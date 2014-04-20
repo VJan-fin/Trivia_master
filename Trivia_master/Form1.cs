@@ -15,6 +15,7 @@ namespace Trivia_master
         Boolean IsClicked = false;
         Point mousePoint;
         Point currPoint;
+
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Trivia_master
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            g.DrawImage(Resources.Untitled_1, this.ClientRectangle);
+            g.DrawImage(Resources.Background, this.ClientRectangle);
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -57,6 +58,16 @@ namespace Trivia_master
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
         }
     }
 }
