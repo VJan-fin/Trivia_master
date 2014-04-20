@@ -47,7 +47,7 @@
             this.labelQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
             this.labelQ.Font = new System.Drawing.Font("Forte", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelQ.Location = new System.Drawing.Point(196, 385);
+            this.labelQ.Location = new System.Drawing.Point(196, 377);
             this.labelQ.Name = "labelQ";
             this.labelQ.Size = new System.Drawing.Size(479, 31);
             this.labelQ.TabIndex = 7;

@@ -24,7 +24,7 @@ namespace Trivia_master
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            g.DrawImage(Resources.Background, this.ClientRectangle);
+            g.DrawImage(Resources.Background1, this.ClientRectangle);
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
