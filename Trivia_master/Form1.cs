@@ -21,12 +21,6 @@ namespace Trivia_master
             InitializeComponent();
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = this.CreateGraphics();
-            g.DrawImage(Resources.Background1, this.ClientRectangle);
-        }
-
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -50,6 +44,7 @@ namespace Trivia_master
         {
             if (e.Button == MouseButtons.Left)
             {
+                if (this.Location.Y < 0) this.Location = new Point(this.Location.X, 0);
                 IsClicked = false;
                 Cursor = Cursors.Default;
             }

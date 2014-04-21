@@ -3,7 +3,7 @@
   <Class Name="Trivia_master.Form1" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQECCAACAAAAACAQABCAAAAAAAgAAAAAABAACA=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,7 +17,7 @@
   <Class Name="Trivia_master.Properties.Resources" Collapsed="true">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAIAABEAAAAQAAEAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Trivia_master.Properties.Settings" Collapsed="true">
@@ -108,7 +108,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Trivia_master.IQuestion&lt;T, U&gt;">
-    <Position X="10" Y="1.5" Width="1.5" />
+    <Position X="9.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAIAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>IQuestion.cs</FileName>

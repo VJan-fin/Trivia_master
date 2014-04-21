@@ -21,5 +21,11 @@ namespace Trivia_master
             MultipleChoiceForm mcf = new MultipleChoiceForm();
             mcf.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AlphabetForm apf = new AlphabetForm();
+            apf.ShowDialog();
+        }
     }
 }

@@ -53,6 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphabetButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AlphabetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphabetForm.Designer.cs">
+      <DependentUpon>AlphabetForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExitButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -88,6 +97,15 @@
     <Compile Include="TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TriviaButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TriviaLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AlphabetForm.resx">
+      <DependentUpon>AlphabetForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
