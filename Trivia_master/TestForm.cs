@@ -27,5 +27,11 @@ namespace Trivia_master
             AlphabetForm apf = new AlphabetForm();
             apf.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AssociationForm a = new AssociationForm();
+            a.ShowDialog();
+        }
     }
 }
