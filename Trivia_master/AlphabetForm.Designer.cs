@@ -29,9 +29,6 @@ namespace Trivia_master
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlphabetForm));
-            this.label1 = new Trivia_master.TriviaLabel();
-            this.triviaLabel1 = new Trivia_master.TriviaLabel();
             this.button1 = new Trivia_master.AlphabetButton();
             this.triviaButton1 = new Trivia_master.AlphabetButton();
             this.triviaButton2 = new Trivia_master.AlphabetButton();
@@ -58,384 +55,498 @@ namespace Trivia_master
             this.triviaButton23 = new Trivia_master.AlphabetButton();
             this.triviaButton24 = new Trivia_master.AlphabetButton();
             this.triviaButton25 = new Trivia_master.AlphabetButton();
-            this.triviaLabel2 = new Trivia_master.TriviaLabel();
+            this.label2 = new Trivia_master.TriviaLabel();
+            this.label1 = new Trivia_master.TriviaLabel();
+            this.label3 = new Trivia_master.TriviaLabel();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(232, 172);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Category: Geography";
-            // 
-            // triviaLabel1
-            // 
-            this.triviaLabel1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triviaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaLabel1.Location = new System.Drawing.Point(156, 258);
-            this.triviaLabel1.Name = "triviaLabel1";
-            this.triviaLabel1.Size = new System.Drawing.Size(361, 28);
-            this.triviaLabel1.TabIndex = 3;
-            this.triviaLabel1.Text = "Capital of Uzbekistan?";
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(162, 457);
+            this.button1.Location = new System.Drawing.Point(163, 459);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 4;
             this.button1.TabStop = false;
             this.button1.Text = "A";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // triviaButton1
             // 
-            this.triviaButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton1.BackgroundImage")));
+            this.triviaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton1.Location = new System.Drawing.Point(208, 457);
+            this.triviaButton1.Location = new System.Drawing.Point(209, 459);
             this.triviaButton1.Name = "triviaButton1";
             this.triviaButton1.Size = new System.Drawing.Size(40, 40);
             this.triviaButton1.TabIndex = 5;
             this.triviaButton1.TabStop = false;
             this.triviaButton1.Text = "B";
-            this.triviaButton1.UseVisualStyleBackColor = true;
-
+            this.triviaButton1.UseVisualStyleBackColor = false;
             // 
             // triviaButton2
             // 
-            this.triviaButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton2.BackgroundImage")));
+            this.triviaButton2.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton2.Location = new System.Drawing.Point(254, 457);
+            this.triviaButton2.Location = new System.Drawing.Point(255, 459);
             this.triviaButton2.Name = "triviaButton2";
             this.triviaButton2.Size = new System.Drawing.Size(40, 40);
             this.triviaButton2.TabIndex = 6;
             this.triviaButton2.TabStop = false;
             this.triviaButton2.Text = "C";
-            this.triviaButton2.UseVisualStyleBackColor = true;
+            this.triviaButton2.UseVisualStyleBackColor = false;
             // 
             // triviaButton3
             // 
-            this.triviaButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton3.BackgroundImage")));
+            this.triviaButton3.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton3.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton3.Location = new System.Drawing.Point(300, 457);
+            this.triviaButton3.Location = new System.Drawing.Point(301, 459);
             this.triviaButton3.Name = "triviaButton3";
             this.triviaButton3.Size = new System.Drawing.Size(40, 40);
             this.triviaButton3.TabIndex = 7;
             this.triviaButton3.TabStop = false;
             this.triviaButton3.Text = "D";
-            this.triviaButton3.UseVisualStyleBackColor = true;
+            this.triviaButton3.UseVisualStyleBackColor = false;
             // 
             // triviaButton4
             // 
-            this.triviaButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton4.BackgroundImage")));
+            this.triviaButton4.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton4.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton4.Location = new System.Drawing.Point(346, 457);
+            this.triviaButton4.Location = new System.Drawing.Point(347, 459);
             this.triviaButton4.Name = "triviaButton4";
             this.triviaButton4.Size = new System.Drawing.Size(40, 40);
             this.triviaButton4.TabIndex = 8;
             this.triviaButton4.TabStop = false;
             this.triviaButton4.Text = "E";
-            this.triviaButton4.UseVisualStyleBackColor = true;
+            this.triviaButton4.UseVisualStyleBackColor = false;
             // 
             // triviaButton5
             // 
-            this.triviaButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton5.BackgroundImage")));
+            this.triviaButton5.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton5.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton5.Location = new System.Drawing.Point(392, 457);
+            this.triviaButton5.Location = new System.Drawing.Point(393, 459);
             this.triviaButton5.Name = "triviaButton5";
             this.triviaButton5.Size = new System.Drawing.Size(40, 40);
             this.triviaButton5.TabIndex = 9;
             this.triviaButton5.TabStop = false;
             this.triviaButton5.Text = "F";
-            this.triviaButton5.UseVisualStyleBackColor = true;
+            this.triviaButton5.UseVisualStyleBackColor = false;
             // 
             // triviaButton6
             // 
-            this.triviaButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton6.BackgroundImage")));
+            this.triviaButton6.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton6.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton6.Location = new System.Drawing.Point(438, 457);
+            this.triviaButton6.Location = new System.Drawing.Point(439, 459);
             this.triviaButton6.Name = "triviaButton6";
             this.triviaButton6.Size = new System.Drawing.Size(40, 40);
             this.triviaButton6.TabIndex = 10;
             this.triviaButton6.TabStop = false;
             this.triviaButton6.Text = "G";
-            this.triviaButton6.UseVisualStyleBackColor = true;
+            this.triviaButton6.UseVisualStyleBackColor = false;
             // 
             // triviaButton7
             // 
-            this.triviaButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton7.BackgroundImage")));
+            this.triviaButton7.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton7.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton7.Location = new System.Drawing.Point(484, 457);
+            this.triviaButton7.Location = new System.Drawing.Point(485, 459);
             this.triviaButton7.Name = "triviaButton7";
             this.triviaButton7.Size = new System.Drawing.Size(40, 40);
             this.triviaButton7.TabIndex = 11;
             this.triviaButton7.TabStop = false;
             this.triviaButton7.Text = "H";
-            this.triviaButton7.UseVisualStyleBackColor = true;
+            this.triviaButton7.UseVisualStyleBackColor = false;
             // 
             // triviaButton8
             // 
-            this.triviaButton8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton8.BackgroundImage")));
+            this.triviaButton8.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton8.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton8.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton8.Location = new System.Drawing.Point(530, 457);
+            this.triviaButton8.Location = new System.Drawing.Point(531, 459);
             this.triviaButton8.Name = "triviaButton8";
             this.triviaButton8.Size = new System.Drawing.Size(40, 40);
             this.triviaButton8.TabIndex = 12;
             this.triviaButton8.TabStop = false;
             this.triviaButton8.Text = "I";
-            this.triviaButton8.UseVisualStyleBackColor = true;
+            this.triviaButton8.UseVisualStyleBackColor = false;
             // 
             // triviaButton9
             // 
-            this.triviaButton9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton9.BackgroundImage")));
+            this.triviaButton9.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton9.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton9.Location = new System.Drawing.Point(576, 457);
+            this.triviaButton9.Location = new System.Drawing.Point(577, 459);
             this.triviaButton9.Name = "triviaButton9";
             this.triviaButton9.Size = new System.Drawing.Size(40, 40);
             this.triviaButton9.TabIndex = 13;
             this.triviaButton9.TabStop = false;
             this.triviaButton9.Text = "J";
-            this.triviaButton9.UseVisualStyleBackColor = true;
+            this.triviaButton9.UseVisualStyleBackColor = false;
             // 
             // triviaButton10
             // 
-            this.triviaButton10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton10.BackgroundImage")));
+            this.triviaButton10.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton10.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton10.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton10.Location = new System.Drawing.Point(162, 503);
+            this.triviaButton10.Location = new System.Drawing.Point(163, 505);
             this.triviaButton10.Name = "triviaButton10";
             this.triviaButton10.Size = new System.Drawing.Size(40, 40);
             this.triviaButton10.TabIndex = 14;
             this.triviaButton10.TabStop = false;
             this.triviaButton10.Text = "K";
-            this.triviaButton10.UseVisualStyleBackColor = true;
+            this.triviaButton10.UseVisualStyleBackColor = false;
             // 
             // triviaButton11
             // 
-            this.triviaButton11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton11.BackgroundImage")));
+            this.triviaButton11.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton11.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton11.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton11.Location = new System.Drawing.Point(208, 503);
+            this.triviaButton11.Location = new System.Drawing.Point(209, 505);
             this.triviaButton11.Name = "triviaButton11";
             this.triviaButton11.Size = new System.Drawing.Size(40, 40);
             this.triviaButton11.TabIndex = 15;
             this.triviaButton11.TabStop = false;
             this.triviaButton11.Text = "L";
-            this.triviaButton11.UseVisualStyleBackColor = true;
+            this.triviaButton11.UseVisualStyleBackColor = false;
             // 
             // triviaButton12
             // 
-            this.triviaButton12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton12.BackgroundImage")));
+            this.triviaButton12.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton12.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton12.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton12.Location = new System.Drawing.Point(254, 503);
+            this.triviaButton12.Location = new System.Drawing.Point(255, 505);
             this.triviaButton12.Name = "triviaButton12";
             this.triviaButton12.Size = new System.Drawing.Size(40, 40);
             this.triviaButton12.TabIndex = 16;
             this.triviaButton12.TabStop = false;
             this.triviaButton12.Text = "M";
-            this.triviaButton12.UseVisualStyleBackColor = true;
+            this.triviaButton12.UseVisualStyleBackColor = false;
             // 
             // triviaButton13
             // 
-            this.triviaButton13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton13.BackgroundImage")));
+            this.triviaButton13.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton13.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton13.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton13.Location = new System.Drawing.Point(300, 503);
+            this.triviaButton13.Location = new System.Drawing.Point(301, 505);
             this.triviaButton13.Name = "triviaButton13";
             this.triviaButton13.Size = new System.Drawing.Size(40, 40);
             this.triviaButton13.TabIndex = 17;
             this.triviaButton13.TabStop = false;
             this.triviaButton13.Text = "N";
-            this.triviaButton13.UseVisualStyleBackColor = true;
+            this.triviaButton13.UseVisualStyleBackColor = false;
             // 
             // triviaButton14
             // 
-            this.triviaButton14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton14.BackgroundImage")));
+            this.triviaButton14.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton14.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton14.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton14.Location = new System.Drawing.Point(346, 503);
+            this.triviaButton14.Location = new System.Drawing.Point(347, 505);
             this.triviaButton14.Name = "triviaButton14";
             this.triviaButton14.Size = new System.Drawing.Size(40, 40);
             this.triviaButton14.TabIndex = 18;
             this.triviaButton14.TabStop = false;
             this.triviaButton14.Text = "O";
-            this.triviaButton14.UseVisualStyleBackColor = true;
+            this.triviaButton14.UseVisualStyleBackColor = false;
             // 
             // triviaButton15
             // 
-            this.triviaButton15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton15.BackgroundImage")));
+            this.triviaButton15.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton15.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton15.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton15.Location = new System.Drawing.Point(392, 503);
+            this.triviaButton15.Location = new System.Drawing.Point(393, 505);
             this.triviaButton15.Name = "triviaButton15";
             this.triviaButton15.Size = new System.Drawing.Size(40, 40);
             this.triviaButton15.TabIndex = 19;
             this.triviaButton15.TabStop = false;
             this.triviaButton15.Text = "P";
-            this.triviaButton15.UseVisualStyleBackColor = true;
+            this.triviaButton15.UseVisualStyleBackColor = false;
             // 
             // triviaButton16
             // 
-            this.triviaButton16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton16.BackgroundImage")));
+            this.triviaButton16.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton16.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton16.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton16.Location = new System.Drawing.Point(438, 503);
+            this.triviaButton16.Location = new System.Drawing.Point(439, 505);
             this.triviaButton16.Name = "triviaButton16";
             this.triviaButton16.Size = new System.Drawing.Size(40, 40);
             this.triviaButton16.TabIndex = 20;
             this.triviaButton16.TabStop = false;
             this.triviaButton16.Text = "Q";
-            this.triviaButton16.UseVisualStyleBackColor = true;
+            this.triviaButton16.UseVisualStyleBackColor = false;
+            this.triviaButton16.Click += new System.EventHandler(this.triviaButton16_Click);
             // 
             // triviaButton17
             // 
-            this.triviaButton17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton17.BackgroundImage")));
+            this.triviaButton17.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton17.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton17.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton17.Location = new System.Drawing.Point(484, 503);
+            this.triviaButton17.Location = new System.Drawing.Point(485, 505);
             this.triviaButton17.Name = "triviaButton17";
             this.triviaButton17.Size = new System.Drawing.Size(40, 40);
             this.triviaButton17.TabIndex = 21;
             this.triviaButton17.TabStop = false;
             this.triviaButton17.Text = "R";
-            this.triviaButton17.UseVisualStyleBackColor = true;
+            this.triviaButton17.UseVisualStyleBackColor = false;
             // 
             // triviaButton18
             // 
-            this.triviaButton18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton18.BackgroundImage")));
+            this.triviaButton18.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton18.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton18.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton18.Location = new System.Drawing.Point(530, 503);
+            this.triviaButton18.Location = new System.Drawing.Point(531, 505);
             this.triviaButton18.Name = "triviaButton18";
             this.triviaButton18.Size = new System.Drawing.Size(40, 40);
             this.triviaButton18.TabIndex = 22;
             this.triviaButton18.TabStop = false;
             this.triviaButton18.Text = "S";
-            this.triviaButton18.UseVisualStyleBackColor = true;
+            this.triviaButton18.UseVisualStyleBackColor = false;
             // 
             // triviaButton19
             // 
-            this.triviaButton19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton19.BackgroundImage")));
+            this.triviaButton19.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton19.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton19.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton19.Location = new System.Drawing.Point(576, 503);
+            this.triviaButton19.Location = new System.Drawing.Point(577, 505);
             this.triviaButton19.Name = "triviaButton19";
             this.triviaButton19.Size = new System.Drawing.Size(40, 40);
             this.triviaButton19.TabIndex = 23;
             this.triviaButton19.TabStop = false;
             this.triviaButton19.Text = "T";
-            this.triviaButton19.UseVisualStyleBackColor = true;
+            this.triviaButton19.UseVisualStyleBackColor = false;
             // 
             // triviaButton20
             // 
-            this.triviaButton20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton20.BackgroundImage")));
+            this.triviaButton20.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton20.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton20.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton20.Location = new System.Drawing.Point(162, 549);
+            this.triviaButton20.Location = new System.Drawing.Point(163, 551);
             this.triviaButton20.Name = "triviaButton20";
             this.triviaButton20.Size = new System.Drawing.Size(40, 40);
             this.triviaButton20.TabIndex = 24;
             this.triviaButton20.TabStop = false;
             this.triviaButton20.Text = "U";
-            this.triviaButton20.UseVisualStyleBackColor = true;
+            this.triviaButton20.UseVisualStyleBackColor = false;
             // 
             // triviaButton21
             // 
-            this.triviaButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton21.BackgroundImage")));
+            this.triviaButton21.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton21.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton21.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton21.Location = new System.Drawing.Point(208, 549);
+            this.triviaButton21.Location = new System.Drawing.Point(209, 551);
             this.triviaButton21.Name = "triviaButton21";
             this.triviaButton21.Size = new System.Drawing.Size(40, 40);
             this.triviaButton21.TabIndex = 25;
             this.triviaButton21.TabStop = false;
             this.triviaButton21.Text = "V";
-            this.triviaButton21.UseVisualStyleBackColor = true;
+            this.triviaButton21.UseVisualStyleBackColor = false;
             // 
             // triviaButton22
             // 
-            this.triviaButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton22.BackgroundImage")));
+            this.triviaButton22.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton22.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton22.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton22.Location = new System.Drawing.Point(254, 549);
+            this.triviaButton22.Location = new System.Drawing.Point(255, 551);
             this.triviaButton22.Name = "triviaButton22";
             this.triviaButton22.Size = new System.Drawing.Size(40, 40);
             this.triviaButton22.TabIndex = 26;
             this.triviaButton22.TabStop = false;
             this.triviaButton22.Text = "W";
-            this.triviaButton22.UseVisualStyleBackColor = true;
+            this.triviaButton22.UseVisualStyleBackColor = false;
             // 
             // triviaButton23
             // 
-            this.triviaButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton23.BackgroundImage")));
+            this.triviaButton23.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton23.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton23.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton23.Location = new System.Drawing.Point(300, 549);
+            this.triviaButton23.Location = new System.Drawing.Point(301, 551);
             this.triviaButton23.Name = "triviaButton23";
             this.triviaButton23.Size = new System.Drawing.Size(40, 40);
             this.triviaButton23.TabIndex = 27;
             this.triviaButton23.TabStop = false;
             this.triviaButton23.Text = "X";
-            this.triviaButton23.UseVisualStyleBackColor = true;
+            this.triviaButton23.UseVisualStyleBackColor = false;
             // 
             // triviaButton24
             // 
-            this.triviaButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton24.BackgroundImage")));
+            this.triviaButton24.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton24.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton24.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton24.Location = new System.Drawing.Point(346, 549);
+            this.triviaButton24.Location = new System.Drawing.Point(347, 551);
             this.triviaButton24.Name = "triviaButton24";
             this.triviaButton24.Size = new System.Drawing.Size(40, 40);
             this.triviaButton24.TabIndex = 28;
             this.triviaButton24.TabStop = false;
             this.triviaButton24.Text = "Y";
-            this.triviaButton24.UseVisualStyleBackColor = true;
+            this.triviaButton24.UseVisualStyleBackColor = false;
             // 
             // triviaButton25
             // 
-            this.triviaButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton25.BackgroundImage")));
+            this.triviaButton25.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton25.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.triviaButton25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.triviaButton25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton25.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.triviaButton25.Location = new System.Drawing.Point(392, 549);
+            this.triviaButton25.Location = new System.Drawing.Point(393, 551);
             this.triviaButton25.Name = "triviaButton25";
             this.triviaButton25.Size = new System.Drawing.Size(40, 40);
             this.triviaButton25.TabIndex = 29;
             this.triviaButton25.TabStop = false;
             this.triviaButton25.Text = "Z";
-            this.triviaButton25.UseVisualStyleBackColor = true;
+            this.triviaButton25.UseVisualStyleBackColor = false;
             // 
-            // triviaLabel2
+            // label2
             // 
-            this.triviaLabel2.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.triviaLabel2.ForeColor = System.Drawing.Color.White;
-            this.triviaLabel2.Location = new System.Drawing.Point(163, 401);
-            this.triviaLabel2.Name = "triviaLabel2";
-            this.triviaLabel2.Size = new System.Drawing.Size(390, 34);
-            this.triviaLabel2.TabIndex = 0;
-            this.triviaLabel2.Text = "_ _ _ _ _ _ _ _";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(251, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Category: Geography";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(169, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 22);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Capital ov Uzbekistan?";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(157, 409);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(221, 35);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "_ _ _ _ _ _ _ _";
             // 
             // AlphabetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 640);
-            this.Controls.Add(this.triviaLabel2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.triviaButton25);
             this.Controls.Add(this.triviaButton24);
             this.Controls.Add(this.triviaButton23);
@@ -462,13 +573,10 @@ namespace Trivia_master
             this.Controls.Add(this.triviaButton2);
             this.Controls.Add(this.triviaButton1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.triviaLabel1);
-            this.Controls.Add(this.label1);
             this.Name = "AlphabetForm";
-            this.Text = "AlphabetForm";
+            this.Text = "butt";
+            this.Load += new System.EventHandler(this.AlphabetForm_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.triviaLabel1, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.triviaButton1, 0);
             this.Controls.SetChildIndex(this.triviaButton2, 0);
@@ -495,15 +603,16 @@ namespace Trivia_master
             this.Controls.SetChildIndex(this.triviaButton23, 0);
             this.Controls.SetChildIndex(this.triviaButton24, 0);
             this.Controls.SetChildIndex(this.triviaButton25, 0);
-            this.Controls.SetChildIndex(this.triviaLabel2, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private TriviaLabel label1;
-        private TriviaLabel triviaLabel1;
         private AlphabetButton button1;
         private AlphabetButton triviaButton1;
         private AlphabetButton triviaButton2;
@@ -530,7 +639,9 @@ namespace Trivia_master
         private AlphabetButton triviaButton23;
         private AlphabetButton triviaButton24;
         private AlphabetButton triviaButton25;
-        private TriviaLabel triviaLabel2;
+        private TriviaLabel label2;
+        private TriviaLabel label1;
+        private TriviaLabel label3;
 
     }
 }

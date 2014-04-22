@@ -49,5 +49,15 @@ namespace Trivia_master
             foreach (AlphabetButton btn in list)
                 btn.checkCharacter(e.KeyChar);
         }
+
+        private void AlphabetForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void triviaButton16_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

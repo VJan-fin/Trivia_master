@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssociationForm));
             this.triviaButton3 = new Trivia_master.AlphabetButton();
             this.triviaButton2 = new Trivia_master.AlphabetButton();
             this.triviaButton1 = new Trivia_master.AlphabetButton();
@@ -60,7 +59,9 @@
             // 
             // triviaButton3
             // 
-            this.triviaButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton3.BackgroundImage")));
+            this.triviaButton3.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton3.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.triviaButton3.Location = new System.Drawing.Point(162, 509);
@@ -73,7 +74,9 @@
             // 
             // triviaButton2
             // 
-            this.triviaButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton2.BackgroundImage")));
+            this.triviaButton2.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.triviaButton2.Location = new System.Drawing.Point(208, 509);
@@ -86,7 +89,9 @@
             // 
             // triviaButton1
             // 
-            this.triviaButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("triviaButton1.BackgroundImage")));
+            this.triviaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.triviaButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.triviaButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.triviaButton1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.triviaButton1.Location = new System.Drawing.Point(392, 463);
@@ -99,7 +104,9 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(484, 463);
@@ -112,7 +119,9 @@
             // 
             // alphabetButton1
             // 
-            this.alphabetButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton1.BackgroundImage")));
+            this.alphabetButton1.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton1.Location = new System.Drawing.Point(576, 463);
@@ -125,7 +134,9 @@
             // 
             // alphabetButton2
             // 
-            this.alphabetButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton2.BackgroundImage")));
+            this.alphabetButton2.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton2.Location = new System.Drawing.Point(162, 463);
@@ -138,7 +149,9 @@
             // 
             // alphabetButton3
             // 
-            this.alphabetButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton3.BackgroundImage")));
+            this.alphabetButton3.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton3.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton3.Location = new System.Drawing.Point(346, 463);
@@ -151,7 +164,9 @@
             // 
             // alphabetButton4
             // 
-            this.alphabetButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton4.BackgroundImage")));
+            this.alphabetButton4.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton4.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton4.Location = new System.Drawing.Point(438, 463);
@@ -164,7 +179,9 @@
             // 
             // alphabetButton5
             // 
-            this.alphabetButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton5.BackgroundImage")));
+            this.alphabetButton5.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton5.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton5.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton5.Location = new System.Drawing.Point(530, 463);
@@ -177,7 +194,9 @@
             // 
             // alphabetButton6
             // 
-            this.alphabetButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton6.BackgroundImage")));
+            this.alphabetButton6.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton6.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton6.Location = new System.Drawing.Point(254, 463);
@@ -190,7 +209,9 @@
             // 
             // alphabetButton7
             // 
-            this.alphabetButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton7.BackgroundImage")));
+            this.alphabetButton7.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton7.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton7.Location = new System.Drawing.Point(300, 463);
@@ -203,7 +224,9 @@
             // 
             // alphabetButton8
             // 
-            this.alphabetButton8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton8.BackgroundImage")));
+            this.alphabetButton8.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton8.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton8.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton8.Location = new System.Drawing.Point(208, 463);
@@ -216,7 +239,9 @@
             // 
             // alphabetButton9
             // 
-            this.alphabetButton9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton9.BackgroundImage")));
+            this.alphabetButton9.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton9.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton9.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton9.Location = new System.Drawing.Point(576, 509);
@@ -229,7 +254,9 @@
             // 
             // alphabetButton10
             // 
-            this.alphabetButton10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton10.BackgroundImage")));
+            this.alphabetButton10.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton10.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton10.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton10.Location = new System.Drawing.Point(530, 509);
@@ -242,7 +269,9 @@
             // 
             // alphabetButton11
             // 
-            this.alphabetButton11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton11.BackgroundImage")));
+            this.alphabetButton11.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton11.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton11.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton11.Location = new System.Drawing.Point(484, 509);
@@ -255,7 +284,9 @@
             // 
             // alphabetButton12
             // 
-            this.alphabetButton12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton12.BackgroundImage")));
+            this.alphabetButton12.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton12.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton12.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton12.Location = new System.Drawing.Point(438, 509);
@@ -268,7 +299,9 @@
             // 
             // alphabetButton13
             // 
-            this.alphabetButton13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton13.BackgroundImage")));
+            this.alphabetButton13.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton13.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton13.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton13.Location = new System.Drawing.Point(392, 509);
@@ -281,7 +314,9 @@
             // 
             // alphabetButton14
             // 
-            this.alphabetButton14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton14.BackgroundImage")));
+            this.alphabetButton14.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton14.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton14.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton14.Location = new System.Drawing.Point(346, 509);
@@ -294,7 +329,9 @@
             // 
             // alphabetButton15
             // 
-            this.alphabetButton15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton15.BackgroundImage")));
+            this.alphabetButton15.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton15.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton15.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton15.Location = new System.Drawing.Point(300, 509);
@@ -307,7 +344,9 @@
             // 
             // alphabetButton16
             // 
-            this.alphabetButton16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton16.BackgroundImage")));
+            this.alphabetButton16.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton16.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton16.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton16.Location = new System.Drawing.Point(254, 509);
@@ -320,7 +359,9 @@
             // 
             // alphabetButton17
             // 
-            this.alphabetButton17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton17.BackgroundImage")));
+            this.alphabetButton17.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton17.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton17.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton17.Location = new System.Drawing.Point(346, 555);
@@ -333,7 +374,9 @@
             // 
             // alphabetButton18
             // 
-            this.alphabetButton18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton18.BackgroundImage")));
+            this.alphabetButton18.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton18.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton18.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton18.Location = new System.Drawing.Point(300, 555);
@@ -346,7 +389,9 @@
             // 
             // alphabetButton19
             // 
-            this.alphabetButton19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton19.BackgroundImage")));
+            this.alphabetButton19.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton19.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton19.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton19.Location = new System.Drawing.Point(254, 555);
@@ -359,7 +404,9 @@
             // 
             // alphabetButton20
             // 
-            this.alphabetButton20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton20.BackgroundImage")));
+            this.alphabetButton20.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton20.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton20.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton20.Location = new System.Drawing.Point(208, 555);
@@ -372,7 +419,9 @@
             // 
             // alphabetButton21
             // 
-            this.alphabetButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton21.BackgroundImage")));
+            this.alphabetButton21.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton21.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton21.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton21.Location = new System.Drawing.Point(162, 555);
@@ -385,17 +434,21 @@
             // 
             // triviaLabel2
             // 
+            this.triviaLabel2.AutoSize = true;
+            this.triviaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.triviaLabel2.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.triviaLabel2.ForeColor = System.Drawing.Color.White;
             this.triviaLabel2.Location = new System.Drawing.Point(156, 403);
             this.triviaLabel2.Name = "triviaLabel2";
-            this.triviaLabel2.Size = new System.Drawing.Size(390, 34);
+            this.triviaLabel2.Size = new System.Drawing.Size(113, 35);
             this.triviaLabel2.TabIndex = 33;
             this.triviaLabel2.Text = "_ _ _ _";
             // 
             // alphabetButton22
             // 
-            this.alphabetButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("alphabetButton22.BackgroundImage")));
+            this.alphabetButton22.BackColor = System.Drawing.Color.Transparent;
+            this.alphabetButton22.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.alphabetButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton22.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphabetButton22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alphabetButton22.Location = new System.Drawing.Point(392, 555);
@@ -468,6 +521,7 @@
             this.Controls.SetChildIndex(this.triviaLabel2, 0);
             this.Controls.SetChildIndex(this.alphabetButton22, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
