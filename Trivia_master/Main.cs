@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Trivia_master
 {
-    public class History<T,U> : Category<T,U>
+    public class Main<T, U> : Category<T, U>
     {
-        
     }
 }

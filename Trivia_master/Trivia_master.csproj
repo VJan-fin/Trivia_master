@@ -84,6 +84,7 @@
     <Compile Include="History.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Math.cs" />
     <Compile Include="Medium.cs" />
     <Compile Include="MultipleChoiceForm.cs">
