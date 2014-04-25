@@ -53,8 +53,18 @@ namespace Trivia_master
         }
 
         /// <summary>
+        /// Show the question passed as a parameter in the suitable form
+        /// </summary>
+        /// <param name="question"></param>
+        /// <returns></returns>
+        public abstract bool showQ(Category<T,U> cat);
+
+        /// <summary>
         /// Creation of the starting state of the game
         /// </summary>
-        public abstract void createState();
+        public void createState()
+        {
+            state = new State<T, U>(this);
+        }
     }
 }

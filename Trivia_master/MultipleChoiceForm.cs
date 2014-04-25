@@ -9,11 +9,30 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public partial class MultipleChoiceForm : Form1
+    public partial class MultipleChoiceForm : Form1<string, string>
     {
+        private IQuestion<string, string> question;
+        private Category<string, string> cat;
+        private string correctAnswer;
+
         public MultipleChoiceForm()
         {
             InitializeComponent();
+        }
+
+        public MultipleChoiceForm(Category<string, string> cat, IQuestion<string, string> question)
+        {
+            // TODO: Complete member initialization
+            InitializeComponent();
+            this.cat = cat;
+            this.question = question;
+            this.labelCategory.Text = this.cat.CategoryName;
+            this.labelQ.Text = question.getQuestion()[0];
+            this.labelA1.Text = question.getAnswers()[0];
+            this.labelA2.Text = this.question.getAnswers()[1];
+            this.labelA3.Text = this.question.getAnswers()[2];
+            this.labelA4.Text = this.question.getAnswers()[3];
+            this.correctAnswer = this.question.getCorrectAnswer()[0];
         }
 
         private void labelA1_MouseEnter(object sender, EventArgs e)

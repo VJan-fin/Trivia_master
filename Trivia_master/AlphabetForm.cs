@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public partial class AlphabetForm : Form1
+    public partial class AlphabetForm : Form1<string, string>
     {
         List<AlphabetButton> list;
         public AlphabetForm()

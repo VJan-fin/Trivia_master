@@ -1,6 +1,7 @@
-﻿namespace Trivia_master
+﻿using System.Windows.Forms;
+namespace Trivia_master
 {
-    partial class Form1
+    partial class Form1<T, U>
     {
         /// <summary>
         /// Required designer variable.

@@ -15,6 +15,17 @@ namespace Trivia_master
     {
         Game<T, U> game;
         List<Category<T, U>> Category;
+
+        public State()
+        {
+
+        }
+
+        public State(Game<T, U> game)
+        {
+            this.game = game;
+        }
+
         public void createForm()
         {
 

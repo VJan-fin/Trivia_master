@@ -33,18 +33,18 @@
             this.labelCategory = new System.Windows.Forms.Label();
             this.labelA1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelA2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelA3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelA4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelQ
             // 
             this.labelQ.AutoSize = true;
-            this.labelQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
+            this.labelQ.BackColor = System.Drawing.Color.Transparent;
             this.labelQ.Font = new System.Drawing.Font("Forte", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelQ.Location = new System.Drawing.Point(147, 306);
@@ -57,7 +57,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Forte", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label6.Location = new System.Drawing.Point(223, 186);
@@ -70,10 +70,10 @@
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
-            this.labelCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
+            this.labelCategory.BackColor = System.Drawing.Color.Transparent;
             this.labelCategory.Font = new System.Drawing.Font("Forte", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelCategory.Location = new System.Drawing.Point(316, 186);
+            this.labelCategory.Location = new System.Drawing.Point(328, 186);
             this.labelCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(81, 24);
@@ -110,21 +110,21 @@
             this.label1.Text = "A:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // labelA2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(437, 468);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 51);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Abraham Lincoln";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.MouseEnter += new System.EventHandler(this.labelA1_MouseEnter);
-            this.label2.MouseLeave += new System.EventHandler(this.labelA1_MouseLeave);
+            this.labelA2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
+            this.labelA2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelA2.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelA2.Location = new System.Drawing.Point(437, 468);
+            this.labelA2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelA2.Name = "labelA2";
+            this.labelA2.Size = new System.Drawing.Size(186, 51);
+            this.labelA2.TabIndex = 20;
+            this.labelA2.Text = "Abraham Lincoln";
+            this.labelA2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelA2.MouseEnter += new System.EventHandler(this.labelA1_MouseEnter);
+            this.labelA2.MouseLeave += new System.EventHandler(this.labelA1_MouseLeave);
             // 
             // label3
             // 
@@ -140,21 +140,21 @@
             this.label3.Text = "B:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
+            // labelA3
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(178, 552);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 51);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "John F. Kennedy";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.MouseEnter += new System.EventHandler(this.labelA1_MouseEnter);
-            this.label4.MouseLeave += new System.EventHandler(this.labelA1_MouseLeave);
+            this.labelA3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
+            this.labelA3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelA3.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelA3.Location = new System.Drawing.Point(178, 552);
+            this.labelA3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelA3.Name = "labelA3";
+            this.labelA3.Size = new System.Drawing.Size(186, 51);
+            this.labelA3.TabIndex = 22;
+            this.labelA3.Text = "John F. Kennedy";
+            this.labelA3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelA3.MouseEnter += new System.EventHandler(this.labelA1_MouseEnter);
+            this.labelA3.MouseLeave += new System.EventHandler(this.labelA1_MouseLeave);
             // 
             // label5
             // 
@@ -170,21 +170,21 @@
             this.label5.Text = "C:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label7
+            // labelA4
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(437, 552);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(186, 51);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Theodore Roosevelt";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.MouseEnter += new System.EventHandler(this.labelA1_MouseEnter);
-            this.label7.MouseLeave += new System.EventHandler(this.labelA1_MouseLeave);
+            this.labelA4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(26)))), ((int)(((byte)(65)))));
+            this.labelA4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelA4.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelA4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelA4.Location = new System.Drawing.Point(437, 552);
+            this.labelA4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelA4.Name = "labelA4";
+            this.labelA4.Size = new System.Drawing.Size(186, 51);
+            this.labelA4.TabIndex = 24;
+            this.labelA4.Text = "Theodore Roosevelt";
+            this.labelA4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelA4.MouseEnter += new System.EventHandler(this.labelA1_MouseEnter);
+            this.labelA4.MouseLeave += new System.EventHandler(this.labelA1_MouseLeave);
             // 
             // label8
             // 
@@ -206,11 +206,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Trivia_master.Properties.Resources.Background1;
             this.ClientSize = new System.Drawing.Size(694, 640);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelA4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelA3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelA2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelA1);
             this.Controls.Add(this.label1);
@@ -226,11 +226,11 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.labelA1, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.labelA2, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.labelA3, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.labelA4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,11 +243,11 @@
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelA1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelA2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelA3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelA4;
         private System.Windows.Forms.Label label8;
 
 

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public partial class AssociationForm : Form1
+    public partial class AssociationForm : Form1<string, string>
     {
         public AssociationForm()
         {

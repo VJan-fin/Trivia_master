@@ -5,16 +5,16 @@ namespace Trivia_master
 {
     public class Easy : Game<string,string>
     {
-        public Form easyForma; // treba da se stavi konkretnata forma koja se odnesuva na Easy
+        public MultipleChoiceForm easyForm; // treba da se stavi konkretnata forma koja se odnesuva na Easy
 
-        public override void createState()
+        public override bool showQ(Category<string, string> cat)
         {
-            //this.state = new State<string, string>(this);
-        }
+            IQuestion<string, string> question = cat.getNextQuestion();
+            //MessageBox.Show(cat.ToString());
+            MultipleChoiceForm mcf = new MultipleChoiceForm(cat, question);
+            mcf.ShowDialog();
 
-        public void doldeliPrasanje()
-        {
-            
+            return true;
         }
     }
 }

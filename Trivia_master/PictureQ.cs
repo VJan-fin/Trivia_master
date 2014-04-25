@@ -50,5 +50,22 @@ namespace Trivia_master
                 this.CorrectAnswers.Add(item);
             }
         }
+
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <returns></returns>
+        public List<U> getAnswers()
+        {
+            return new List<U>();
+        }
+
+        /// <summary>
+        /// Not implemented
+        /// </summary>
+        /// <param name="a"></param>
+        public void setAnswer(List<U> a)
+        { 
+        }
     }
 }

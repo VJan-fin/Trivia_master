@@ -81,11 +81,14 @@
     </Compile>
     <Compile Include="HangManQ.cs" />
     <Compile Include="Hard.cs" />
-    <Compile Include="History.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Main.cs" />
-    <Compile Include="Math.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Medium.cs" />
     <Compile Include="MultipleChoiceForm.cs">
       <SubType>Form</SubType>

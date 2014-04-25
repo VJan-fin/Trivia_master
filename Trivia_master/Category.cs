@@ -12,9 +12,10 @@ namespace Trivia_master
     /// </summary>
     /// <typeparam name="T">Question type</typeparam>
     /// <typeparam name="U">Answer type</typeparam>
-    public abstract class Category<T,U>
+    public class Category<T,U>
     {
         public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
         private int Curr { get; set; }
         /// <summary>
         /// Contains the complete set of questions from the suitable
@@ -72,7 +73,7 @@ namespace Trivia_master
         /// <returns></returns>
         public override string ToString()
         {
-            return this.GetType().Name;
+            return this.CategoryName;
         }
     }
 }

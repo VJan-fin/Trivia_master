@@ -10,10 +10,9 @@ namespace Trivia_master
     {
         public Form easyForma; // treba da se stavi konkretnata forma koja se odnesuva na Easy
 
-        public override void createState()
+        public override bool showQ(Category<string, string> cat)
         {
-            state = new State<string, string>();
-            state.createForm();
+            throw new NotImplementedException();
         }
     }
 
