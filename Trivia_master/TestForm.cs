@@ -30,7 +30,11 @@ namespace Trivia_master
             mc.Answers.Add("3");
             mc.Answers.Add("4");
             cat.questions.Add(mc);
-            obj.showQ(cat);
+            obj.Categories.Add(cat);
+            //obj.showQ(cat);
+
+            obj.createState();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

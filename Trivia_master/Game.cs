@@ -25,6 +25,7 @@ namespace Trivia_master
         public Game()
         {
             random = new Random();
+            this.Categories = new List<Category<T, U>>();
         }
 
         /// <summary>
@@ -47,7 +48,7 @@ namespace Trivia_master
             List<Category<T, U>> result = new List<Category<T, U>>();
             for (int i = 0; i < n; i++)
             {
-                result.Add(Categories[random.Next(n)]);
+                result.Add(Categories[random.Next(Categories.Count)]);
             }
             return result;
         }

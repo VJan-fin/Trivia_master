@@ -14,21 +14,23 @@ namespace Trivia_master
     public class State<T, U>
     {
         Game<T, U> game;
-        List<Category<T, U>> Category;
+        public List<Category<T, U>> Category;
 
         public State()
         {
-
         }
 
         public State(Game<T, U> game)
         {
             this.game = game;
+            Category = game.getCategories(9);
+            createForm();
         }
 
         public void createForm()
         {
-
+            MainForm<T, U> mf = new MainForm<T, U>(this);
+            mf.ShowDialog();
         }
     }
 }
