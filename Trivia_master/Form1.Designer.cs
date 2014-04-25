@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 namespace Trivia_master
 {
-    partial class Form1<T, U>
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.

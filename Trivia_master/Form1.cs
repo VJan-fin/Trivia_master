@@ -10,9 +10,8 @@ using Trivia_master.Properties;
 
 namespace Trivia_master
 {
-    public partial class Form1<T, U> : Form
+    public partial class Form1 : Form
     {
-        State<T, U> state;
         Boolean IsClicked = false;
         Point mousePoint;
         Point currPoint;
