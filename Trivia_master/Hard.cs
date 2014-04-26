@@ -13,7 +13,7 @@ namespace Trivia_master
         public override bool showQ(Category<string, string> cat)
         {
              IQuestion<string,string> question = cat.getNextQuestion();
-             AssociationForm form = new AssociationForm(question);
+             AssociationForm form = new AssociationForm(question,cat);
              form.ShowDialog();
 
              return false;
