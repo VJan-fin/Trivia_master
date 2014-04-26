@@ -68,8 +68,23 @@ namespace Trivia_master
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AssociationForm a = new AssociationForm();
-            a.ShowDialog();
+            
+            AssociationQ<string, string> question = new AssociationQ<string, string>();
+            question.Question.Add("A programming language");
+            question.Question.Add("John McCarthy");
+            question.Question.Add("Artificial intelligence");
+            question.Question.Add("Has a lot of dialects");
+            question.CorrectAnswers.Add("LISP");
+            Category<string, string> category = new Category<string, string>();
+            category.CategoryName = "Computer Science";
+            category.addQuestion(question);
+            Hard hard = new Hard();
+            hard.Categories.Add(category);
+            hard.createState();
+            
+            /* AssociationForm a = new AssociationForm();
+            
+            a.ShowDialog();*/
         }
     }
 }
