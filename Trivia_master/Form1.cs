@@ -10,7 +10,7 @@ using Trivia_master.Properties;
 
 namespace Trivia_master
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IUpdatableView
     {
         Boolean IsClicked = false;
         Point mousePoint;
@@ -63,6 +63,19 @@ namespace Trivia_master
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Default;
+        }
+
+
+        public virtual void CorrectAnswer()
+        {
+        }
+
+        public virtual void IncorrectAnswer()
+        {
+        }
+
+        public virtual void UpdateView()
+        {
         }
     }
 }

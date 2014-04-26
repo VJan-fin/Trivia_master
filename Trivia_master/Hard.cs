@@ -8,15 +8,21 @@ namespace Trivia_master
 {
     public class Hard : Game<string, string>
     {
-        public AssociationForm form; // treba da se stavi konkretnata forma koja se odnesuva naHard
+        public AssociationForm form;
 
         public override bool showQ(Category<string, string> cat)
         {
+<<<<<<< HEAD
              IQuestion<string,string> question = cat.getNextQuestion();
              AssociationForm form = new AssociationForm(question,cat);
              form.ShowDialog();
+=======
+            IQuestion<string, string> question = cat.getNextQuestion();
+            AssociationForm form = new AssociationForm(question);
+            form.ShowDialog();
+>>>>>>> 5262a978e5e0da414297ecb438880c23bae741ef
 
-             return false;
+            return false;
         }
     }
 

@@ -12,6 +12,8 @@ namespace Trivia_master
     public partial class AlphabetForm<T, U> : Form1 where T : MediumQuestionPainter  where U : MediumAnswerPainter
     {
         IQuestion<T, U> question;
+        protected T Question { get; set; }
+        protected U Answer { get; set; }
         List<AlphabetButton> list;
         int count;
         public AlphabetForm(Category<T, U> c, IQuestion<T, U> q)
@@ -20,6 +22,8 @@ namespace Trivia_master
             count = 0;
             DoubleBuffered = true;
             question = q;
+            Question = q.getQuestion()[0];
+            Answer = q.getCorrectAnswer()[0];
             list = new List<AlphabetButton>();
             list.Add(button1);
             list.Add(triviaButton1);
@@ -48,16 +52,30 @@ namespace Trivia_master
             list.Add(triviaButton24);
             list.Add(triviaButton25);
             lblKategorija.Text = c.ToString();
-            question = q;
-            question.getQuestion()[0].Font = lblKategorija.Font;
-            question.getCorrectAnswer()[0].Font = lblOdgovor.Font;
-            question.getCorrectAnswer()[0].reset();
+            Question.Font = lblKategorija.Font;
+            Answer.Font = lblOdgovor.Font;
+            Answer.reset();
+        }
+
+        public override void UpdateView()
+        {
+            Invalidate();
+        }
+
+        public override void CorrectAnswer()
+        {
+            DialogResult = DialogResult.OK;
+        }
+
+        public override void IncorrectAnswer()
+        {
+            DialogResult = DialogResult.No;
         }
 
         private void Draw(Graphics g)
         {
-            question.getQuestion()[0].Draw(g);
-            question.getCorrectAnswer()[0].Draw(g);
+            Question.Draw(g);
+            Answer.Draw(g);
         }
 
         private void AlphabetForm_KeyPress(object sender, KeyPressEventArgs e)
