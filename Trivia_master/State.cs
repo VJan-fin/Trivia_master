@@ -32,5 +32,10 @@ namespace Trivia_master
             MainForm<T, U> mf = new MainForm<T, U>(this);
             mf.ShowDialog();
         }
+
+        public bool ShowQ(Category<T, U> cat)
+        {
+            return game.showQ(cat);
+        }
     }
 }

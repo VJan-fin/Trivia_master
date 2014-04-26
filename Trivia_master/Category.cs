@@ -27,13 +27,14 @@ namespace Trivia_master
         {
             questions = new List<IQuestion<T, U>>();
             Curr = 0;
+            Shuffle();
         }
 
         /// <summary>
         /// A method for creating a random permutation
         /// of all the questions from the object's category
         /// </summary>
-        private void Shuffle()
+        public void Shuffle()
         {
             Random rng = new Random();
             int n = questions.Count;

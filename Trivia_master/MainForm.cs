@@ -30,5 +30,10 @@ namespace Trivia_master
             
         }
 
+        private void alphabetButton1_Click(object sender, EventArgs e)
+        {
+            state.ShowQ(state.Category[0]);
+        }
+
     }
 }
