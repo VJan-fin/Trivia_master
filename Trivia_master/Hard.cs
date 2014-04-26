@@ -15,7 +15,8 @@ namespace Trivia_master
 
             IQuestion<string, string> question = cat.getNextQuestion();
             AssociationForm form = new AssociationForm(question,cat);
-            form.ShowDialog();
+            if (form.ShowDialog() == DialogResult.Yes)
+                return true;
 
 
             return false;

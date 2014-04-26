@@ -81,6 +81,12 @@
     <Compile Include="AssociationForm.Designer.cs">
       <DependentUpon>AssociationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CloseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CloseForm.Designer.cs">
+      <DependentUpon>CloseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HangManQ.cs" />
     <Compile Include="Hard.cs" />
     <Compile Include="IQuestion.cs" />
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="AssociationForm.resx">
       <DependentUpon>AssociationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CloseForm.resx">
+      <DependentUpon>CloseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1rsz_1rsz_1aaaaq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TRU BRICK 2 DARK BLUE.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

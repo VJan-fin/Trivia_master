@@ -31,6 +31,10 @@ namespace Trivia_master
                 currPoint = this.Location;
             }
         }
+        public virtual void CloseForm()
+        {
+            Close();
+        }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -52,7 +56,12 @@ namespace Trivia_master
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Close();
+          /*  CloseForm cs = new CloseForm();
+            if (cs.ShowDialog() == DialogResult.Yes)
+            {
+                Close();
+            }*/
+            CloseForm();
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -76,6 +85,11 @@ namespace Trivia_master
 
         public virtual void UpdateView()
         {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

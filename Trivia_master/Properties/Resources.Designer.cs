@@ -113,9 +113,29 @@ namespace Trivia_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rsz_1rsz_1rsz_1aaaaq {
+            get {
+                object obj = ResourceManager.GetObject("rsz_1rsz_1rsz_1aaaaq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Timeout {
             get {
                 object obj = ResourceManager.GetObject("Timeout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TRU_BRICK_2_DARK_BLUE {
+            get {
+                object obj = ResourceManager.GetObject("TRU BRICK 2 DARK BLUE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

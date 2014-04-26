@@ -117,7 +117,14 @@ namespace Trivia_master
 
             obj.createState();
         }
-
+        public override void CloseForm()
+        {
+            CloseForm cs = new CloseForm();
+            if (cs.ShowDialog() == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             AssociationQ<string, string> question = new AssociationQ<string, string>();
@@ -132,10 +139,8 @@ namespace Trivia_master
             Hard hard = new Hard();
             hard.Categories.Add(category);
             hard.createState();
-
-            /*
-            AssociationForm a = new AssociationForm();
-            a.ShowDialog();*/
+            
+           
         }
 
         private bool IsClicked = false;
