@@ -62,19 +62,7 @@ namespace Trivia_master
 
         private void AlphabetForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            foreach (AlphabetButton btn in list)
-                if (btn.Text.Equals(e.KeyChar.ToString().ToUpper()) && btn.Enabled == false)
-                    return;
-            if (!question.getCorrectAnswer()[0].AddChar(e.KeyChar))
-            {
-                count++;
-                if (count == 5)
-                    DialogResult = DialogResult.No;
-            }
-            if (question.getCorrectAnswer()[0].IsCorrect())
-            {
-                DialogResult = DialogResult.OK;
-            }
+
         }
 
         private void AlphabetForm_Paint(object sender, PaintEventArgs e)
