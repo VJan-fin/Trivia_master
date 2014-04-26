@@ -85,6 +85,7 @@
     <Compile Include="Hard.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="IUpdatableView.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
