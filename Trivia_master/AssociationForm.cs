@@ -11,20 +11,17 @@ namespace Trivia_master
 {
     public partial class AssociationForm : Form1
     {
-<<<<<<< HEAD
+
         IQuestion<string,string> question;
         Category<string, string> category;
-        public AssociationForm(IQuestion<string,string> iq, Category<string,string> cat)
-=======
-        IQuestion<string, string> question;
 
+   
         public AssociationForm()
         {
             InitializeComponent();
         }
 
-        public AssociationForm(IQuestion<string, string> iq)
->>>>>>> 5262a978e5e0da414297ecb438880c23bae741ef
+        public AssociationForm(IQuestion<string, string> iq, Category<string,string> cat)
         {
             InitializeComponent();
             question = iq;
@@ -40,11 +37,8 @@ namespace Trivia_master
             var g = Graphics.FromImage(back);
             SolidBrush sb = new SolidBrush(Color.Red);
             Font font = new Font("Forte", 15);
-<<<<<<< HEAD
-           g.DrawString("Category : "+category.CategoryName, font, sb, new Rectangle(widthStart, 135, widthSize, heightSize));
-=======
 
->>>>>>> 5262a978e5e0da414297ecb438880c23bae741ef
+           g.DrawString("Category : "+category.CategoryName, font, sb, new Rectangle(widthStart, 135, widthSize, heightSize));
             for (int i = 0; i < 4; i++)
             {
 
@@ -53,7 +47,7 @@ namespace Trivia_master
                 g.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
                 heightStart += increment;
             }
-<<<<<<< HEAD
+
             int wordCount = question.getCorrectAnswer()[0].Count();
             StringBuilder strb = new StringBuilder();
             for (int i = 1; i <= wordCount; i++)
@@ -65,7 +59,6 @@ namespace Trivia_master
             triviaLabel2.Text = strb.ToString();
 
             Graphics graph = CreateGraphics();
-=======
             /*  Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
               heightStart += increment;
             g.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
@@ -79,7 +72,6 @@ namespace Trivia_master
             g.DrawString("2. John McCarthy", font, sb, rec2);
             g.DrawString("3. Artificial intelligence", font, sb, rec3);
             g.DrawString("4. Old as hell", font, sb, rec4);*/
->>>>>>> 5262a978e5e0da414297ecb438880c23bae741ef
             BackgroundImage = back;
         }
     }
