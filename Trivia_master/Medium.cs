@@ -6,13 +6,17 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public class Medium : Game<string,string>
+    public class Medium : Game<MediumQuestionPainter,MediumAnswerPainter>
     {
-        public Form mediumForma; // treba da se stavi konkretnata forma koja se odnesuva na Medium
+        public AlphabetForm<MediumQuestionPainter, MediumAnswerPainter> mediumForma; // treba da se stavi konkretnata forma koja se odnesuva na Medium
 
-        public override bool showQ(Category<string, string> cat)
+        public override bool showQ(Category<MediumQuestionPainter, MediumAnswerPainter> cat)
         {
-            throw new NotImplementedException();
+            IQuestion<MediumQuestionPainter, MediumAnswerPainter> pom = cat.getNextQuestion();
+            mediumForma = new AlphabetForm<MediumQuestionPainter, MediumAnswerPainter>(cat, pom);
+            if (mediumForma.ShowDialog() == DialogResult.OK)
+                return true;
+            else return false;
         }
     }
 }

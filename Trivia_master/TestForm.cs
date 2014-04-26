@@ -39,8 +39,31 @@ namespace Trivia_master
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlphabetForm apf = new AlphabetForm();
-            apf.ShowDialog();
+            Medium obj = new Medium();
+            obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Finki" });
+            obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            AlphabetQuestion que = new AlphabetQuestion("First programming language?");
+            List<MediumQuestionPainter> list = new List<MediumQuestionPainter>();
+            list.Add(que);
+            obj.Categories[0].questions[0].setQuestion(list);
+            AlphabetAnswer ans = new AlphabetAnswer("ADA");
+            List<MediumAnswerPainter> list1 = new List<MediumAnswerPainter>();
+            list1.Add(ans);
+            obj.Categories[0].questions[0].setCorrectAnswer(list1);
+
+            //obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Finki" });
+            obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            que = new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?");
+            list = new List<MediumQuestionPainter>();
+            list.Add(que);
+            obj.Categories[0].questions[1].setQuestion(list);
+            ans = new AlphabetAnswer("HEURISTIC");
+            list1 = new List<MediumAnswerPainter>();
+            list1.Add(ans);
+            obj.Categories[0].questions[1].setCorrectAnswer(list1);
+            obj.Categories[0].Shuffle();
+
+            obj.createState();
         }
 
         private void button3_Click(object sender, EventArgs e)

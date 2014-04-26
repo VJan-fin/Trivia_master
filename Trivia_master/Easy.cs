@@ -13,7 +13,6 @@ namespace Trivia_master
             //MessageBox.Show(cat.ToString());
             MultipleChoiceForm mcf = new MultipleChoiceForm(cat, question);
             mcf.ShowDialog();
-
             return true;
         }
     }

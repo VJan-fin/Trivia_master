@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphabetAnswer.cs" />
     <Compile Include="AlphabetButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -62,6 +63,7 @@
     <Compile Include="AlphabetForm.Designer.cs">
       <DependentUpon>AlphabetForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlphabetQuestion.cs" />
     <Compile Include="ExitButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -90,6 +92,8 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Medium.cs" />
+    <Compile Include="MediumAnswerPainter.cs" />
+    <Compile Include="MediumQuestionPainter.cs" />
     <Compile Include="MultipleChoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>

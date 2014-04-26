@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 namespace Trivia_master
 {
-    partial class AlphabetForm
+    partial class AlphabetForm<T, U>
     {
         /// <summary>
         /// Required designer variable.
@@ -56,8 +56,8 @@ namespace Trivia_master
             this.triviaButton24 = new Trivia_master.AlphabetButton();
             this.triviaButton25 = new Trivia_master.AlphabetButton();
             this.label2 = new Trivia_master.TriviaLabel();
-            this.label1 = new Trivia_master.TriviaLabel();
-            this.label3 = new Trivia_master.TriviaLabel();
+            this.lblOdgovor = new Trivia_master.TriviaLabel();
+            this.lblKategorija = new Trivia_master.TriviaLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -76,6 +76,7 @@ namespace Trivia_master
             this.button1.TabStop = false;
             this.button1.Text = "A";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton1
             // 
@@ -93,6 +94,7 @@ namespace Trivia_master
             this.triviaButton1.TabStop = false;
             this.triviaButton1.Text = "B";
             this.triviaButton1.UseVisualStyleBackColor = false;
+            this.triviaButton1.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton2
             // 
@@ -110,6 +112,7 @@ namespace Trivia_master
             this.triviaButton2.TabStop = false;
             this.triviaButton2.Text = "C";
             this.triviaButton2.UseVisualStyleBackColor = false;
+            this.triviaButton2.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton3
             // 
@@ -127,6 +130,7 @@ namespace Trivia_master
             this.triviaButton3.TabStop = false;
             this.triviaButton3.Text = "D";
             this.triviaButton3.UseVisualStyleBackColor = false;
+            this.triviaButton3.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton4
             // 
@@ -144,6 +148,7 @@ namespace Trivia_master
             this.triviaButton4.TabStop = false;
             this.triviaButton4.Text = "E";
             this.triviaButton4.UseVisualStyleBackColor = false;
+            this.triviaButton4.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton5
             // 
@@ -161,6 +166,7 @@ namespace Trivia_master
             this.triviaButton5.TabStop = false;
             this.triviaButton5.Text = "F";
             this.triviaButton5.UseVisualStyleBackColor = false;
+            this.triviaButton5.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton6
             // 
@@ -178,6 +184,7 @@ namespace Trivia_master
             this.triviaButton6.TabStop = false;
             this.triviaButton6.Text = "G";
             this.triviaButton6.UseVisualStyleBackColor = false;
+            this.triviaButton6.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton7
             // 
@@ -195,6 +202,7 @@ namespace Trivia_master
             this.triviaButton7.TabStop = false;
             this.triviaButton7.Text = "H";
             this.triviaButton7.UseVisualStyleBackColor = false;
+            this.triviaButton7.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton8
             // 
@@ -212,6 +220,7 @@ namespace Trivia_master
             this.triviaButton8.TabStop = false;
             this.triviaButton8.Text = "I";
             this.triviaButton8.UseVisualStyleBackColor = false;
+            this.triviaButton8.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton9
             // 
@@ -229,6 +238,7 @@ namespace Trivia_master
             this.triviaButton9.TabStop = false;
             this.triviaButton9.Text = "J";
             this.triviaButton9.UseVisualStyleBackColor = false;
+            this.triviaButton9.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton10
             // 
@@ -246,6 +256,7 @@ namespace Trivia_master
             this.triviaButton10.TabStop = false;
             this.triviaButton10.Text = "K";
             this.triviaButton10.UseVisualStyleBackColor = false;
+            this.triviaButton10.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton11
             // 
@@ -263,6 +274,7 @@ namespace Trivia_master
             this.triviaButton11.TabStop = false;
             this.triviaButton11.Text = "L";
             this.triviaButton11.UseVisualStyleBackColor = false;
+            this.triviaButton11.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton12
             // 
@@ -280,6 +292,7 @@ namespace Trivia_master
             this.triviaButton12.TabStop = false;
             this.triviaButton12.Text = "M";
             this.triviaButton12.UseVisualStyleBackColor = false;
+            this.triviaButton12.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton13
             // 
@@ -297,6 +310,7 @@ namespace Trivia_master
             this.triviaButton13.TabStop = false;
             this.triviaButton13.Text = "N";
             this.triviaButton13.UseVisualStyleBackColor = false;
+            this.triviaButton13.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton14
             // 
@@ -314,6 +328,7 @@ namespace Trivia_master
             this.triviaButton14.TabStop = false;
             this.triviaButton14.Text = "O";
             this.triviaButton14.UseVisualStyleBackColor = false;
+            this.triviaButton14.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton15
             // 
@@ -331,6 +346,7 @@ namespace Trivia_master
             this.triviaButton15.TabStop = false;
             this.triviaButton15.Text = "P";
             this.triviaButton15.UseVisualStyleBackColor = false;
+            this.triviaButton15.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton16
             // 
@@ -348,7 +364,7 @@ namespace Trivia_master
             this.triviaButton16.TabStop = false;
             this.triviaButton16.Text = "Q";
             this.triviaButton16.UseVisualStyleBackColor = false;
-            this.triviaButton16.Click += new System.EventHandler(this.triviaButton16_Click);
+            this.triviaButton16.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton17
             // 
@@ -366,6 +382,7 @@ namespace Trivia_master
             this.triviaButton17.TabStop = false;
             this.triviaButton17.Text = "R";
             this.triviaButton17.UseVisualStyleBackColor = false;
+            this.triviaButton17.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton18
             // 
@@ -383,6 +400,7 @@ namespace Trivia_master
             this.triviaButton18.TabStop = false;
             this.triviaButton18.Text = "S";
             this.triviaButton18.UseVisualStyleBackColor = false;
+            this.triviaButton18.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton19
             // 
@@ -400,6 +418,7 @@ namespace Trivia_master
             this.triviaButton19.TabStop = false;
             this.triviaButton19.Text = "T";
             this.triviaButton19.UseVisualStyleBackColor = false;
+            this.triviaButton19.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton20
             // 
@@ -417,6 +436,7 @@ namespace Trivia_master
             this.triviaButton20.TabStop = false;
             this.triviaButton20.Text = "U";
             this.triviaButton20.UseVisualStyleBackColor = false;
+            this.triviaButton20.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton21
             // 
@@ -434,6 +454,7 @@ namespace Trivia_master
             this.triviaButton21.TabStop = false;
             this.triviaButton21.Text = "V";
             this.triviaButton21.UseVisualStyleBackColor = false;
+            this.triviaButton21.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton22
             // 
@@ -451,6 +472,7 @@ namespace Trivia_master
             this.triviaButton22.TabStop = false;
             this.triviaButton22.Text = "W";
             this.triviaButton22.UseVisualStyleBackColor = false;
+            this.triviaButton22.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton23
             // 
@@ -468,6 +490,7 @@ namespace Trivia_master
             this.triviaButton23.TabStop = false;
             this.triviaButton23.Text = "X";
             this.triviaButton23.UseVisualStyleBackColor = false;
+            this.triviaButton23.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton24
             // 
@@ -485,6 +508,7 @@ namespace Trivia_master
             this.triviaButton24.TabStop = false;
             this.triviaButton24.Text = "Y";
             this.triviaButton24.UseVisualStyleBackColor = false;
+            this.triviaButton24.Click += new System.EventHandler(this.button1_Click);
             // 
             // triviaButton25
             // 
@@ -502,6 +526,7 @@ namespace Trivia_master
             this.triviaButton25.TabStop = false;
             this.triviaButton25.Text = "Z";
             this.triviaButton25.UseVisualStyleBackColor = false;
+            this.triviaButton25.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -511,41 +536,41 @@ namespace Trivia_master
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(251, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 22);
+            this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Category: Geography";
+            this.label2.Text = "Category:";
             // 
-            // label1
+            // lblOdgovor
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(169, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 22);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Capital ov Uzbekistan?";
+            this.lblOdgovor.AutoSize = true;
+            this.lblOdgovor.BackColor = System.Drawing.Color.Transparent;
+            this.lblOdgovor.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOdgovor.ForeColor = System.Drawing.Color.White;
+            this.lblOdgovor.Location = new System.Drawing.Point(157, 409);
+            this.lblOdgovor.Name = "lblOdgovor";
+            this.lblOdgovor.Size = new System.Drawing.Size(221, 35);
+            this.lblOdgovor.TabIndex = 32;
+            this.lblOdgovor.Text = "_ _ _ _ _ _ _ _";
+            this.lblOdgovor.Visible = false;
             // 
-            // label3
+            // lblKategorija
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(157, 409);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 35);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "_ _ _ _ _ _ _ _";
+            this.lblKategorija.AutoSize = true;
+            this.lblKategorija.BackColor = System.Drawing.Color.Transparent;
+            this.lblKategorija.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKategorija.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblKategorija.Location = new System.Drawing.Point(343, 154);
+            this.lblKategorija.Name = "lblKategorija";
+            this.lblKategorija.Size = new System.Drawing.Size(0, 22);
+            this.lblKategorija.TabIndex = 33;
             // 
             // AlphabetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 640);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblKategorija);
+            this.Controls.Add(this.lblOdgovor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.triviaButton25);
             this.Controls.Add(this.triviaButton24);
@@ -575,8 +600,10 @@ namespace Trivia_master
             this.Controls.Add(this.button1);
             this.Name = "AlphabetForm";
             this.Text = "butt";
-            this.Load += new System.EventHandler(this.AlphabetForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AlphabetForm_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyUp);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.triviaButton1, 0);
             this.Controls.SetChildIndex(this.triviaButton2, 0);
@@ -604,8 +631,8 @@ namespace Trivia_master
             this.Controls.SetChildIndex(this.triviaButton24, 0);
             this.Controls.SetChildIndex(this.triviaButton25, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.lblOdgovor, 0);
+            this.Controls.SetChildIndex(this.lblKategorija, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,8 +667,8 @@ namespace Trivia_master
         private AlphabetButton triviaButton24;
         private AlphabetButton triviaButton25;
         private TriviaLabel label2;
-        private TriviaLabel label1;
-        private TriviaLabel label3;
+        private TriviaLabel lblOdgovor;
+        private TriviaLabel lblKategorija;
 
     }
 }

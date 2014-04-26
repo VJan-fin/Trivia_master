@@ -9,12 +9,17 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public partial class AlphabetForm : Form1
+    public partial class AlphabetForm<T, U> : Form1 where T : MediumQuestionPainter  where U : MediumAnswerPainter
     {
+        IQuestion<T, U> question;
         List<AlphabetButton> list;
-        public AlphabetForm()
+        int count;
+        public AlphabetForm(Category<T, U> c, IQuestion<T, U> q)
         {
             InitializeComponent();
+            count = 0;
+            DoubleBuffered = true;
+            question = q;
             list = new List<AlphabetButton>();
             list.Add(button1);
             list.Add(triviaButton1);
@@ -42,22 +47,75 @@ namespace Trivia_master
             list.Add(triviaButton23);
             list.Add(triviaButton24);
             list.Add(triviaButton25);
+            lblKategorija.Text = c.ToString();
+            question = q;
+            question.getQuestion()[0].Font = lblKategorija.Font;
+            question.getCorrectAnswer()[0].Font = lblOdgovor.Font;
+            question.getCorrectAnswer()[0].reset();
+        }
+
+        private void Draw(Graphics g)
+        {
+            question.getQuestion()[0].Draw(g);
+            question.getCorrectAnswer()[0].Draw(g);
         }
 
         private void AlphabetForm_KeyPress(object sender, KeyPressEventArgs e)
         {
             foreach (AlphabetButton btn in list)
-                btn.checkCharacter(e.KeyChar);
+                if (btn.Text.Equals(e.KeyChar.ToString().ToUpper()) && btn.Enabled == false)
+                    return;
+            if (!question.getCorrectAnswer()[0].AddChar(e.KeyChar))
+            {
+                count++;
+                if (count == 5)
+                    DialogResult = DialogResult.No;
+            }
+            if (question.getCorrectAnswer()[0].IsCorrect())
+            {
+                DialogResult = DialogResult.OK;
+            }
         }
 
-        private void AlphabetForm_Load(object sender, EventArgs e)
+        private void AlphabetForm_Paint(object sender, PaintEventArgs e)
         {
-
+            Draw(e.Graphics);
         }
 
-        private void triviaButton16_Click(object sender, EventArgs e)
+        private void AlphabetForm_KeyDown(object sender, KeyEventArgs e)
         {
+            foreach (AlphabetButton btn in list)
+                if (btn.Text.Equals(e.KeyData.ToString().ToUpper()) && btn.Enabled != false)
+                    btn.BackColor = Color.Yellow;
+            Invalidate();
+        }
 
+        private void AlphabetForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            foreach (AlphabetButton btn in list)
+                if (btn.Text.Equals(e.KeyData.ToString().ToUpper()) && btn.Enabled != false)
+                {
+                    btn.BackColor = Color.Transparent;
+                    btn.Enabled = false;
+                }
+            Invalidate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (!question.getCorrectAnswer()[0].AddChar(btn.Text.ElementAt<Char>(0)))
+            {
+                count++;
+                if (count == 5)
+                    DialogResult = DialogResult.No;
+            }
+            if (question.getCorrectAnswer()[0].IsCorrect())
+            {
+                DialogResult = DialogResult.OK;
+            }
+            btn.Enabled = false;
+            Invalidate();
         }
     }
 }
