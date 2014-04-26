@@ -11,13 +11,20 @@ namespace Trivia_master
 {
     public partial class AssociationForm : Form1
     {
-        IQuestion<string,string> question;
-        public AssociationForm(IQuestion<string,string> iq)
+        IQuestion<string, string> question;
+
+        public AssociationForm()
+        {
+            InitializeComponent();
+        }
+
+        public AssociationForm(IQuestion<string, string> iq)
         {
             InitializeComponent();
             question = iq;
             addAssociations();
         }
+
         private void addAssociations()
         {
             Bitmap back = new Bitmap(this.BackgroundImage);
@@ -26,16 +33,17 @@ namespace Trivia_master
             var g = Graphics.FromImage(back);
             SolidBrush sb = new SolidBrush(Color.Red);
             Font font = new Font("Forte", 15);
+
             for (int i = 0; i < 4; i++)
             {
-                
+
                 Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
-                
-                g.DrawString((i+1).ToString()+". "+question.getQuestion()[i], font, sb, rec1);
+
+                g.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
                 heightStart += increment;
             }
-          /*  Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
-            heightStart += increment;
+            /*  Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
+              heightStart += increment;
             g.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
             Rectangle rec2 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
             heightStart += increment;

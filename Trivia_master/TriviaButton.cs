@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Trivia_master
 {
-    class TriviaButton : Button
+    public class TriviaButton : Button
     {
         public TriviaButton() : base()
         {

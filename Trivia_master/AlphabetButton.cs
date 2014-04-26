@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    class AlphabetButton : TriviaButton
+    public class AlphabetButton : TriviaButton
     {
         public void checkCharacter(char c)
         {

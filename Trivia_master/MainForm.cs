@@ -12,28 +12,49 @@ namespace Trivia_master
     public partial class MainForm<T, U> : Form1
     {
         State<T, U> state;
+        private List<QuestionBox> Boxes;
 
         public MainForm()
         {
             InitializeComponent();
+            this.Boxes = new List<QuestionBox>();
         }
 
         public MainForm(State<T, U> state)
         {
             InitializeComponent();
             this.state = state;
+            this.Boxes = new List<QuestionBox>();
+            this.Boxes.Add(this.QBox1);
+            this.Boxes.Add(this.QBox2);
+            this.Boxes.Add(this.QBox3);
+            this.Boxes.Add(this.QBox4);
+            this.Boxes.Add(this.QBox5);
+            this.Boxes.Add(this.QBox6);
+            this.Boxes.Add(this.QBox7);
+            this.Boxes.Add(this.QBox8);
+            this.Boxes.Add(this.QBox9);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            alphabetButton1.Text = state.Category[0].ToString();
-            
+            int i = 0;
+            foreach (var item in this.Boxes)
+            {
+                item.Text = state.Category[i++].ToString();
+            }        
         }
 
         private void alphabetButton1_Click(object sender, EventArgs e)
         {
-            state.ShowQ(state.Category[0]);
+            int ind = 0;
+            foreach (var item in this.Boxes)
+            {
+                if (item.Text == (sender as QuestionBox).Text)
+                    break;
+                ind++;
+            }
+            (sender as QuestionBox).Visible = !state.ShowQ(state.Category[ind]);
         }
-
     }
 }
