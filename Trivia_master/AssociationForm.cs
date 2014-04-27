@@ -14,18 +14,37 @@ namespace Trivia_master
 
         IQuestion<string,string> question;
         Category<string, string> category;
-
-   
+        List<Rectangle> Areas;
+        public int TimeLeft = 21;
+        public int heightStart;
+        public int increment;
+        public int widthStart;
+        public int widthSize;
+        public int heightSize;
+        SolidBrush sb;
+        Font font;
+        Bitmap OldPicture;
+        Font timerFont;
         public AssociationForm()
         {
             InitializeComponent();
         }
-
+       
         public AssociationForm(IQuestion<string, string> iq, Category<string,string> cat)
         {
             InitializeComponent();
             question = iq;
             this.category = cat;
+            Areas = new List<Rectangle>();
+            timer1.Start();
+            sb = new SolidBrush(Color.Red);
+            font = new Font("Forte", 15);
+            timerFont = new Font("Forte", 22);
+            heightStart = 190;
+            increment = 30;
+            widthStart = 190;
+            widthSize = 300;
+            heightSize = 50;
             addAssociations();
         }
 
@@ -33,21 +52,20 @@ namespace Trivia_master
         {
             Bitmap back = new Bitmap(this.BackgroundImage);
          
-            int heightStart = 190, increment = 30, widthStart = 190, widthSize = 300, heightSize = 50;
+            
             var g = Graphics.FromImage(back);
-            SolidBrush sb = new SolidBrush(Color.Red);
-            Font font = new Font("Forte", 15);
-
+           
+            
            g.DrawString("Category : "+category.CategoryName, font, sb, new Rectangle(widthStart, 135, widthSize, heightSize));
             for (int i = 0; i < 4; i++)
             {
 
                 Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
-
+                Areas.Add(rec1);
                 g.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
                 heightStart += increment;
             }
-           
+            
             int wordCount = question.getCorrectAnswer()[0].Count();
             StringBuilder strb = new StringBuilder();
             for (int i = 1; i <= wordCount; i++)
@@ -73,6 +91,26 @@ namespace Trivia_master
             g.DrawString("3. Artificial intelligence", font, sb, rec3);
             g.DrawString("4. Old as hell", font, sb, rec4);*/
             BackgroundImage = back;
+            OldPicture = back;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeLeft--;
+            if (TimeLeft == 0)
+                timer1.Stop();
+            else
+            {
+             
+                Rectangle rec2 = new Rectangle(500, 300, 40, 40);
+                Bitmap back = new Bitmap(OldPicture);
+               Graphics gp = Graphics.FromImage(back);
+               gp.FillRectangle(new SolidBrush(Color.Transparent), rec2);
+                gp.DrawString(TimeLeft.ToString(), timerFont, sb, rec2);
+        
+                BackgroundImage = back;
+            }
+        }
+    
     }
 }

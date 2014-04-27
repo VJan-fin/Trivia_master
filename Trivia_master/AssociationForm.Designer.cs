@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.triviaButton3 = new Trivia_master.AlphabetButton();
             this.triviaButton2 = new Trivia_master.AlphabetButton();
             this.triviaButton1 = new Trivia_master.AlphabetButton();
@@ -55,6 +56,7 @@
             this.alphabetButton21 = new Trivia_master.AlphabetButton();
             this.triviaLabel2 = new Trivia_master.TriviaLabel();
             this.alphabetButton22 = new Trivia_master.AlphabetButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // triviaButton3
@@ -459,6 +461,11 @@
             this.alphabetButton22.Text = "Z";
             this.alphabetButton22.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // AssociationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,7 +498,7 @@
             this.Controls.Add(this.triviaButton2);
             this.Controls.Add(this.triviaButton1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssociationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form3";
@@ -556,6 +563,7 @@
         private AlphabetButton alphabetButton21;
         private TriviaLabel triviaLabel2;
         private AlphabetButton alphabetButton22;
+        private System.Windows.Forms.Timer timer1;
 
     }
 }
