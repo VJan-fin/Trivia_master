@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="AlphabetJoker.cs" />
     <Compile Include="AlphabetQuestion.cs" />
+    <Compile Include="CostomAlphabetButton.cs" />
     <Compile Include="ExitButton.cs">
       <SubType>Component</SubType>
     </Compile>

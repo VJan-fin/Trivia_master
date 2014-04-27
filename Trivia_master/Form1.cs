@@ -110,5 +110,12 @@ namespace Trivia_master
         {
 
         }
+
+
+
+        public void setCursor(Cursor crs)
+        {
+            this.Cursor = crs;
+        }
     }
 }

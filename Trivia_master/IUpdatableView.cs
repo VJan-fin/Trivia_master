@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Trivia_master
 {
@@ -14,5 +15,6 @@ namespace Trivia_master
         Size getSize();
         void TimeElapsed();
         void Answered();
+        void setCursor(Cursor crs);
     }
 }

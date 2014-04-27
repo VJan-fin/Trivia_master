@@ -16,12 +16,15 @@ namespace Trivia_master
         protected Point TimerLocation { get; set; }
         protected Size Size { get; set; }
         protected int Answered { get; set; }
+        public Font AlphaFont { get; set; }
         protected Point Location { get; set; }
+        protected bool MouseClicked { get; set; }
         protected Point PictureLocation { get; set; }
         protected Size PictureSize { get; set; }
         protected Brush DefaultBrush { get; set; }
         protected Brush TimeToCloseBrush { get; set; }
         protected Brush AnsweredCorrect { get; set; }
+        protected Point AnsweredAnswerLocation { get; set; }
         public IUpdatableView Form { get; set; }
         public Font Font { get; set; }
         public int TimeToEnd { get; set; }
@@ -83,6 +86,7 @@ namespace Trivia_master
 
         public virtual void Reset()
         {
+            MouseClicked = false;
             Size = Form.getSize();
             if (Size.Width > Size.Height)
             {
@@ -90,7 +94,7 @@ namespace Trivia_master
             }
             else Location = new Point(0, Size.Height / 2 - Size.Width / 2);
             TimeToEnd = 3;
-            PictureLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 7 / 20), Location.Y + (Math.Min(Size.Width, Size.Height) * 1 / 5));
+            PictureLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 7 / 20), Location.Y + (Math.Min(Size.Width, Size.Height) * 4 / 15));
             RemainingTime = Time;
             Answered = 0;
             TimeToClose = (int)Math.Round(Time / 100.0 * 15, 0);

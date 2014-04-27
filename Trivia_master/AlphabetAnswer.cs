@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using Trivia_master.Properties;
+using System.Windows.Forms;
 
 namespace Trivia_master
 {
@@ -11,15 +12,20 @@ namespace Trivia_master
     {
         protected String answer { get; set; }
         protected String CorrectAnswer { get; set; }
+        protected List<CostomAlphabetButton> Buttons { get; set; }
         protected Point AnswerLocation { get; set; }
         protected Brush AnswerBrush { get; set; }
         protected HashSet<Char> Set { get; set; }
         protected Color AnswerColor { get; set; }
+        protected int Attempts { get; set; }
+        protected int AttemptsToClose { get; set; }
+        protected int DefaultAttempts { get; set; }
+        protected Point AttemptsLocation { get; set; }
         protected StringBuilder sb;
         protected int count;
         protected int wrong;
 
-        public AlphabetAnswer(String a, int time = 20) : base(time)
+        public AlphabetAnswer(String a, int time = 20, int attepmts = 5) : base(time)
         {
             answer = a;
             sb = new StringBuilder();
@@ -31,6 +37,9 @@ namespace Trivia_master
                 pm.Append(Char.ToUpper(answer.ElementAt<Char>(i)));
                 pm.Append(" ");
             }
+            DefaultAttempts = attepmts;
+            Attempts = attepmts;
+            AttemptsToClose = (int)Math.Round(Attempts * 20.0 / 100, 0);
             CorrectAnswer = pm.ToString();
         }
 
@@ -46,30 +55,59 @@ namespace Trivia_master
             count = 0;
             wrong = 0;
             Set = new HashSet<char>();
+            Attempts = DefaultAttempts;
             AnswerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 4 / 19), Location.Y + (Math.Min(Size.Width, Size.Height) * 5 / 8));
+            AnsweredAnswerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 4 / 19), Location.Y + (Math.Min(Size.Width, Size.Height) * 31 / 40));
+            AttemptsLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 25 / 40), Location.Y + (Math.Min(Size.Width, Size.Height) * 9 / 40));
+            int pom = (int)Math.Round(Math.Min(Size.Width, Size.Height)/16.0, 0);
+            Size BtnSize = new Size(pom, pom);
+            int XX = AnswerLocation.X;
+            int X = XX;
+            int Y = Location.Y + (Math.Min(Size.Width, Size.Height) * 41 / 64);
+            int factor = (int)Math.Round(Math.Min(Size.Width, Size.Height) / 13.913, 0);
+            Buttons = new List<CostomAlphabetButton>();
+            for (int i = 0; i < 26; i++)
+            {
+                if (i % 10 == 0)
+                {
+                    X = XX;
+                    Y += factor;
+                }
+                CostomAlphabetButton cb = new CostomAlphabetButton(AlphaFont, new Point(X, Y), BtnSize);
+                cb.Text = ((char)('A' + i)).ToString();
+                Buttons.Add(cb);
+                X += factor;
+            }
         }
 
         public override void Draw(System.Drawing.Graphics g)
         {
             if (Answered == 0)
             {
+                foreach (CostomAlphabetButton btn in Buttons)
+                {
+                    btn.Draw(g);
+                }
                 base.Draw(g);
+                if(Attempts <= AttemptsToClose)
+                    g.DrawString(String.Format("Attempts: {0:00}", Attempts), Font, TimeToCloseBrush, AttemptsLocation);
+                else g.DrawString(String.Format("Attempts: {0:00}", Attempts), Font, DefaultBrush, AttemptsLocation);
                 g.DrawString(sb.ToString(), Font, AnswerBrush, AnswerLocation);
             }
             else if (Answered == 1)
             {
                 g.DrawImage(Resources.Wrong_answer1, new Rectangle(PictureLocation, PictureSize));
-                g.DrawString(CorrectAnswer, Font, DefaultBrush, AnswerLocation);
+                g.DrawString(CorrectAnswer, Font, DefaultBrush, AnsweredAnswerLocation);
             }
             else if (Answered == 2)
             {
                 g.DrawImage(Resources.Correct2, new Rectangle(PictureLocation, PictureSize));
-                g.DrawString(CorrectAnswer, Font, AnsweredCorrect, AnswerLocation);
+                g.DrawString(CorrectAnswer, Font, AnsweredCorrect, AnsweredAnswerLocation);
             }
             else if (Answered == 3)
             {
                 g.DrawImage(Resources.Timeout, new Rectangle(PictureLocation, PictureSize));
-                g.DrawString(CorrectAnswer, Font, DefaultBrush, AnswerLocation);
+                g.DrawString(CorrectAnswer, Font, DefaultBrush, AnsweredAnswerLocation);
             }
         }
 
@@ -99,8 +137,8 @@ namespace Trivia_master
                 Form.Answered();
             }
             if (curr == 0)
-                wrong++;
-            if (wrong == 5)
+                Attempts--;
+            if (Attempts == 0)
             {
                 Answered = 1;
                 Form.Answered();
@@ -111,6 +149,78 @@ namespace Trivia_master
         public override void KeyPress(System.Windows.Forms.KeyPressEventArgs e)
         {
             AddChar(e.KeyChar);
+        }
+
+        public override void KeyDown(System.Windows.Forms.KeyEventArgs e)
+        {
+            foreach (CostomAlphabetButton btn in Buttons)
+            {
+                if (btn.Enabled && btn.Text.Equals(e.KeyData.ToString().ToUpper()))
+                    btn.BackColor = Color.FromArgb(192, 192, 0);
+            }
+            Form.UpdateView();
+        }
+
+        public override void KeyUp(System.Windows.Forms.KeyEventArgs e)
+        {
+            foreach (CostomAlphabetButton btn in Buttons)
+            {
+                if (btn.Enabled && btn.Text.Equals(e.KeyData.ToString().ToUpper()))
+                {
+                    btn.Enabled = false;
+                    btn.BackColor = Color.Transparent;
+                    btn.ForeColor = SystemColors.InactiveCaptionText;
+                }
+            }
+            Form.UpdateView();
+        }
+
+        public override void MouseMove(System.Windows.Forms.MouseEventArgs e)
+        {
+            if (MouseClicked)
+                return;
+            Form.setCursor(Cursors.Default);
+            foreach (CostomAlphabetButton btn in Buttons)
+            {
+                if (btn.Enabled && btn.IsIn(e.Location))
+                {
+                    Form.setCursor(Cursors.Hand);
+                    btn.BackColor = Color.FromArgb(229, 192, 21);
+                }
+                else btn.BackColor = Color.Transparent;
+            }
+            Form.UpdateView();
+        }
+
+        public override void MouseDown(System.Windows.Forms.MouseEventArgs e)
+        {
+            MouseClicked = true;
+            foreach (CostomAlphabetButton btn in Buttons)
+            {
+                if (btn.Enabled && btn.IsIn(e.Location))
+                {
+                    Form.setCursor(Cursors.Hand);
+                    btn.BackColor = Color.FromArgb(192, 192, 0);
+                }
+                else btn.BackColor = Color.Transparent;
+            }
+            Form.UpdateView();
+        }
+
+        public override void MouseUp(System.Windows.Forms.MouseEventArgs e)
+        {
+            MouseClicked = false;
+            foreach (CostomAlphabetButton btn in Buttons)
+            {
+                if (btn.Enabled && btn.IsIn(e.Location))
+                {
+                    btn.BackColor = Color.Transparent;
+                    btn.Enabled = false;
+                    btn.ForeColor = SystemColors.InactiveCaptionText;
+                    AddChar(btn.Text.ElementAt<char>(0));
+                }
+                else btn.BackColor = Color.Transparent;
+            }
         }
     }
 }
