@@ -46,7 +46,7 @@ namespace Trivia_master
             defaultHeightStart =heightStart = 250;
             increment = 30;
             widthStart = 230;
-            widthSize = 300;
+            widthSize = 400;
             heightSize = 50;
            ;
             

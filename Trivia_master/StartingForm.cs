@@ -137,17 +137,43 @@ namespace Trivia_master
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            Hard hard = new Hard();
+            Category<string, AlphabetAnswer> cs = new Category<string, AlphabetAnswer>();
             AssociationQ<string, AlphabetAnswer> question = new AssociationQ<string, AlphabetAnswer>();
             question.Question.Add("A programming language");
             question.Question.Add("John McCarthy");
             question.Question.Add("Artificial intelligence");
             question.Question.Add("Has a lot of dialects");
             question.CorrectAnswers.Add(new AlphabetAnswer("LISP"));
-            Category<string, AlphabetAnswer> category = new Category<string, AlphabetAnswer>();
-            category.CategoryName = "Computer Science";
-            category.addQuestion(question);
-            Hard hard = new Hard();
-            hard.Categories.Add(category);
+            cs.CategoryName = "Computer Science";
+            cs.addQuestion(question);
+
+            hard.Categories.Add(cs);
+            Category<string, AlphabetAnswer> geography = new Category<string, AlphabetAnswer>();
+            geography.CategoryName = "Geography";
+            AssociationQ<string, AlphabetAnswer> questionG1 = new AssociationQ<string, AlphabetAnswer>();
+            questionG1.Question.Add("One of the biggest cities in the world");
+            questionG1.Question.Add("Has a population of 14 milion");
+            questionG1.Question.Add("Turkey");
+            questionG1.Question.Add("Transcontinental city");
+            questionG1.CorrectAnswers.Add(new AlphabetAnswer("Istanbul"));
+            geography.addQuestion(questionG1);
+            AssociationQ<string, AlphabetAnswer> questionG2 = new AssociationQ<string, AlphabetAnswer>();
+            questionG2.Question.Add("Planet");
+            questionG2.Question.Add("Closest to the sun");
+            questionG2.Question.Add("Named after one of the Roman gods");
+            questionG2.Question.Add("Smaller than Earth");
+            questionG2.CorrectAnswers.Add(new AlphabetAnswer("Mercury"));
+            AssociationQ<string, AlphabetAnswer> questionG3 = new AssociationQ<string, AlphabetAnswer>();
+            questionG3.Question.Add("River");
+            questionG3.Question.Add("Africa");
+            questionG3.Question.Add("Floods every year");
+            questionG3.Question.Add("flows through 10 distinct countries");
+            questionG3.CorrectAnswers.Add(new AlphabetAnswer("NILE"));
+            geography.addQuestion(questionG3);
+            hard.Categories.Add(geography);
+          
+          
             hard.createState();
             
            
