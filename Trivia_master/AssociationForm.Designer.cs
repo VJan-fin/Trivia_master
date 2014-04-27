@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.triviaButton3 = new Trivia_master.AlphabetButton();
             this.triviaButton2 = new Trivia_master.AlphabetButton();
             this.triviaButton1 = new Trivia_master.AlphabetButton();
@@ -55,6 +56,7 @@
             this.alphabetButton21 = new Trivia_master.AlphabetButton();
             this.triviaLabel2 = new Trivia_master.TriviaLabel();
             this.alphabetButton22 = new Trivia_master.AlphabetButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // triviaButton3
@@ -486,6 +488,10 @@
             this.alphabetButton22.UseVisualStyleBackColor = true;
             this.alphabetButton22.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // AssociationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,6 +596,7 @@
         private AlphabetButton alphabetButton21;
         private TriviaLabel triviaLabel2;
         private AlphabetButton alphabetButton22;
+        private System.Windows.Forms.Timer timer1;
 
     }
 }
