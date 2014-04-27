@@ -25,6 +25,7 @@ namespace Trivia_master
         public int widthStart;
         public int widthSize;
         public int heightSize;
+        public int defaultHeightStart;
         SolidBrush sb;
         Font font;
         Bitmap OldPicture;
@@ -42,11 +43,12 @@ namespace Trivia_master
             sb = new SolidBrush(Color.Red);
             font = new Font("Forte", 15);
             timerFont = new Font("Forte", 22);
-            heightStart = 190;
+            defaultHeightStart =heightStart = 250;
             increment = 30;
-            widthStart = 190;
+            widthStart = 230;
             widthSize = 300;
             heightSize = 50;
+           ;
             
             question = q;
             this.category = c;
@@ -121,8 +123,8 @@ namespace Trivia_master
 
         private void addAssociations(Graphics gp)
         {
-
-            gp.DrawString("Category : " + category.CategoryName, font, sb, new Rectangle(widthStart, 135, widthSize, heightSize));
+            heightStart = defaultHeightStart;
+            gp.DrawString("Category : " + category.CategoryName, font, sb, new Rectangle(widthStart, 190, widthSize, heightSize));
             for (int i = 0; i < 4; i++)
             {
 
