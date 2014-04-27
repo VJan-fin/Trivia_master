@@ -6,15 +6,15 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public class Hard : Game<string, string>
+    public class Hard : Game<string, AlphabetAnswer>
     {
-        public AssociationForm form;
+        public AssociationForm<AlphabetAnswer> form;
 
-        public override bool showQ(Category<string, string> cat)
+        public override bool showQ(Category<string, AlphabetAnswer> cat)
         {
 
-            IQuestion<string, string> question = cat.getNextQuestion();
-            AssociationForm form = new AssociationForm(question,cat);
+            IQuestion<string, AlphabetAnswer> question = cat.getNextQuestion();
+            AssociationForm<AlphabetAnswer> form = new AssociationForm<AlphabetAnswer>(cat, question);
             if (form.ShowDialog() == DialogResult.Yes)
                 return true;
 

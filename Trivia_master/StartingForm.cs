@@ -137,13 +137,13 @@ namespace Trivia_master
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            AssociationQ<string, string> question = new AssociationQ<string, string>();
+            AssociationQ<string, AlphabetAnswer> question = new AssociationQ<string, AlphabetAnswer>();
             question.Question.Add("A programming language");
             question.Question.Add("John McCarthy");
             question.Question.Add("Artificial intelligence");
             question.Question.Add("Has a lot of dialects");
-            question.CorrectAnswers.Add("LISP");
-            Category<string, string> category = new Category<string, string>();
+            question.CorrectAnswers.Add(new AlphabetAnswer("LISP"));
+            Category<string, AlphabetAnswer> category = new Category<string, AlphabetAnswer>();
             category.CategoryName = "Computer Science";
             category.addQuestion(question);
             Hard hard = new Hard();

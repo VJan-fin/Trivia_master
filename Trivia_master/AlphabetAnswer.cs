@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    class AlphabetAnswer : MediumAnswerPainter
+    public class AlphabetAnswer : MediumAnswerPainter
     {
         protected String answer { get; set; }
         protected String CorrectAnswer { get; set; }

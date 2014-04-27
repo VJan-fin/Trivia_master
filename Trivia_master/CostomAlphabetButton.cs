@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Trivia_master
 {
-    class CostomAlphabetButton
+    public class CostomAlphabetButton
     {
         public Point Location { get; set; }
         public Size Size { get; set; }

@@ -9,27 +9,95 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public partial class AssociationForm : Form1
+    public partial class AssociationForm<U> : Form1
+        where U : MediumAnswerPainter
     {
 
-        IQuestion<string,string> question;
-        Category<string, string> category;
+        IQuestion<string,U> question;
+        Category<string, U> category;
+        protected String Question { get; set; }
+        protected U Answer { get; set; }
+        protected int Answere { get; set; }
 
-   
         public AssociationForm()
         {
             InitializeComponent();
         }
 
-        public AssociationForm(IQuestion<string, string> iq, Category<string,string> cat)
+        public AssociationForm(Category<String, U> c, IQuestion<String, U> q)
         {
             InitializeComponent();
-            question = iq;
-            this.category = cat;
-            addAssociations();
+            question = q;
+            this.category = c;
+            Answere = 0;
+            DoubleBuffered = true;
+            Answer = q.getCorrectAnswer()[0];
+            Answer.Form = this; 
+            Answer.AlphaFont = button1.Font;
+            Answer.Font = triviaLabel2.Font;
+            Answer.Reset();
+            UpdateView();
         }
 
-        private void addAssociations()
+        private void Draw(Graphics g)
+        {
+            if(Answere == 0)
+                addAssociations(g);
+            Answer.Draw(g);
+        }
+
+        private void AlphabetForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Answer.KeyPress(e);
+        }
+
+        private void AlphabetForm_Paint(object sender, PaintEventArgs e)
+        {
+            Draw(e.Graphics);
+        }
+
+        private void AlphabetForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            Answer.KeyDown(e);
+        }
+
+        private void AlphabetForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            Answer.KeyUp(e);
+        }
+
+        public override void UpdateView()
+        {
+            Invalidate(true);
+        }
+
+        private void AlphabetForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            Answer.MouseDown(e);
+        }
+
+        private void AlphabetForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            Answer.MouseUp(e);
+        }
+
+        private void AlphabetForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            Answer.MouseMove(e);
+        }
+
+        public override Size getSize()
+        {
+            return Size;
+        }
+
+        public override void Answered()
+        {
+            Answere = 1;
+            UpdateView();
+        }
+
+        private void addAssociations(Graphics gp)
         {
             Bitmap back = new Bitmap(this.BackgroundImage);
          
@@ -48,7 +116,7 @@ namespace Trivia_master
                 heightStart += increment;
             }
            
-            int wordCount = question.getCorrectAnswer()[0].Count();
+            /*int wordCount = question.getCorrectAnswer()[0].Count();
             StringBuilder strb = new StringBuilder();
             for (int i = 1; i <= wordCount; i++)
             {
@@ -56,7 +124,7 @@ namespace Trivia_master
                 if (i != wordCount)
                   strb.Append(" ");
             }
-            triviaLabel2.Text = strb.ToString();
+            triviaLabel2.Text = strb.ToString();*/
 
             Graphics graph = CreateGraphics();
             /*  Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);

@@ -15,12 +15,9 @@ namespace Trivia_master
         protected T Question { get; set; }
         protected U Answer { get; set; }
         protected int Answere { get; set; }
-        protected int TimeToClose { get; set; }
-        List<AlphabetButton> list;
         public AlphabetForm(Category<T, U> c, IQuestion<T, U> q, int TimeToClose = 3)
         {
             Answere = 0;
-            this.TimeToClose = TimeToClose;
             InitializeComponent();
             DoubleBuffered = true;
             Question = q.getQuestion()[0];

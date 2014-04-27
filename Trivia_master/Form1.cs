@@ -38,7 +38,7 @@ namespace Trivia_master
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (IsClicked)
+            if (IsClicked && Cursor != Cursors.Hand)
             {
                 this.Location = new Point(this.Location.X + (e.Location.X - mousePoint.X), this.Location.Y + (e.Location.Y - mousePoint.Y));
             }
