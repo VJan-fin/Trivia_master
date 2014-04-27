@@ -47,7 +47,7 @@ namespace Trivia_master
                 g.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
                 heightStart += increment;
             }
-
+           
             int wordCount = question.getCorrectAnswer()[0].Count();
             StringBuilder strb = new StringBuilder();
             for (int i = 1; i <= wordCount; i++)

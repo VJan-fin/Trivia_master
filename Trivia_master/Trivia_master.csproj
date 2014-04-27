@@ -63,6 +63,7 @@
     <Compile Include="AlphabetForm.Designer.cs">
       <DependentUpon>AlphabetForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlphabetJoker.cs" />
     <Compile Include="AlphabetQuestion.cs" />
     <Compile Include="ExitButton.cs">
       <SubType>Component</SubType>
@@ -204,6 +205,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TRU BRICK 2 DARK BLUE.jpg" />
+    <None Include="Resources\Joker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joker1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

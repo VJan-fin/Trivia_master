@@ -8,16 +8,29 @@ namespace Trivia_master
 {
     class AlphabetQuestion : MediumQuestionPainter
     {
-        String question;
+        private String question;
+        private StringBuilder sb;
+        public AlphabetQuestion()
+        {
+            StringBuilder sb = new StringBuilder();
+        }
 
         public AlphabetQuestion(String q)
         {
-            StringBuilder sb = new StringBuilder(q);
-            for (int i = q.Length - 1; i > 0; i--)
+            question = q;
+            sb = new StringBuilder();
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+            int pom = (int)(Math.Min(Size.Width, Size.Height) / 14);
+            StringBuilder sb = new StringBuilder(question);
+            for (int i = question.Length - 1; i > 0; i--)
             {
-                if (i % 45 == 0)
+                if (i % pom == 0)
                 {
-                    while (!q.ElementAt(i).ToString().Equals(" ") || i == 0)
+                    while (!question.ElementAt(i).ToString().Equals(" ") || i == 0)
                     {
                         i--;
                     }
@@ -25,11 +38,12 @@ namespace Trivia_master
                     sb.Remove(i + 1, 1);
                 }
             }
-            question = sb.ToString();
+            this.sb = sb;
         }
+
         public override void Draw(System.Drawing.Graphics g)
         {
-            g.DrawString(question, Font, new SolidBrush(Color.FromArgb(217, 0, 0)), new Point(200, 230));
+            g.DrawString(sb.ToString(), Font, new SolidBrush(Color.FromArgb(217, 0, 0)), new Point(Location.X + (Math.Min(Size.Width, Size.Height) / 5), Location.Y + (Math.Min(Size.Width, Size.Height) * 2 / 5)));
         }
     }
 }

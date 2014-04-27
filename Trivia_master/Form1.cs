@@ -77,19 +77,38 @@ namespace Trivia_master
 
         public virtual void CorrectAnswer()
         {
+            DialogResult = DialogResult.OK;
         }
 
         public virtual void IncorrectAnswer()
         {
+            DialogResult = DialogResult.No;
         }
 
         public virtual void UpdateView()
         {
         }
 
+<<<<<<< HEAD
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+=======
+
+        public virtual Size getSize()
+        {
+            return this.Size;
+        }
+
+
+        public virtual void TimeElapsed()
+        {
+            DialogResult = DialogResult.No;
+        }
+
+        public virtual void Answered()
+        {
+>>>>>>> 5d84a0c095df653cd9a459c23b43590c23963974
         }
     }
 }
