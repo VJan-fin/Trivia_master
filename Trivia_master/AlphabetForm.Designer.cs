@@ -29,7 +29,7 @@ namespace Trivia_master
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new Trivia_master.AlphabetButton();
+            this.components = new System.ComponentModel.Container();
             this.triviaButton1 = new Trivia_master.AlphabetButton();
             this.triviaButton2 = new Trivia_master.AlphabetButton();
             this.triviaButton3 = new Trivia_master.AlphabetButton();
@@ -56,51 +56,13 @@ namespace Trivia_master
             this.triviaButton24 = new Trivia_master.AlphabetButton();
             this.triviaButton25 = new Trivia_master.AlphabetButton();
             this.label2 = new Trivia_master.TriviaLabel();
-            this.lblOdgovor = new Trivia_master.TriviaLabel();
             this.lblKategorija = new Trivia_master.TriviaLabel();
-            this.alphabetButton1 = new Trivia_master.AlphabetButton();
-            this.alphabetButton2 = new Trivia_master.AlphabetButton();
-            this.alphabetButton3 = new Trivia_master.AlphabetButton();
-            this.alphabetButton4 = new Trivia_master.AlphabetButton();
-            this.alphabetButton5 = new Trivia_master.AlphabetButton();
-            this.alphabetButton6 = new Trivia_master.AlphabetButton();
-            this.alphabetButton7 = new Trivia_master.AlphabetButton();
-            this.alphabetButton8 = new Trivia_master.AlphabetButton();
-            this.alphabetButton9 = new Trivia_master.AlphabetButton();
-            this.alphabetButton10 = new Trivia_master.AlphabetButton();
-            this.alphabetButton11 = new Trivia_master.AlphabetButton();
-            this.alphabetButton12 = new Trivia_master.AlphabetButton();
-            this.alphabetButton13 = new Trivia_master.AlphabetButton();
-            this.alphabetButton14 = new Trivia_master.AlphabetButton();
-            this.alphabetButton15 = new Trivia_master.AlphabetButton();
-            this.alphabetButton16 = new Trivia_master.AlphabetButton();
-            this.alphabetButton17 = new Trivia_master.AlphabetButton();
-            this.alphabetButton18 = new Trivia_master.AlphabetButton();
-            this.alphabetButton19 = new Trivia_master.AlphabetButton();
-            this.alphabetButton20 = new Trivia_master.AlphabetButton();
-            this.alphabetButton21 = new Trivia_master.AlphabetButton();
-            this.alphabetButton22 = new Trivia_master.AlphabetButton();
-            this.alphabetButton23 = new Trivia_master.AlphabetButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblOdgovor = new Trivia_master.TriviaLabel();
+            this.button1 = new Trivia_master.AlphabetButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(163, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 4;
-            this.button1.TabStop = false;
-            this.button1.Text = "A";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
             // 
             // triviaButton1
             // 
@@ -118,8 +80,8 @@ namespace Trivia_master
             this.triviaButton1.TabStop = false;
             this.triviaButton1.Text = "B";
             this.triviaButton1.UseVisualStyleBackColor = false;
-            this.triviaButton1.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton2
             // 
@@ -137,8 +99,8 @@ namespace Trivia_master
             this.triviaButton2.TabStop = false;
             this.triviaButton2.Text = "C";
             this.triviaButton2.UseVisualStyleBackColor = false;
-            this.triviaButton2.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton3
             // 
@@ -156,8 +118,8 @@ namespace Trivia_master
             this.triviaButton3.TabStop = false;
             this.triviaButton3.Text = "D";
             this.triviaButton3.UseVisualStyleBackColor = false;
-            this.triviaButton3.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton4
             // 
@@ -175,8 +137,8 @@ namespace Trivia_master
             this.triviaButton4.TabStop = false;
             this.triviaButton4.Text = "E";
             this.triviaButton4.UseVisualStyleBackColor = false;
-            this.triviaButton4.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton5
             // 
@@ -194,8 +156,8 @@ namespace Trivia_master
             this.triviaButton5.TabStop = false;
             this.triviaButton5.Text = "F";
             this.triviaButton5.UseVisualStyleBackColor = false;
-            this.triviaButton5.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton6
             // 
@@ -213,8 +175,8 @@ namespace Trivia_master
             this.triviaButton6.TabStop = false;
             this.triviaButton6.Text = "G";
             this.triviaButton6.UseVisualStyleBackColor = false;
-            this.triviaButton6.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton7
             // 
@@ -232,8 +194,8 @@ namespace Trivia_master
             this.triviaButton7.TabStop = false;
             this.triviaButton7.Text = "H";
             this.triviaButton7.UseVisualStyleBackColor = false;
-            this.triviaButton7.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton8
             // 
@@ -251,8 +213,8 @@ namespace Trivia_master
             this.triviaButton8.TabStop = false;
             this.triviaButton8.Text = "I";
             this.triviaButton8.UseVisualStyleBackColor = false;
-            this.triviaButton8.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton9
             // 
@@ -270,8 +232,8 @@ namespace Trivia_master
             this.triviaButton9.TabStop = false;
             this.triviaButton9.Text = "J";
             this.triviaButton9.UseVisualStyleBackColor = false;
-            this.triviaButton9.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton10
             // 
@@ -289,8 +251,8 @@ namespace Trivia_master
             this.triviaButton10.TabStop = false;
             this.triviaButton10.Text = "K";
             this.triviaButton10.UseVisualStyleBackColor = false;
-            this.triviaButton10.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton11
             // 
@@ -308,8 +270,8 @@ namespace Trivia_master
             this.triviaButton11.TabStop = false;
             this.triviaButton11.Text = "L";
             this.triviaButton11.UseVisualStyleBackColor = false;
-            this.triviaButton11.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton12
             // 
@@ -327,8 +289,8 @@ namespace Trivia_master
             this.triviaButton12.TabStop = false;
             this.triviaButton12.Text = "M";
             this.triviaButton12.UseVisualStyleBackColor = false;
-            this.triviaButton12.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton13
             // 
@@ -346,8 +308,8 @@ namespace Trivia_master
             this.triviaButton13.TabStop = false;
             this.triviaButton13.Text = "N";
             this.triviaButton13.UseVisualStyleBackColor = false;
-            this.triviaButton13.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton14
             // 
@@ -365,8 +327,8 @@ namespace Trivia_master
             this.triviaButton14.TabStop = false;
             this.triviaButton14.Text = "O";
             this.triviaButton14.UseVisualStyleBackColor = false;
-            this.triviaButton14.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton15
             // 
@@ -384,8 +346,8 @@ namespace Trivia_master
             this.triviaButton15.TabStop = false;
             this.triviaButton15.Text = "P";
             this.triviaButton15.UseVisualStyleBackColor = false;
-            this.triviaButton15.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton16
             // 
@@ -403,8 +365,8 @@ namespace Trivia_master
             this.triviaButton16.TabStop = false;
             this.triviaButton16.Text = "Q";
             this.triviaButton16.UseVisualStyleBackColor = false;
-            this.triviaButton16.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton16.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton17
             // 
@@ -422,8 +384,8 @@ namespace Trivia_master
             this.triviaButton17.TabStop = false;
             this.triviaButton17.Text = "R";
             this.triviaButton17.UseVisualStyleBackColor = false;
-            this.triviaButton17.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton17.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton18
             // 
@@ -441,8 +403,8 @@ namespace Trivia_master
             this.triviaButton18.TabStop = false;
             this.triviaButton18.Text = "S";
             this.triviaButton18.UseVisualStyleBackColor = false;
-            this.triviaButton18.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton18.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton19
             // 
@@ -460,8 +422,8 @@ namespace Trivia_master
             this.triviaButton19.TabStop = false;
             this.triviaButton19.Text = "T";
             this.triviaButton19.UseVisualStyleBackColor = false;
-            this.triviaButton19.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton19.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton20
             // 
@@ -479,8 +441,8 @@ namespace Trivia_master
             this.triviaButton20.TabStop = false;
             this.triviaButton20.Text = "U";
             this.triviaButton20.UseVisualStyleBackColor = false;
-            this.triviaButton20.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton21
             // 
@@ -498,8 +460,8 @@ namespace Trivia_master
             this.triviaButton21.TabStop = false;
             this.triviaButton21.Text = "V";
             this.triviaButton21.UseVisualStyleBackColor = false;
-            this.triviaButton21.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton22
             // 
@@ -517,8 +479,8 @@ namespace Trivia_master
             this.triviaButton22.TabStop = false;
             this.triviaButton22.Text = "W";
             this.triviaButton22.UseVisualStyleBackColor = false;
-            this.triviaButton22.Click += new System.EventHandler(this.button1_Click);
             this.triviaButton22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.triviaButton22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton23
             // 
@@ -536,7 +498,7 @@ namespace Trivia_master
             this.triviaButton23.TabStop = false;
             this.triviaButton23.Text = "X";
             this.triviaButton23.UseVisualStyleBackColor = false;
-            this.triviaButton23.Click += new System.EventHandler(this.button1_Click);
+            this.triviaButton23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton24
             // 
@@ -554,7 +516,7 @@ namespace Trivia_master
             this.triviaButton24.TabStop = false;
             this.triviaButton24.Text = "Y";
             this.triviaButton24.UseVisualStyleBackColor = false;
-            this.triviaButton24.Click += new System.EventHandler(this.button1_Click);
+            this.triviaButton24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // triviaButton25
             // 
@@ -572,7 +534,7 @@ namespace Trivia_master
             this.triviaButton25.TabStop = false;
             this.triviaButton25.Text = "Z";
             this.triviaButton25.UseVisualStyleBackColor = false;
-            this.triviaButton25.Click += new System.EventHandler(this.button1_Click);
+            this.triviaButton25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // label2
             // 
@@ -580,24 +542,11 @@ namespace Trivia_master
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(251, 154);
+            this.label2.Location = new System.Drawing.Point(223, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 30;
             this.label2.Text = "Category:";
-            // 
-            // lblOdgovor
-            // 
-            this.lblOdgovor.AutoSize = true;
-            this.lblOdgovor.BackColor = System.Drawing.Color.Transparent;
-            this.lblOdgovor.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOdgovor.ForeColor = System.Drawing.Color.White;
-            this.lblOdgovor.Location = new System.Drawing.Point(157, 409);
-            this.lblOdgovor.Name = "lblOdgovor";
-            this.lblOdgovor.Size = new System.Drawing.Size(221, 35);
-            this.lblOdgovor.TabIndex = 32;
-            this.lblOdgovor.Text = "_ _ _ _ _ _ _ _";
-            this.lblOdgovor.Visible = false;
             // 
             // lblKategorija
             // 
@@ -605,537 +554,135 @@ namespace Trivia_master
             this.lblKategorija.BackColor = System.Drawing.Color.Transparent;
             this.lblKategorija.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKategorija.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblKategorija.Location = new System.Drawing.Point(343, 154);
+            this.lblKategorija.Location = new System.Drawing.Point(328, 186);
             this.lblKategorija.Name = "lblKategorija";
             this.lblKategorija.Size = new System.Drawing.Size(0, 22);
             this.lblKategorija.TabIndex = 33;
             // 
-            // alphabetButton1
+            // pictureBox2
             // 
-            this.alphabetButton1.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton1.Location = new System.Drawing.Point(163, 459);
-            this.alphabetButton1.Name = "alphabetButton1";
-            this.alphabetButton1.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton1.TabIndex = 4;
-            this.alphabetButton1.TabStop = false;
-            this.alphabetButton1.Text = "A";
-            this.alphabetButton1.UseVisualStyleBackColor = false;
-            this.alphabetButton1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(227, 135);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(338, 263);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
-            // alphabetButton2
+            // timer1
             // 
-            this.alphabetButton2.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton2.Location = new System.Drawing.Point(209, 459);
-            this.alphabetButton2.Name = "alphabetButton2";
-            this.alphabetButton2.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton2.TabIndex = 5;
-            this.alphabetButton2.TabStop = false;
-            this.alphabetButton2.Text = "B";
-            this.alphabetButton2.UseVisualStyleBackColor = false;
-            this.alphabetButton2.Click += new System.EventHandler(this.button1_Click);
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // alphabetButton3
+            // lblOdgovor
             // 
-            this.alphabetButton3.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton3.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton3.Location = new System.Drawing.Point(255, 459);
-            this.alphabetButton3.Name = "alphabetButton3";
-            this.alphabetButton3.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton3.TabIndex = 6;
-            this.alphabetButton3.TabStop = false;
-            this.alphabetButton3.Text = "C";
-            this.alphabetButton3.UseVisualStyleBackColor = false;
-            this.alphabetButton3.Click += new System.EventHandler(this.button1_Click);
+            this.lblOdgovor.AutoSize = true;
+            this.lblOdgovor.BackColor = System.Drawing.Color.Transparent;
+            this.lblOdgovor.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOdgovor.ForeColor = System.Drawing.Color.White;
+            this.lblOdgovor.Location = new System.Drawing.Point(157, 418);
+            this.lblOdgovor.Name = "lblOdgovor";
+            this.lblOdgovor.Size = new System.Drawing.Size(221, 35);
+            this.lblOdgovor.TabIndex = 32;
+            this.lblOdgovor.Text = "_ _ _ _ _ _ _ _";
+            this.lblOdgovor.Visible = false;
             // 
-            // alphabetButton4
+            // button1
             // 
-            this.alphabetButton4.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton4.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton4.Location = new System.Drawing.Point(301, 459);
-            this.alphabetButton4.Name = "alphabetButton4";
-            this.alphabetButton4.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton4.TabIndex = 7;
-            this.alphabetButton4.TabStop = false;
-            this.alphabetButton4.Text = "D";
-            this.alphabetButton4.UseVisualStyleBackColor = false;
-            this.alphabetButton4.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton5
-            // 
-            this.alphabetButton5.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton5.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton5.Location = new System.Drawing.Point(347, 459);
-            this.alphabetButton5.Name = "alphabetButton5";
-            this.alphabetButton5.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton5.TabIndex = 8;
-            this.alphabetButton5.TabStop = false;
-            this.alphabetButton5.Text = "E";
-            this.alphabetButton5.UseVisualStyleBackColor = false;
-            this.alphabetButton5.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton6
-            // 
-            this.alphabetButton6.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton6.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton6.Location = new System.Drawing.Point(393, 459);
-            this.alphabetButton6.Name = "alphabetButton6";
-            this.alphabetButton6.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton6.TabIndex = 9;
-            this.alphabetButton6.TabStop = false;
-            this.alphabetButton6.Text = "F";
-            this.alphabetButton6.UseVisualStyleBackColor = false;
-            this.alphabetButton6.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton7
-            // 
-            this.alphabetButton7.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton7.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton7.Location = new System.Drawing.Point(439, 459);
-            this.alphabetButton7.Name = "alphabetButton7";
-            this.alphabetButton7.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton7.TabIndex = 10;
-            this.alphabetButton7.TabStop = false;
-            this.alphabetButton7.Text = "G";
-            this.alphabetButton7.UseVisualStyleBackColor = false;
-            this.alphabetButton7.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton8
-            // 
-            this.alphabetButton8.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton8.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton8.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton8.Location = new System.Drawing.Point(485, 459);
-            this.alphabetButton8.Name = "alphabetButton8";
-            this.alphabetButton8.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton8.TabIndex = 11;
-            this.alphabetButton8.TabStop = false;
-            this.alphabetButton8.Text = "H";
-            this.alphabetButton8.UseVisualStyleBackColor = false;
-            this.alphabetButton8.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton9
-            // 
-            this.alphabetButton9.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton9.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton9.Location = new System.Drawing.Point(531, 459);
-            this.alphabetButton9.Name = "alphabetButton9";
-            this.alphabetButton9.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton9.TabIndex = 12;
-            this.alphabetButton9.TabStop = false;
-            this.alphabetButton9.Text = "I";
-            this.alphabetButton9.UseVisualStyleBackColor = false;
-            this.alphabetButton9.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton10
-            // 
-            this.alphabetButton10.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton10.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton10.Location = new System.Drawing.Point(577, 459);
-            this.alphabetButton10.Name = "alphabetButton10";
-            this.alphabetButton10.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton10.TabIndex = 13;
-            this.alphabetButton10.TabStop = false;
-            this.alphabetButton10.Text = "J";
-            this.alphabetButton10.UseVisualStyleBackColor = false;
-            this.alphabetButton10.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton11
-            // 
-            this.alphabetButton11.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton11.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton11.Location = new System.Drawing.Point(163, 505);
-            this.alphabetButton11.Name = "alphabetButton11";
-            this.alphabetButton11.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton11.TabIndex = 14;
-            this.alphabetButton11.TabStop = false;
-            this.alphabetButton11.Text = "K";
-            this.alphabetButton11.UseVisualStyleBackColor = false;
-            this.alphabetButton11.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton12
-            // 
-            this.alphabetButton12.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton12.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton12.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton12.Location = new System.Drawing.Point(209, 505);
-            this.alphabetButton12.Name = "alphabetButton12";
-            this.alphabetButton12.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton12.TabIndex = 15;
-            this.alphabetButton12.TabStop = false;
-            this.alphabetButton12.Text = "L";
-            this.alphabetButton12.UseVisualStyleBackColor = false;
-            this.alphabetButton12.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton13
-            // 
-            this.alphabetButton13.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton13.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton13.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton13.Location = new System.Drawing.Point(255, 505);
-            this.alphabetButton13.Name = "alphabetButton13";
-            this.alphabetButton13.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton13.TabIndex = 16;
-            this.alphabetButton13.TabStop = false;
-            this.alphabetButton13.Text = "M";
-            this.alphabetButton13.UseVisualStyleBackColor = false;
-            this.alphabetButton13.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton14
-            // 
-            this.alphabetButton14.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton14.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton14.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton14.Location = new System.Drawing.Point(301, 505);
-            this.alphabetButton14.Name = "alphabetButton14";
-            this.alphabetButton14.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton14.TabIndex = 17;
-            this.alphabetButton14.TabStop = false;
-            this.alphabetButton14.Text = "N";
-            this.alphabetButton14.UseVisualStyleBackColor = false;
-            this.alphabetButton14.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton15
-            // 
-            this.alphabetButton15.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton15.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton15.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton15.Location = new System.Drawing.Point(347, 505);
-            this.alphabetButton15.Name = "alphabetButton15";
-            this.alphabetButton15.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton15.TabIndex = 18;
-            this.alphabetButton15.TabStop = false;
-            this.alphabetButton15.Text = "O";
-            this.alphabetButton15.UseVisualStyleBackColor = false;
-            this.alphabetButton15.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton16
-            // 
-            this.alphabetButton16.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton16.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton16.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton16.Location = new System.Drawing.Point(393, 505);
-            this.alphabetButton16.Name = "alphabetButton16";
-            this.alphabetButton16.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton16.TabIndex = 19;
-            this.alphabetButton16.TabStop = false;
-            this.alphabetButton16.Text = "P";
-            this.alphabetButton16.UseVisualStyleBackColor = false;
-            this.alphabetButton16.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton17
-            // 
-            this.alphabetButton17.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton17.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton17.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton17.Location = new System.Drawing.Point(439, 505);
-            this.alphabetButton17.Name = "alphabetButton17";
-            this.alphabetButton17.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton17.TabIndex = 20;
-            this.alphabetButton17.TabStop = false;
-            this.alphabetButton17.Text = "Q";
-            this.alphabetButton17.UseVisualStyleBackColor = false;
-            this.alphabetButton17.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton18
-            // 
-            this.alphabetButton18.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton18.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton18.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton18.Location = new System.Drawing.Point(485, 505);
-            this.alphabetButton18.Name = "alphabetButton18";
-            this.alphabetButton18.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton18.TabIndex = 21;
-            this.alphabetButton18.TabStop = false;
-            this.alphabetButton18.Text = "R";
-            this.alphabetButton18.UseVisualStyleBackColor = false;
-            this.alphabetButton18.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton19
-            // 
-            this.alphabetButton19.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton19.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton19.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton19.Location = new System.Drawing.Point(531, 505);
-            this.alphabetButton19.Name = "alphabetButton19";
-            this.alphabetButton19.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton19.TabIndex = 22;
-            this.alphabetButton19.TabStop = false;
-            this.alphabetButton19.Text = "S";
-            this.alphabetButton19.UseVisualStyleBackColor = false;
-            this.alphabetButton19.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton20
-            // 
-            this.alphabetButton20.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton20.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton20.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton20.Location = new System.Drawing.Point(577, 505);
-            this.alphabetButton20.Name = "alphabetButton20";
-            this.alphabetButton20.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton20.TabIndex = 23;
-            this.alphabetButton20.TabStop = false;
-            this.alphabetButton20.Text = "T";
-            this.alphabetButton20.UseVisualStyleBackColor = false;
-            this.alphabetButton20.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton21
-            // 
-            this.alphabetButton21.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton21.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton21.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton21.Location = new System.Drawing.Point(163, 551);
-            this.alphabetButton21.Name = "alphabetButton21";
-            this.alphabetButton21.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton21.TabIndex = 24;
-            this.alphabetButton21.TabStop = false;
-            this.alphabetButton21.Text = "U";
-            this.alphabetButton21.UseVisualStyleBackColor = false;
-            this.alphabetButton21.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton22
-            // 
-            this.alphabetButton22.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton22.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton22.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton22.Location = new System.Drawing.Point(209, 551);
-            this.alphabetButton22.Name = "alphabetButton22";
-            this.alphabetButton22.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton22.TabIndex = 25;
-            this.alphabetButton22.TabStop = false;
-            this.alphabetButton22.Text = "V";
-            this.alphabetButton22.UseVisualStyleBackColor = false;
-            this.alphabetButton22.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alphabetButton23
-            // 
-            this.alphabetButton23.BackColor = System.Drawing.Color.Transparent;
-            this.alphabetButton23.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.alphabetButton23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.alphabetButton23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
-            this.alphabetButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.alphabetButton23.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphabetButton23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.alphabetButton23.Location = new System.Drawing.Point(255, 551);
-            this.alphabetButton23.Name = "alphabetButton23";
-            this.alphabetButton23.Size = new System.Drawing.Size(40, 40);
-            this.alphabetButton23.TabIndex = 26;
-            this.alphabetButton23.TabStop = false;
-            this.alphabetButton23.Text = "W";
-            this.alphabetButton23.UseVisualStyleBackColor = false;
-            this.alphabetButton23.Click += new System.EventHandler(this.button1_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(192)))), ((int)(((byte)(21)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(163, 459);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 4;
+            this.button1.TabStop = false;
+            this.button1.Text = "A";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
             // 
             // AlphabetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 640);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblKategorija);
             this.Controls.Add(this.lblOdgovor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.triviaButton25);
             this.Controls.Add(this.triviaButton24);
             this.Controls.Add(this.triviaButton23);
-            this.Controls.Add(this.alphabetButton23);
             this.Controls.Add(this.triviaButton22);
-            this.Controls.Add(this.alphabetButton22);
             this.Controls.Add(this.triviaButton21);
-            this.Controls.Add(this.alphabetButton21);
             this.Controls.Add(this.triviaButton20);
-            this.Controls.Add(this.alphabetButton20);
             this.Controls.Add(this.triviaButton19);
-            this.Controls.Add(this.alphabetButton19);
             this.Controls.Add(this.triviaButton18);
-            this.Controls.Add(this.alphabetButton18);
             this.Controls.Add(this.triviaButton17);
-            this.Controls.Add(this.alphabetButton17);
             this.Controls.Add(this.triviaButton16);
-            this.Controls.Add(this.alphabetButton16);
             this.Controls.Add(this.triviaButton15);
-            this.Controls.Add(this.alphabetButton15);
             this.Controls.Add(this.triviaButton14);
-            this.Controls.Add(this.alphabetButton14);
             this.Controls.Add(this.triviaButton13);
-            this.Controls.Add(this.alphabetButton13);
             this.Controls.Add(this.triviaButton12);
-            this.Controls.Add(this.alphabetButton12);
             this.Controls.Add(this.triviaButton11);
-            this.Controls.Add(this.alphabetButton11);
             this.Controls.Add(this.triviaButton10);
-            this.Controls.Add(this.alphabetButton10);
             this.Controls.Add(this.triviaButton9);
-            this.Controls.Add(this.alphabetButton9);
             this.Controls.Add(this.triviaButton8);
-            this.Controls.Add(this.alphabetButton8);
             this.Controls.Add(this.triviaButton7);
-            this.Controls.Add(this.alphabetButton7);
             this.Controls.Add(this.triviaButton6);
-            this.Controls.Add(this.alphabetButton6);
             this.Controls.Add(this.triviaButton5);
-            this.Controls.Add(this.alphabetButton5);
             this.Controls.Add(this.triviaButton4);
-            this.Controls.Add(this.alphabetButton4);
             this.Controls.Add(this.triviaButton3);
-            this.Controls.Add(this.alphabetButton3);
             this.Controls.Add(this.triviaButton2);
-            this.Controls.Add(this.alphabetButton2);
             this.Controls.Add(this.triviaButton1);
-            this.Controls.Add(this.alphabetButton1);
             this.Controls.Add(this.button1);
             this.Name = "AlphabetForm";
             this.Text = "butt";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.AlphabetForm_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AlphabetForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AlphabetForm_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AlphabetForm_MouseUp);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.alphabetButton1, 0);
             this.Controls.SetChildIndex(this.triviaButton1, 0);
-            this.Controls.SetChildIndex(this.alphabetButton2, 0);
             this.Controls.SetChildIndex(this.triviaButton2, 0);
-            this.Controls.SetChildIndex(this.alphabetButton3, 0);
             this.Controls.SetChildIndex(this.triviaButton3, 0);
-            this.Controls.SetChildIndex(this.alphabetButton4, 0);
             this.Controls.SetChildIndex(this.triviaButton4, 0);
-            this.Controls.SetChildIndex(this.alphabetButton5, 0);
             this.Controls.SetChildIndex(this.triviaButton5, 0);
-            this.Controls.SetChildIndex(this.alphabetButton6, 0);
             this.Controls.SetChildIndex(this.triviaButton6, 0);
-            this.Controls.SetChildIndex(this.alphabetButton7, 0);
             this.Controls.SetChildIndex(this.triviaButton7, 0);
-            this.Controls.SetChildIndex(this.alphabetButton8, 0);
             this.Controls.SetChildIndex(this.triviaButton8, 0);
-            this.Controls.SetChildIndex(this.alphabetButton9, 0);
             this.Controls.SetChildIndex(this.triviaButton9, 0);
-            this.Controls.SetChildIndex(this.alphabetButton10, 0);
             this.Controls.SetChildIndex(this.triviaButton10, 0);
-            this.Controls.SetChildIndex(this.alphabetButton11, 0);
             this.Controls.SetChildIndex(this.triviaButton11, 0);
-            this.Controls.SetChildIndex(this.alphabetButton12, 0);
             this.Controls.SetChildIndex(this.triviaButton12, 0);
-            this.Controls.SetChildIndex(this.alphabetButton13, 0);
             this.Controls.SetChildIndex(this.triviaButton13, 0);
-            this.Controls.SetChildIndex(this.alphabetButton14, 0);
             this.Controls.SetChildIndex(this.triviaButton14, 0);
-            this.Controls.SetChildIndex(this.alphabetButton15, 0);
             this.Controls.SetChildIndex(this.triviaButton15, 0);
-            this.Controls.SetChildIndex(this.alphabetButton16, 0);
             this.Controls.SetChildIndex(this.triviaButton16, 0);
-            this.Controls.SetChildIndex(this.alphabetButton17, 0);
             this.Controls.SetChildIndex(this.triviaButton17, 0);
-            this.Controls.SetChildIndex(this.alphabetButton18, 0);
             this.Controls.SetChildIndex(this.triviaButton18, 0);
-            this.Controls.SetChildIndex(this.alphabetButton19, 0);
             this.Controls.SetChildIndex(this.triviaButton19, 0);
-            this.Controls.SetChildIndex(this.alphabetButton20, 0);
             this.Controls.SetChildIndex(this.triviaButton20, 0);
-            this.Controls.SetChildIndex(this.alphabetButton21, 0);
             this.Controls.SetChildIndex(this.triviaButton21, 0);
-            this.Controls.SetChildIndex(this.alphabetButton22, 0);
             this.Controls.SetChildIndex(this.triviaButton22, 0);
-            this.Controls.SetChildIndex(this.alphabetButton23, 0);
             this.Controls.SetChildIndex(this.triviaButton23, 0);
             this.Controls.SetChildIndex(this.triviaButton24, 0);
             this.Controls.SetChildIndex(this.triviaButton25, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.lblOdgovor, 0);
             this.Controls.SetChildIndex(this.lblKategorija, 0);
+            this.Controls.SetChildIndex(this.pictureBox2, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1143,7 +690,6 @@ namespace Trivia_master
 
         #endregion
 
-        private AlphabetButton button1;
         private AlphabetButton triviaButton1;
         private AlphabetButton triviaButton2;
         private AlphabetButton triviaButton3;
@@ -1170,31 +716,11 @@ namespace Trivia_master
         private AlphabetButton triviaButton24;
         private AlphabetButton triviaButton25;
         private TriviaLabel label2;
-        private TriviaLabel lblOdgovor;
         private TriviaLabel lblKategorija;
-        private AlphabetButton alphabetButton1;
-        private AlphabetButton alphabetButton2;
-        private AlphabetButton alphabetButton3;
-        private AlphabetButton alphabetButton4;
-        private AlphabetButton alphabetButton5;
-        private AlphabetButton alphabetButton6;
-        private AlphabetButton alphabetButton7;
-        private AlphabetButton alphabetButton8;
-        private AlphabetButton alphabetButton9;
-        private AlphabetButton alphabetButton10;
-        private AlphabetButton alphabetButton11;
-        private AlphabetButton alphabetButton12;
-        private AlphabetButton alphabetButton13;
-        private AlphabetButton alphabetButton14;
-        private AlphabetButton alphabetButton15;
-        private AlphabetButton alphabetButton16;
-        private AlphabetButton alphabetButton17;
-        private AlphabetButton alphabetButton18;
-        private AlphabetButton alphabetButton19;
-        private AlphabetButton alphabetButton20;
-        private AlphabetButton alphabetButton21;
-        private AlphabetButton alphabetButton22;
-        private AlphabetButton alphabetButton23;
+        private PictureBox pictureBox2;
+        private Timer timer1;
+        private TriviaLabel lblOdgovor;
+        private AlphabetButton button1;
 
     }
 }

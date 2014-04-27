@@ -6,20 +6,32 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Trivia_master.Properties;
 
 namespace Trivia_master
 {
     public partial class AlphabetForm<T, U> : Form1 where T : MediumQuestionPainter  where U : MediumAnswerPainter
     {
-        IQuestion<T, U> question;
+        protected T Question { get; set; }
+        protected U Answer { get; set; }
+        protected int Answere { get; set; }
+        protected int TimeToClose { get; set; }
         List<AlphabetButton> list;
-        int count;
-        public AlphabetForm(Category<T, U> c, IQuestion<T, U> q)
+        public AlphabetForm(Category<T, U> c, IQuestion<T, U> q, int TimeToClose = 3)
         {
+            Answere = 0;
+            this.TimeToClose = TimeToClose;
             InitializeComponent();
-            count = 0;
             DoubleBuffered = true;
-            question = q;
+            Question = q.getQuestion()[0];
+            Question.Form = this;
+            Question.Font = lblKategorija.Font;
+            Question.Reset();
+            Answer = q.getCorrectAnswer()[0];
+            Answer.Form = this;
+            Answer.Font = lblOdgovor.Font;
+            Answer.Reset();
+            lblKategorija.Text = c.ToString();
             list = new List<AlphabetButton>();
             list.Add(button1);
             list.Add(triviaButton1);
@@ -47,22 +59,20 @@ namespace Trivia_master
             list.Add(triviaButton23);
             list.Add(triviaButton24);
             list.Add(triviaButton25);
-            lblKategorija.Text = c.ToString();
-            question = q;
-            question.getQuestion()[0].Font = lblKategorija.Font;
-            question.getCorrectAnswer()[0].Font = lblOdgovor.Font;
-            question.getCorrectAnswer()[0].reset();
+            Invalidate(true);
         }
 
         private void Draw(Graphics g)
         {
-            question.getQuestion()[0].Draw(g);
-            question.getCorrectAnswer()[0].Draw(g);
+            if(Answere == 0)
+                Question.Draw(g);
+            Answer.Draw(g);
         }
 
         private void AlphabetForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Question.KeyPress(e);
+            Answer.KeyPress(e);
         }
 
         private void AlphabetForm_Paint(object sender, PaintEventArgs e)
@@ -72,32 +82,80 @@ namespace Trivia_master
 
         private void AlphabetForm_KeyDown(object sender, KeyEventArgs e)
         {
-            foreach (AlphabetButton btn in list)
-                if (btn.Text.Equals(e.KeyData.ToString().ToUpper()) && btn.Enabled != false)
-                    btn.BackColor = Color.Yellow;
-            Invalidate();
+            if (Answere != 0)
+                return;
+            foreach (Button btn in list)
+            {
+                if (btn.Enabled && btn.Text.Equals(e.KeyData.ToString().ToUpper()))
+                    btn.BackColor = Color.FromArgb(192, 192, 0);
+            }
+            Question.KeyDown(e);
+            Answer.KeyDown(e);
         }
 
         private void AlphabetForm_KeyUp(object sender, KeyEventArgs e)
         {
-
+            foreach (Button btn in list)
+            {
+                if (btn.Enabled && btn.Text.Equals(e.KeyData.ToString().ToUpper()) && btn.BackColor == Color.FromArgb(192, 192, 0))
+                {
+                    btn.BackColor = Color.Transparent;
+                    btn.Enabled = false;
+                }
+            }
+            if (Answere != 0)
+                return;
+            Question.KeyUp(e);
+            Answer.KeyUp(e);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public override void UpdateView()
         {
-            Button btn = sender as Button;
-            if (!question.getCorrectAnswer()[0].AddChar(btn.Text.ElementAt<Char>(0)))
-            {
-                count++;
-                if (count == 5)
-                    DialogResult = DialogResult.No;
-            }
-            if (question.getCorrectAnswer()[0].IsCorrect())
-            {
-                DialogResult = DialogResult.OK;
-            }
-            btn.Enabled = false;
             Invalidate();
+        }
+
+        private void AlphabetForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            Question.MouseDown(e);
+            Answer.MouseDown(e);
+        }
+
+        private void AlphabetForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            Question.MouseUp(e);
+            Answer.MouseUp(e);
+        }
+
+        private void AlphabetForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            Question.MouseMove(e);
+            Answer.MouseMove(e);
+        }
+
+        public override Size getSize()
+        {
+            return Size;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeToClose--;
+            if (TimeToClose == 0)
+            {
+                timer1.Stop();
+                if (Answere == 1)
+                    base.IncorrectAnswer();
+                else base.CorrectAnswer();
+            }
+        }
+
+        public override void Answered()
+        {
+            lblKategorija.Visible = false;
+            lblOdgovor.Visible = false;
+            label2.Visible = false;
+            Answere = 1;
+            UpdateView();
         }
     }
 }

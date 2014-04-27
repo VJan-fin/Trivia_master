@@ -92,13 +92,13 @@ namespace Trivia_master
         private void button2_Click(object sender, EventArgs e)
         {
             Medium obj = new Medium();
-            obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Finki" });
+            obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Computer Science" });
             obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
             AlphabetQuestion que = new AlphabetQuestion("First programming language?");
             List<MediumQuestionPainter> list = new List<MediumQuestionPainter>();
             list.Add(que);
             obj.Categories[0].questions[0].setQuestion(list);
-            AlphabetAnswer ans = new AlphabetAnswer("ADA");
+            MediumAnswerPainter ans = new AlphabetAnswer("ADA");
             List<MediumAnswerPainter> list1 = new List<MediumAnswerPainter>();
             list1.Add(ans);
             obj.Categories[0].questions[0].setCorrectAnswer(list1);
@@ -113,6 +113,16 @@ namespace Trivia_master
             list1 = new List<MediumAnswerPainter>();
             list1.Add(ans);
             obj.Categories[0].questions[1].setCorrectAnswer(list1);
+
+            obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            que = new AlphabetQuestion("Home");
+            list = new List<MediumQuestionPainter>();
+            list.Add(que);
+            obj.Categories[0].questions[2].setQuestion(list);
+            ans = new AlphabetJoker();
+            list1 = new List<MediumAnswerPainter>();
+            list1.Add(ans);
+            obj.Categories[0].questions[2].setCorrectAnswer(list1);
             obj.Categories[0].Shuffle();
 
             obj.createState();

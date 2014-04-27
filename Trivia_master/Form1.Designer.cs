@@ -53,6 +53,7 @@ namespace Trivia_master
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
