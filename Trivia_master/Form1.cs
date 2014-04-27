@@ -89,11 +89,11 @@ namespace Trivia_master
         {
         }
 
-<<<<<<< HEAD
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-=======
+        }
 
         public virtual Size getSize()
         {
@@ -108,7 +108,7 @@ namespace Trivia_master
 
         public virtual void Answered()
         {
->>>>>>> 5d84a0c095df653cd9a459c23b43590c23963974
+
         }
     }
 }
