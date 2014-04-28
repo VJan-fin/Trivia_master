@@ -216,6 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="oie_transparent.ico" />
+    <None Include="Resources\oie_transparent.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

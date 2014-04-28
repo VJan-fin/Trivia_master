@@ -10,12 +10,12 @@ using Trivia_master.Properties;
 
 namespace Trivia_master
 {
-    public partial class AlphabetForm<T, U> : Form1 where T : MediumQuestionPainter  where U : MediumAnswerPainter
+    public partial class AlphabetForm : Form1
     {
-        protected T Question { get; set; }
-        protected U Answer { get; set; }
+        protected MediumQuestionPainter Question { get; set; }
+        protected MediumAnswerPainter Answer { get; set; }
         protected int Answere { get; set; }
-        public AlphabetForm(Category<T, U> c, IQuestion<T, U> q, int TimeToClose = 3)
+        public AlphabetForm(Category<MediumQuestionPainter, MediumAnswerPainter> c, IQuestion<MediumQuestionPainter, MediumAnswerPainter> q, int TimeToClose = 3)
         {
             Answere = 0;
             InitializeComponent();
