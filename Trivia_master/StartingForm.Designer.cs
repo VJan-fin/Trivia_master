@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartingForm));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.QBox1 = new Trivia_master.QuestionBox();
             this.questionBox1 = new Trivia_master.QuestionBox();
@@ -40,9 +41,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Trivia_master.Properties.Resources.Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(220, 197);
+            this.pictureBox2.Location = new System.Drawing.Point(165, 160);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(586, 317);
+            this.pictureBox2.Size = new System.Drawing.Size(440, 258);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -58,10 +60,9 @@
             this.QBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.QBox1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.QBox1.Location = new System.Drawing.Point(220, 589);
-            this.QBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.QBox1.Location = new System.Drawing.Point(165, 479);
             this.QBox1.Name = "QBox1";
-            this.QBox1.Size = new System.Drawing.Size(160, 94);
+            this.QBox1.Size = new System.Drawing.Size(120, 76);
             this.QBox1.TabIndex = 64;
             this.QBox1.TabStop = false;
             this.QBox1.Text = "Easy";
@@ -76,10 +77,9 @@
             this.questionBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.questionBox1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.questionBox1.Location = new System.Drawing.Point(433, 589);
-            this.questionBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.questionBox1.Location = new System.Drawing.Point(325, 479);
             this.questionBox1.Name = "questionBox1";
-            this.questionBox1.Size = new System.Drawing.Size(160, 94);
+            this.questionBox1.Size = new System.Drawing.Size(120, 76);
             this.questionBox1.TabIndex = 65;
             this.questionBox1.TabStop = false;
             this.questionBox1.Text = "Medium";
@@ -94,10 +94,9 @@
             this.questionBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.questionBox2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.questionBox2.Location = new System.Drawing.Point(646, 589);
-            this.questionBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.questionBox2.Location = new System.Drawing.Point(484, 479);
             this.questionBox2.Name = "questionBox2";
-            this.questionBox2.Size = new System.Drawing.Size(160, 94);
+            this.questionBox2.Size = new System.Drawing.Size(120, 76);
             this.questionBox2.TabIndex = 66;
             this.questionBox2.TabStop = false;
             this.questionBox2.Text = "Hard";
@@ -110,23 +109,26 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(437, 706);
+            this.label1.Location = new System.Drawing.Point(328, 574);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 30);
+            this.label1.Size = new System.Drawing.Size(317, 26);
             this.label1.TabIndex = 67;
             this.label1.Text = "v1.0 \r\n©2014 Viktor Janevski, Aleksandar Kuzmanoski, Dimitar Spasovski";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // StartingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 788);
+            this.ClientSize = new System.Drawing.Size(694, 640);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.questionBox2);
             this.Controls.Add(this.questionBox1);
             this.Controls.Add(this.QBox1);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StartingForm";
             this.Text = "Trivia Master";
             this.Controls.SetChildIndex(this.pictureBox2, 0);

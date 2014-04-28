@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CloseForm));
             this.alphabetButton1 = new Trivia_master.AlphabetButton();
             this.alphabetButton2 = new Trivia_master.AlphabetButton();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             this.Controls.Add(this.alphabetButton1);
             this.Controls.Add(this.alphabetButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CloseForm";
             this.Text = "Form3";
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CloseForm_MouseClick);

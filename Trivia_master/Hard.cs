@@ -8,13 +8,13 @@ namespace Trivia_master
 {
     public class Hard : Game<string, AlphabetAnswer>
     {
-        public AssociationForm<AlphabetAnswer> form;
+        public AssociationForm form;
 
         public override bool showQ(Category<string, AlphabetAnswer> cat)
         {
 
             IQuestion<string, AlphabetAnswer> question = cat.getNextQuestion();
-            AssociationForm<AlphabetAnswer> form = new AssociationForm<AlphabetAnswer>(cat, question);
+            AssociationForm form = new AssociationForm(cat, question);
             if (form.ShowDialog() == DialogResult.OK)
                 return true;
 

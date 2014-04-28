@@ -1,6 +1,6 @@
 ﻿namespace Trivia_master
 {
-    partial class AssociationForm<U>
+    partial class AssociationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssociationForm));
             this.triviaButton3 = new Trivia_master.AlphabetButton();
             this.triviaButton2 = new Trivia_master.AlphabetButton();
             this.triviaButton1 = new Trivia_master.AlphabetButton();
@@ -524,10 +525,12 @@
             this.Controls.Add(this.triviaButton2);
             this.Controls.Add(this.triviaButton1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssociationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.AssociationForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.AlphabetForm_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AlphabetForm_KeyPress);

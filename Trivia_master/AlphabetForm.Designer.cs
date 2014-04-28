@@ -29,6 +29,7 @@ namespace Trivia_master
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlphabetForm<T,U>));
             this.label2 = new Trivia_master.TriviaLabel();
             this.lblKategorija = new Trivia_master.TriviaLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -93,6 +94,7 @@ namespace Trivia_master
             this.Controls.Add(this.lblKategorija);
             this.Controls.Add(this.lblOdgovor);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlphabetForm";
             this.Text = "butt";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.AlphabetForm_Paint);

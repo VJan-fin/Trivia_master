@@ -9,14 +9,13 @@ using System.Windows.Forms;
 
 namespace Trivia_master
 {
-    public partial class AssociationForm<U> : Form1
-        where U : MediumAnswerPainter
+    public partial class AssociationForm : Form1
     {
 
-        IQuestion<string,U> question;
-        Category<string, U> category;
+        IQuestion<string,AlphabetAnswer> question;
+        Category<string, AlphabetAnswer> category;
         protected String Question { get; set; }
-        protected U Answer { get; set; }
+        protected MediumAnswerPainter Answer { get; set; }
         protected int Answere { get; set; }
         List<Rectangle> Areas;
         //public int TimeLeft = 21;
@@ -28,14 +27,13 @@ namespace Trivia_master
         public int defaultHeightStart;
         SolidBrush sb;
         Font font;
-        Bitmap OldPicture;
         Font timerFont;
         public AssociationForm()
         {
             InitializeComponent();
         }
 
-        public AssociationForm(Category<String, U> c, IQuestion<String, U> q)
+        public AssociationForm(Category<String, AlphabetAnswer> c, IQuestion<String, AlphabetAnswer> q)
         {
             InitializeComponent();
             Areas = new List<Rectangle>();
@@ -152,6 +150,11 @@ namespace Trivia_master
                     BackgroundImage = back;
                 }
             }*/
+        }
+
+        private void AssociationForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
