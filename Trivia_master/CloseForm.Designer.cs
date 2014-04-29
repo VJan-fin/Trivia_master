@@ -33,21 +33,14 @@
             // 
             // CloseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.BackgroundImage = global::Trivia_master.Properties.Resources.Blue_Frame11;
+            this.BackgroundImage = global::Trivia_master.Properties.Resources.Blue_Frame1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(377, 215);
-=======
-            this.BackgroundImage = global::Trivia_master.Properties.Resources.pozadina;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(500, 265);
->>>>>>> a880555d1a7036e74f60ce44096c089b57c077e8
+            this.ClientSize = new System.Drawing.Size(388, 222);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CloseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form3";
