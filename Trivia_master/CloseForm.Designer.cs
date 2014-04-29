@@ -33,7 +33,7 @@
             // 
             // alphabetButton1
             // 
-            this.alphabetButton1.BackColor = System.Drawing.Color.Transparent;
+            /*this.alphabetButton1.BackColor = System.Drawing.Color.Transparent;
             this.alphabetButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.alphabetButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton1.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -46,11 +46,11 @@
             this.alphabetButton1.TabStop = false;
             this.alphabetButton1.Text = "No";
             this.alphabetButton1.UseVisualStyleBackColor = true;
-            this.alphabetButton1.Click += new System.EventHandler(this.alphabetButton1_Click);
+            this.alphabetButton1.Click += new System.EventHandler(this.alphabetButton1_Click);*/
             // 
             // alphabetButton2
             // 
-            this.alphabetButton2.BackColor = System.Drawing.Color.Transparent;
+            /*this.alphabetButton2.BackColor = System.Drawing.Color.Transparent;
             this.alphabetButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.alphabetButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alphabetButton2.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,7 +63,7 @@
             this.alphabetButton2.TabStop = false;
             this.alphabetButton2.Text = "Yes";
             this.alphabetButton2.UseVisualStyleBackColor = true;
-            this.alphabetButton2.Click += new System.EventHandler(this.alphabetButton2_Click);
+            this.alphabetButton2.Click += new System.EventHandler(this.alphabetButton2_Click);*/
             // 
             // CloseForm
             // 
@@ -72,8 +72,8 @@
             this.BackgroundImage = global::Trivia_master.Properties.Resources.rsz_1rsz_1rsz_1aaaaq;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(493, 252);
-            this.Controls.Add(this.alphabetButton1);
-            this.Controls.Add(this.alphabetButton2);
+            //this.Controls.Add(this.alphabetButton1);
+            //this.Controls.Add(this.alphabetButton2);
             this.BackgroundImage = global::Trivia_master.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(375, 215);
