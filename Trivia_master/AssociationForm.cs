@@ -29,6 +29,7 @@ namespace Trivia_master
         Font font;
         Font timerFont;
         Point Location;
+
         public AssociationForm()
         {
             InitializeComponent();
@@ -123,23 +124,34 @@ namespace Trivia_master
         private void addAssociations(Graphics gp)
         {
             heightStart = defaultHeightStart;
-           
-            if (Size.Width > Size.Height)
-            {
-                Location = new Point(Size.Width / 2 - Size.Height / 2, 0);
-            }
-            else Location = new Point(0, Size.Height / 2 - Size.Width / 2);
-           
-             gp.DrawString("Category : "+category.CategoryName,font,sb, new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 5 / 16), Location.Y + (Math.Min(Size.Width, Size.Height) * 7 / 22)));
-
+            gp.DrawString("Category : " + category.CategoryName, font, sb, new Rectangle(widthStart, 190, widthSize, heightSize));
             for (int i = 0; i < 4; i++)
             {
-                gp.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 3 / 13), Location.Y + (Math.Min(Size.Width, Size.Height) * (6 + i + 3) / 22)));
-             /*   Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
+
+                Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
                 Areas.Add(rec1);
                 gp.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
-                heightStart += increment;*/
+                heightStart += increment;
             }
+
+
+            /*private void timer1_Tick(object sender, EventArgs e)
+            {
+                TimeLeft--;
+                if (TimeLeft == 0)
+                    timer1.Stop();
+                else
+                {
+             
+                    Rectangle rec2 = new Rectangle(500, 300, 40, 40);
+                    Bitmap back = new Bitmap(OldPicture);
+                   Graphics gp = Graphics.FromImage(back);
+                   gp.FillRectangle(new SolidBrush(Color.Transparent), rec2);
+                    gp.DrawString(TimeLeft.ToString(), timerFont, sb, rec2);
+        
+                    BackgroundImage = back;
+                }
+            }*/
         }
 
         private void AssociationForm_Load(object sender, EventArgs e)

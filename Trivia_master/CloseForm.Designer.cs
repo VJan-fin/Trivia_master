@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CloseForm));
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
             // alphabetButton1
             // 
             this.alphabetButton1.BackColor = System.Drawing.Color.Transparent;
@@ -66,24 +65,19 @@
             this.alphabetButton2.UseVisualStyleBackColor = true;
             this.alphabetButton2.Click += new System.EventHandler(this.alphabetButton2_Click);
             // 
-=======
->>>>>>> d5a601cf0447f44878841cc32af46eb0b097bafd
             // CloseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackgroundImage = global::Trivia_master.Properties.Resources.rsz_1rsz_1rsz_1aaaaq;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(493, 252);
             this.Controls.Add(this.alphabetButton1);
             this.Controls.Add(this.alphabetButton2);
-=======
             this.BackgroundImage = global::Trivia_master.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(375, 215);
             this.DoubleBuffered = true;
->>>>>>> d5a601cf0447f44878841cc32af46eb0b097bafd
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -96,8 +90,10 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CloseForm_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CloseForm_MouseUp);
             this.ResumeLayout(false);
-
         }
+
+        AlphabetButton alphabetButton1 = new AlphabetButton();
+        AlphabetButton alphabetButton2 = new AlphabetButton();
 
         #endregion
 
