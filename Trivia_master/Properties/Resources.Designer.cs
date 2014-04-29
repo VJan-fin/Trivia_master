@@ -83,6 +83,26 @@ namespace Trivia_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_Frame1 {
+            get {
+                object obj = ResourceManager.GetObject("Blue_Frame1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Frame11 {
+            get {
+                object obj = ResourceManager.GetObject("Blue_Frame11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Correct2 {
             get {
                 object obj = ResourceManager.GetObject("Correct2", resourceCulture);
@@ -176,6 +196,16 @@ namespace Trivia_master.Properties {
         internal static System.Drawing.Bitmap TRU_BRICK_2_DARK_BLUE {
             get {
                 object obj = ResourceManager.GetObject("TRU BRICK 2 DARK BLUE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TRU_BRICK_2_DARK_BLUE1 {
+            get {
+                object obj = ResourceManager.GetObject("TRU BRICK 2 DARK BLUE1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
