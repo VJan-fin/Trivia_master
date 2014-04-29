@@ -58,13 +58,12 @@ namespace Trivia_master
 
         private void alphabetButton2_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Yes;
-            Close();
+
         }
 
         private void alphabetButton1_Click(object sender, EventArgs e)
         {
-            Close();
+            
         }
 
         private void CloseForm_MouseDown(object sender, MouseEventArgs e)
@@ -102,7 +101,7 @@ namespace Trivia_master
             Color color = Color.Transparent;
             foreach (CostomAlphabetButton c in lista)
                 if (c.IsIn(e.Location))
-                    c.BackColor = Color.DarkSeaGreen;
+                    c.BackColor = Color.FromArgb(229, 192, 21);
                 else c.BackColor = color;
             Invalidate();
         }
