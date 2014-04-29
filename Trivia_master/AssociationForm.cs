@@ -29,6 +29,7 @@ namespace Trivia_master
         Font font;
         Font timerFont;
         Point Location;
+
         public AssociationForm()
         {
             InitializeComponent();
