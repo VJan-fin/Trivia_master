@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CloseForm));
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // alphabetButton1
             // 
             this.alphabetButton1.BackColor = System.Drawing.Color.Transparent;
@@ -65,23 +66,40 @@
             this.alphabetButton2.UseVisualStyleBackColor = true;
             this.alphabetButton2.Click += new System.EventHandler(this.alphabetButton2_Click);
             // 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> d5a601cf0447f44878841cc32af46eb0b097bafd
+>>>>>>> 79172e2f8c917eef4ea0f6ffb0ad15aadfc06571
             // CloseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 79172e2f8c917eef4ea0f6ffb0ad15aadfc06571
             this.BackgroundImage = global::Trivia_master.Properties.Resources.rsz_1rsz_1rsz_1aaaaq;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(493, 252);
             this.Controls.Add(this.alphabetButton1);
             this.Controls.Add(this.alphabetButton2);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 79172e2f8c917eef4ea0f6ffb0ad15aadfc06571
             this.BackgroundImage = global::Trivia_master.Properties.Resources.pozadina;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(375, 215);
             this.DoubleBuffered = true;
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5a601cf0447f44878841cc32af46eb0b097bafd
+>>>>>>> 79172e2f8c917eef4ea0f6ffb0ad15aadfc06571
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
