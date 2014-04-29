@@ -216,6 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="oie_transparent.ico" />
+    <None Include="Resources\pozadina.png" />
     <None Include="Resources\oie_transparent.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
