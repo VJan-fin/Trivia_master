@@ -19,7 +19,7 @@ namespace Trivia_master
         public int GameID { get; set; }
         public virtual State<T, U> state { get; set; }
         public virtual List<Category<T,U>> Categories { get; set; }
-        public virtual Category<Image,string> MainCategory { get; set; }
+        public virtual Category<Image,FormPainter> MainCategory { get; set; }
         private Random random;
 
         public Game()
@@ -32,7 +32,7 @@ namespace Trivia_master
         /// Choose one question which will be used for the base game.
         /// </summary>
         /// <returns></returns>
-        public IQuestion<Image, string> getMainQ()
+        public IQuestion<Image, FormPainter> getMainQ()
         {
             return MainCategory.getNextQuestion();
         }

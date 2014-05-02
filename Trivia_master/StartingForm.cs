@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Trivia_master.Properties;
 
 namespace Trivia_master
 {
@@ -219,6 +220,17 @@ namespace Trivia_master
             hard.Categories.Add(geography);
           
           */
+
+            Category<Image, FormPainter> main = new Category<Image, FormPainter>();
+            main.CategoryName = "Main";
+            AssociationQ<Image, FormPainter> q = new AssociationQ<Image, FormPainter>();
+            q.Question.Add(Resources.Joker1);
+            fp = new FormPainter(new AlphabetAnswer("LISP"));
+            fp.AddComponent(new TimerPainter());
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+            hard.MainCategory = main;
+
             hard.createState();
             
            

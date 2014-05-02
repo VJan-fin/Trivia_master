@@ -11,6 +11,29 @@ namespace Trivia_master
 {
     public partial class MainForm<T, U> : Form1
     {
+        IQuestion<Image,FormPainter> question;
+        Category<T, U> category;
+        protected Image Question { get; set; }
+        protected int Answere { get; set; }
+
+        public MainForm(Category<T, U> c, IQuestion<Image, FormPainter> q)
+        {
+            InitializeComponent();
+            //timer1.Start();
+           
+            
+            question = q;
+            Question = q.getQuestion()[0];
+            this.category = c;
+            Answere = 0;
+            DoubleBuffered = true;
+            Answer = q.getCorrectAnswer()[0];
+            Answer.Form = this; 
+            Answer.Reset();
+            pictureBox2.Image = Question;
+            UpdateView();
+        }
+
         State<T, U> state;
         private List<QuestionBox> Boxes;
 
@@ -56,5 +79,62 @@ namespace Trivia_master
             }
             (sender as QuestionBox).Visible = !state.ShowQ(state.Category[ind]);
         }
+
+        private void Draw(Graphics g)
+        {
+            Answer.Draw(g);
+        }
+
+        private void AlphabetForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Answer.KeyPress(e);
+        }
+
+        private void AlphabetForm_Paint(object sender, PaintEventArgs e)
+        {
+            Draw(e.Graphics);
+        }
+
+        private void AlphabetForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            Answer.KeyDown(e);
+        }
+
+        private void AlphabetForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            Answer.KeyUp(e);
+        }
+
+        public override void UpdateView()
+        {
+            Invalidate(true);
+        }
+
+        private void AlphabetForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            Answer.MouseDown(e);
+        }
+
+        private void AlphabetForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            Answer.MouseUp(e);
+        }
+
+        private void AlphabetForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            Answer.MouseMove(e);
+        }
+
+        public override Size getSize()
+        {
+            return Size;
+        }
+
+        public override void Answered()
+        {
+            Answere = 1;
+            UpdateView();
+        }
+
     }
 }
