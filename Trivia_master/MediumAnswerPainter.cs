@@ -15,7 +15,7 @@ namespace Trivia_master
         protected int TimeToClose { get; set; }
         protected Point TimerLocation { get; set; }
         protected Size Size { get; set; }
-        protected int Answered { get; set; }
+        public int Answered { get; set; }
         public Font AlphaFont { get; set; }
         protected Point Location { get; set; }
         protected bool MouseClicked { get; set; }
@@ -41,7 +41,7 @@ namespace Trivia_master
             else g.DrawString(String.Format("{0,2:D2}:{1,2:D2}", RemainingTime / 60, RemainingTime % 60), Font, TimeToCloseBrush, TimerLocation);
         }
 
-        public MediumAnswerPainter(int time = 20)
+        public MediumAnswerPainter(int time = 3)
         {
             DefaultBrush = new SolidBrush(Color.FromArgb(217, 0, 0));
             TimeToCloseBrush = new SolidBrush(Color.FromArgb(229, 192, 21));

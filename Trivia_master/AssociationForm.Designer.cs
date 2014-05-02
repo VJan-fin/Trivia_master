@@ -468,9 +468,8 @@
             this.triviaLabel2.ForeColor = System.Drawing.Color.White;
             this.triviaLabel2.Location = new System.Drawing.Point(156, 403);
             this.triviaLabel2.Name = "triviaLabel2";
-            this.triviaLabel2.Size = new System.Drawing.Size(113, 35);
+            this.triviaLabel2.Size = new System.Drawing.Size(0, 35);
             this.triviaLabel2.TabIndex = 33;
-            this.triviaLabel2.Text = "_ _ _ _";
             this.triviaLabel2.Visible = false;
             // 
             // alphabetButton22

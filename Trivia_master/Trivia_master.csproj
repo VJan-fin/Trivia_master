@@ -92,6 +92,7 @@
     <Compile Include="CloseForm.Designer.cs">
       <DependentUpon>CloseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPainter.cs" />
     <Compile Include="HangManQ.cs" />
     <Compile Include="Hard.cs" />
     <Compile Include="IQuestion.cs" />
