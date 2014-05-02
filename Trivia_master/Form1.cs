@@ -12,6 +12,7 @@ namespace Trivia_master
 {
     public partial class Form1 : Form, IUpdatableView
     {
+      public  FormPainter Answer;
         Boolean IsClicked = false;
         Point mousePoint;
         Point currPoint;
@@ -19,6 +20,7 @@ namespace Trivia_master
         public Form1()
         {
             InitializeComponent();
+      
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -77,12 +79,12 @@ namespace Trivia_master
 
         public virtual void CorrectAnswer()
         {
-
+            Answer.correctAnswer();
         }
 
         public virtual void IncorrectAnswer()
         {
-
+            Answer.falseAnswer();
         }
 
         public virtual void UpdateView()
@@ -103,7 +105,7 @@ namespace Trivia_master
 
         public virtual void TimeElapsed()
         {
-
+            Answer.timeElapsed();
         }
 
         public virtual void Answered()

@@ -31,7 +31,6 @@ namespace Trivia_master
             Timer = new Timer();
             Timer.Interval = 1000;
             Timer.Tick += new System.EventHandler(this.Up);
-            Timer.Tick += new System.EventHandler(this.Up);
         }
 
         public void Up(object sender, EventArgs e)
@@ -44,7 +43,7 @@ namespace Trivia_master
             else Form.TimeElapsed();
         }
 
-        public virtual void Reset()
+        public override void Reset()
         {
             Size = Form.getSize();
             if (Size.Width > Size.Height)
@@ -53,7 +52,7 @@ namespace Trivia_master
             }
             else Location = new Point(0, Size.Height / 2 - Size.Width / 2);
             RemainingTime = Time;
-            TimerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * (int)(X/100)), Location.Y + (Math.Min(Size.Width, Size.Height) * (int)(Y/100)));
+            TimerLocation = new Point(Location.X + (int)(Math.Min(Size.Width, Size.Height) * X/100), Location.Y + (int)(Math.Min(Size.Width, Size.Height) * Y/100));
             Timer.Start();
         }
 

@@ -9,7 +9,7 @@ namespace Trivia_master
 {
     public abstract class MediumAnswerPainter
     {
-        protected Timer Timer { get; set; }
+        public Timer Timer { get; set; }
         protected int TimeToClose { get; set; }
         protected Size Size { get; set; }
         public int Answered { get; set; }

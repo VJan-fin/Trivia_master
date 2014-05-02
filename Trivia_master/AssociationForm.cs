@@ -12,10 +12,9 @@ namespace Trivia_master
     public partial class AssociationForm : Form1
     {
 
-        IQuestion<string,AlphabetAnswer> question;
-        Category<string, AlphabetAnswer> category;
+        IQuestion<string,FormPainter> question;
+        Category<string, FormPainter> category;
         protected String Question { get; set; }
-        protected MediumAnswerPainter Answer { get; set; }
         protected int Answere { get; set; }
         List<Rectangle> Areas;
         //public int TimeLeft = 21;
@@ -29,13 +28,13 @@ namespace Trivia_master
         Font font;
         Font timerFont;
         Point Location;
-
+        
         public AssociationForm()
         {
             InitializeComponent();
         }
 
-        public AssociationForm(Category<String, AlphabetAnswer> c, IQuestion<String, AlphabetAnswer> q)
+        public AssociationForm(Category<String, FormPainter> c, IQuestion<String, FormPainter> q)
         {
             InitializeComponent();
             Areas = new List<Rectangle>();
@@ -48,7 +47,7 @@ namespace Trivia_master
             widthStart = 230;
             widthSize = 400;
             heightSize = 50;
-           ;
+           
             
             question = q;
             this.category = c;
@@ -56,8 +55,6 @@ namespace Trivia_master
             DoubleBuffered = true;
             Answer = q.getCorrectAnswer()[0];
             Answer.Form = this; 
-            Answer.AlphaFont = button1.Font;
-            Answer.Font = triviaLabel2.Font;
             Answer.Reset();
             UpdateView();
         }

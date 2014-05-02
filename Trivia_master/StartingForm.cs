@@ -138,62 +138,78 @@ namespace Trivia_master
         private void button3_Click(object sender, EventArgs e)
         {
             Hard hard = new Hard();
-            Category<string, AlphabetAnswer> cs = new Category<string, AlphabetAnswer>();
+            FormPainter fp;
+           Category<string, FormPainter> cs = new Category<string, FormPainter>();
             cs.CategoryName = "Computer Science";
-            AssociationQ<string, AlphabetAnswer> question = new AssociationQ<string, AlphabetAnswer>();
+            AssociationQ<string, FormPainter> question = new AssociationQ<string, FormPainter>();
             question.Question.Add("A programming language");
             question.Question.Add("John McCarthy");
             question.Question.Add("Artificial intelligence");
             question.Question.Add("Has a lot of dialects");
-            question.CorrectAnswers.Add(new AlphabetAnswer("LISP"));
+            fp = new FormPainter(new AlphabetAnswer("LISP"));
+            fp.AddComponent(new TimerPainter());
+            question.CorrectAnswers.Add(fp);
             cs.addQuestion(question);
-            AssociationQ<string, AlphabetAnswer> questionCS2 = new AssociationQ<string, AlphabetAnswer>();
+           
+            
+            AssociationQ<string, FormPainter> questionCS2 = new AssociationQ<string, FormPainter>();
             questionCS2.Question.Add("Algorithm");
             questionCS2.Question.Add("Artificial Intelligence");
             questionCS2.Question.Add("Tic Tac Toe");
             questionCS2.Question.Add("Tree traversal");
-            questionCS2.CorrectAnswers.Add(new AlphabetAnswer("Minimax"));
+            fp = new FormPainter(new AlphabetAnswer("Minimax"));
+            fp.AddComponent(new TimerPainter());
+            questionCS2.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS2);
-            AssociationQ<string, AlphabetAnswer> questionCS3 = new AssociationQ<string, AlphabetAnswer>();
-            questionCS3.Question.Add("Famous computer virus");
-            questionCS3.Question.Add("Infected 50 million computers");
-            questionCS3.Question.Add("2000");
-            questionCS3.Question.Add("E-mail");
-            questionCS3.CorrectAnswers.Add(new AlphabetAnswer("ILOVEYOU"));
-            cs.addQuestion(questionCS3);
-            AssociationQ<string, AlphabetAnswer> questionCS4 = new AssociationQ<string, AlphabetAnswer>();
-            questionCS4.Question.Add("A programming paradigm");
-            questionCS4.Question.Add("Java");
-            questionCS4.Question.Add("C#");
-            questionCS4.Question.Add("Acronym");
-            questionCS4.CorrectAnswers.Add(new AlphabetAnswer("OOP"));
-            cs.addQuestion(questionCS4);
-            AssociationQ<string, AlphabetAnswer> questionCS5 = new AssociationQ<string, AlphabetAnswer>();
+            
+             AssociationQ<string, FormPainter> questionCS3 = new AssociationQ<string, FormPainter>();
+             questionCS3.Question.Add("Famous computer virus");
+             questionCS3.Question.Add("Infected 50 million computers");
+             questionCS3.Question.Add("2000");
+             questionCS3.Question.Add("E-mail");
+             fp = new FormPainter(new AlphabetAnswer("ILOVEYOU"));
+             fp.AddComponent(new TimerPainter());
+             questionCS3.CorrectAnswers.Add(fp);
+             cs.addQuestion(questionCS3);
+             AssociationQ<string, FormPainter> questionCS4 = new AssociationQ<string, FormPainter>();
+             questionCS4.Question.Add("A programming paradigm");
+             questionCS4.Question.Add("Java");
+             questionCS4.Question.Add("C#");
+             questionCS4.Question.Add("Acronym");
+             fp = new FormPainter(new AlphabetAnswer("OOP"));
+             questionCS4.CorrectAnswers.Add(fp);
+             cs.addQuestion(questionCS4);
+            AssociationQ<string, FormPainter> questionCS5 = new AssociationQ<string,FormPainter >();
             questionCS5.Question.Add("Router");
             questionCS5.Question.Add("Switch");
             questionCS5.Question.Add("Hub");
             questionCS5.Question.Add("Ethernet");
-            questionCS5.CorrectAnswers.Add(new AlphabetAnswer("Network"));
+
+            fp = new FormPainter(new AlphabetAnswer("Network")); 
+            fp.AddComponent(new TimerPainter());
+            questionCS5.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS5);
 
             hard.Categories.Add(cs);
-            Category<string, AlphabetAnswer> geography = new Category<string, AlphabetAnswer>();
+        /*    Category<string, FormPainter> geography = new Category<string, FormPainter>();
             geography.CategoryName = "Geography";
-            AssociationQ<string, AlphabetAnswer> questionG1 = new AssociationQ<string, AlphabetAnswer>();
+            AssociationQ<string, FormPainter> questionG1 = new AssociationQ<string, FormPainter>();
             questionG1.Question.Add("One of the biggest cities in the world");
             questionG1.Question.Add("Has a population of 14 milion");
             questionG1.Question.Add("Turkey");
             questionG1.Question.Add("Transcontinental city");
-            questionG1.CorrectAnswers.Add(new AlphabetAnswer("Istanbul"));
+            fp = new FormPainter(new AlphabetAnswer("Istanbul"));
+            fp.AddComponent(new TimerPainter());
+            questionG1.CorrectAnswers.Add(new AlphabetAnswer("Istanbul");
             geography.addQuestion(questionG1);
-            AssociationQ<string, AlphabetAnswer> questionG2 = new AssociationQ<string, AlphabetAnswer>();
+            AssociationQ<string, FormPainter> questionG2 = new AssociationQ<string, FormPainter>();
             questionG2.Question.Add("Planet");
             questionG2.Question.Add("Closest to the sun");
             questionG2.Question.Add("Named after one of the Roman gods");
             questionG2.Question.Add("Smaller than Earth");
-            questionG2.CorrectAnswers.Add(new AlphabetAnswer("Mercury"));
+            questionG2.CorrectAnswers.Add(new FormPainter("Mercury"));
             geography.addQuestion(questionG2);
-            AssociationQ<string, AlphabetAnswer> questionG3 = new AssociationQ<string, AlphabetAnswer>();
+            AssociationQ<string, FormPainter> questionG3 = new AssociationQ<string, FormPainter>();
             questionG3.Question.Add("River");
             questionG3.Question.Add("Africa");
             questionG3.Question.Add("Floods every year");
@@ -202,7 +218,7 @@ namespace Trivia_master
             geography.addQuestion(questionG3);
             hard.Categories.Add(geography);
           
-          
+          */
             hard.createState();
             
            
