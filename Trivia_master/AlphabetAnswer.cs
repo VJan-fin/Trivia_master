@@ -24,6 +24,7 @@ namespace Trivia_master
         protected StringBuilder sb;
         protected int count;
         protected int wrong;
+        public Point AttemptsRelativeLocation {get; set;}
 
         public AlphabetAnswer(String a, int time = 20, int attepmts = 5) : base(time)
         {
@@ -38,6 +39,7 @@ namespace Trivia_master
                 pm.Append(" ");
             }
             DefaultAttempts = attepmts;
+            AttemptsRelativeLocation = new Point(63, 23);
             Attempts = attepmts;
             AttemptsToClose = (int)Math.Round(Attempts * 20.0 / 100, 0);
             CorrectAnswer = pm.ToString();
@@ -58,7 +60,7 @@ namespace Trivia_master
             Attempts = DefaultAttempts;
             AnswerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 4 / 19), Location.Y + (Math.Min(Size.Width, Size.Height) * 5 / 8));
             AnsweredAnswerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 4 / 19), Location.Y + (Math.Min(Size.Width, Size.Height) * 31 / 40));
-            AttemptsLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 25 / 40), Location.Y + (Math.Min(Size.Width, Size.Height) * 9 / 40));
+            AttemptsLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * AttemptsRelativeLocation.X/100), Location.Y + (Math.Min(Size.Width, Size.Height) * AttemptsRelativeLocation.Y/100));
             int pom = (int)Math.Round(Math.Min(Size.Width, Size.Height)/16.0, 0);
             Size BtnSize = new Size(pom, pom);
             int XX = AnswerLocation.X;

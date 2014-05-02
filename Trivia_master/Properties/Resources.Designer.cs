@@ -153,6 +153,16 @@ namespace Trivia_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Napoleon {
+            get {
+                object obj = ResourceManager.GetObject("Napoleon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap oie_transparent {
             get {
                 object obj = ResourceManager.GetObject("oie_transparent", resourceCulture);

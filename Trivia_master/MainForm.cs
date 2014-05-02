@@ -57,6 +57,17 @@ namespace Trivia_master
             this.Boxes.Add(this.QBox7);
             this.Boxes.Add(this.QBox8);
             this.Boxes.Add(this.QBox9);
+            question = state.Question;
+            Question = question.getQuestion()[0];
+            //this.category = c;
+            Answere = 0;
+            DoubleBuffered = true;
+            Answer = question.getCorrectAnswer()[0];
+            Answer.Form = this;
+            Answer.Reset();
+            pictureBox2.Image = Question;
+            Answer.Reset();
+            UpdateView();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -132,6 +143,8 @@ namespace Trivia_master
 
         public override void Answered()
         {
+            foreach (QuestionBox box in Boxes)
+                box.Visible = false;
             Answere = 1;
             UpdateView();
         }

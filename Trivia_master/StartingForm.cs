@@ -12,9 +12,19 @@ namespace Trivia_master
 {
     public partial class StartingForm : Form1
     {
+        Category<Image, FormPainter> main { get; set; }
         public StartingForm()
         {
             InitializeComponent();
+            main = new Category<Image, FormPainter>();
+            main.CategoryName = "Main";
+            HangManQ<Image, FormPainter> q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Napoleon);
+            AlphabetAnswer aa = new AlphabetAnswer("NAPOLEON");
+            aa.AttemptsRelativeLocation = new Point(62, 59);
+            FormPainter fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +97,8 @@ namespace Trivia_master
             mc6.Answers.Add("Alexander Pushkin");
             cat3.questions.Add(mc6);
 
+            easyObj.MainCategory = main;
+
             easyObj.createState();
         }
 
@@ -125,6 +137,8 @@ namespace Trivia_master
             list1.Add(ans);
             obj.Categories[0].questions[2].setCorrectAnswer(list1);
             obj.Categories[0].Shuffle();
+
+            obj.MainCategory = main;
 
             obj.createState();
         }
@@ -221,14 +235,7 @@ namespace Trivia_master
           
           */
 
-            Category<Image, FormPainter> main = new Category<Image, FormPainter>();
-            main.CategoryName = "Main";
-            AssociationQ<Image, FormPainter> q = new AssociationQ<Image, FormPainter>();
-            q.Question.Add(Resources.Joker1);
-            fp = new FormPainter(new AlphabetAnswer("LISP"));
-            fp.AddComponent(new TimerPainter());
-            q.CorrectAnswers.Add(fp);
-            main.addQuestion(q);
+            
             hard.MainCategory = main;
 
             hard.createState();

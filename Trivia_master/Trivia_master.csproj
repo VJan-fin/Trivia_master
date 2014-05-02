@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="oie_transparent.ico" />
+    <None Include="Resources\Napoleon.jpg" />
     <None Include="Resources\Blue_Frame11.png" />
     <None Include="Resources\Blue_Frame1.png" />
     <None Include="Resources\pozadina.png" />

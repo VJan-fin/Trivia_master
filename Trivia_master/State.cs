@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 namespace Trivia_master
 {
@@ -13,6 +14,7 @@ namespace Trivia_master
     /// <typeparam name="U">Answer type</typeparam>
     public class State<T, U>
     {
+        public IQuestion<Image, FormPainter> Question { get; set; }
         Game<T, U> game;
         public List<Category<T, U>> Category;
 
@@ -24,6 +26,7 @@ namespace Trivia_master
         {
             this.game = game;
             Category = game.getCategories(9);
+            Question = game.MainCategory.getNextQuestion();
             createForm();
         }
 

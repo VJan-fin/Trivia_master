@@ -82,6 +82,7 @@
             this.alphabetButton22.TabStop = false;
             this.alphabetButton22.Text = "Z";
             this.alphabetButton22.UseVisualStyleBackColor = true;
+            this.alphabetButton22.Visible = false;
             // 
             // triviaLabel2
             // 
@@ -94,6 +95,7 @@
             this.triviaLabel2.Size = new System.Drawing.Size(113, 35);
             this.triviaLabel2.TabIndex = 60;
             this.triviaLabel2.Text = "_ _ _ _";
+            this.triviaLabel2.Visible = false;
             // 
             // alphabetButton21
             // 
@@ -109,6 +111,7 @@
             this.alphabetButton21.TabStop = false;
             this.alphabetButton21.Text = "U";
             this.alphabetButton21.UseVisualStyleBackColor = true;
+            this.alphabetButton21.Visible = false;
             // 
             // alphabetButton20
             // 
@@ -124,6 +127,7 @@
             this.alphabetButton20.TabStop = false;
             this.alphabetButton20.Text = "V";
             this.alphabetButton20.UseVisualStyleBackColor = true;
+            this.alphabetButton20.Visible = false;
             // 
             // alphabetButton19
             // 
@@ -139,6 +143,7 @@
             this.alphabetButton19.TabStop = false;
             this.alphabetButton19.Text = "W";
             this.alphabetButton19.UseVisualStyleBackColor = true;
+            this.alphabetButton19.Visible = false;
             // 
             // alphabetButton18
             // 
@@ -154,6 +159,7 @@
             this.alphabetButton18.TabStop = false;
             this.alphabetButton18.Text = "X";
             this.alphabetButton18.UseVisualStyleBackColor = true;
+            this.alphabetButton18.Visible = false;
             // 
             // alphabetButton17
             // 
@@ -169,6 +175,7 @@
             this.alphabetButton17.TabStop = false;
             this.alphabetButton17.Text = "Y";
             this.alphabetButton17.UseVisualStyleBackColor = true;
+            this.alphabetButton17.Visible = false;
             // 
             // alphabetButton16
             // 
@@ -184,6 +191,7 @@
             this.alphabetButton16.TabStop = false;
             this.alphabetButton16.Text = "M";
             this.alphabetButton16.UseVisualStyleBackColor = true;
+            this.alphabetButton16.Visible = false;
             // 
             // alphabetButton15
             // 
@@ -199,6 +207,7 @@
             this.alphabetButton15.TabStop = false;
             this.alphabetButton15.Text = "N";
             this.alphabetButton15.UseVisualStyleBackColor = true;
+            this.alphabetButton15.Visible = false;
             // 
             // alphabetButton14
             // 
@@ -214,6 +223,7 @@
             this.alphabetButton14.TabStop = false;
             this.alphabetButton14.Text = "O";
             this.alphabetButton14.UseVisualStyleBackColor = true;
+            this.alphabetButton14.Visible = false;
             // 
             // alphabetButton13
             // 
@@ -229,6 +239,7 @@
             this.alphabetButton13.TabStop = false;
             this.alphabetButton13.Text = "P";
             this.alphabetButton13.UseVisualStyleBackColor = true;
+            this.alphabetButton13.Visible = false;
             // 
             // alphabetButton12
             // 
@@ -244,6 +255,7 @@
             this.alphabetButton12.TabStop = false;
             this.alphabetButton12.Text = "Q";
             this.alphabetButton12.UseVisualStyleBackColor = true;
+            this.alphabetButton12.Visible = false;
             // 
             // alphabetButton11
             // 
@@ -259,6 +271,7 @@
             this.alphabetButton11.TabStop = false;
             this.alphabetButton11.Text = "R";
             this.alphabetButton11.UseVisualStyleBackColor = true;
+            this.alphabetButton11.Visible = false;
             // 
             // alphabetButton10
             // 
@@ -274,6 +287,7 @@
             this.alphabetButton10.TabStop = false;
             this.alphabetButton10.Text = "S";
             this.alphabetButton10.UseVisualStyleBackColor = true;
+            this.alphabetButton10.Visible = false;
             // 
             // alphabetButton23
             // 
@@ -289,6 +303,7 @@
             this.alphabetButton23.TabStop = false;
             this.alphabetButton23.Text = "T";
             this.alphabetButton23.UseVisualStyleBackColor = true;
+            this.alphabetButton23.Visible = false;
             // 
             // alphabetButton24
             // 
@@ -304,6 +319,7 @@
             this.alphabetButton24.TabStop = false;
             this.alphabetButton24.Text = "I";
             this.alphabetButton24.UseVisualStyleBackColor = true;
+            this.alphabetButton24.Visible = false;
             // 
             // alphabetButton25
             // 
@@ -319,6 +335,7 @@
             this.alphabetButton25.TabStop = false;
             this.alphabetButton25.Text = "C";
             this.alphabetButton25.UseVisualStyleBackColor = true;
+            this.alphabetButton25.Visible = false;
             // 
             // alphabetButton26
             // 
@@ -334,6 +351,7 @@
             this.alphabetButton26.TabStop = false;
             this.alphabetButton26.Text = "D";
             this.alphabetButton26.UseVisualStyleBackColor = true;
+            this.alphabetButton26.Visible = false;
             // 
             // alphabetButton27
             // 
@@ -349,6 +367,7 @@
             this.alphabetButton27.TabStop = false;
             this.alphabetButton27.Text = "B";
             this.alphabetButton27.UseVisualStyleBackColor = true;
+            this.alphabetButton27.Visible = false;
             // 
             // alphabetButton28
             // 
@@ -364,6 +383,7 @@
             this.alphabetButton28.TabStop = false;
             this.alphabetButton28.Text = "J";
             this.alphabetButton28.UseVisualStyleBackColor = true;
+            this.alphabetButton28.Visible = false;
             // 
             // alphabetButton29
             // 
@@ -379,6 +399,7 @@
             this.alphabetButton29.TabStop = false;
             this.alphabetButton29.Text = "A";
             this.alphabetButton29.UseVisualStyleBackColor = true;
+            this.alphabetButton29.Visible = false;
             // 
             // alphabetButton30
             // 
@@ -394,6 +415,7 @@
             this.alphabetButton30.TabStop = false;
             this.alphabetButton30.Text = "E";
             this.alphabetButton30.UseVisualStyleBackColor = true;
+            this.alphabetButton30.Visible = false;
             // 
             // alphabetButton31
             // 
@@ -409,6 +431,7 @@
             this.alphabetButton31.TabStop = false;
             this.alphabetButton31.Text = "G";
             this.alphabetButton31.UseVisualStyleBackColor = true;
+            this.alphabetButton31.Visible = false;
             // 
             // triviaButton3
             // 
@@ -424,6 +447,7 @@
             this.triviaButton3.TabStop = false;
             this.triviaButton3.Text = "K";
             this.triviaButton3.UseVisualStyleBackColor = true;
+            this.triviaButton3.Visible = false;
             // 
             // triviaButton2
             // 
@@ -439,6 +463,7 @@
             this.triviaButton2.TabStop = false;
             this.triviaButton2.Text = "L";
             this.triviaButton2.UseVisualStyleBackColor = true;
+            this.triviaButton2.Visible = false;
             // 
             // triviaButton1
             // 
@@ -454,6 +479,7 @@
             this.triviaButton1.TabStop = false;
             this.triviaButton1.Text = "F";
             this.triviaButton1.UseVisualStyleBackColor = true;
+            this.triviaButton1.Visible = false;
             // 
             // button1
             // 
@@ -469,6 +495,7 @@
             this.button1.TabStop = false;
             this.button1.Text = "H";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // pictureBox2
             // 
@@ -667,7 +694,7 @@
             this.Controls.Add(this.triviaButton2);
             this.Controls.Add(this.triviaButton1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainForm";
