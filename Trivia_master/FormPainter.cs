@@ -91,6 +91,7 @@ namespace Trivia_master
         public override void Reset()
         {
             AnswerType = -1;
+            Changed = false;
             foreach (MediumAnswerPainter map in objectPaintList)
             {
                 map.Form = Form;

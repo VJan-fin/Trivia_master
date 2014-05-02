@@ -192,6 +192,7 @@ namespace Trivia_master
              questionCS4.Question.Add("C#");
              questionCS4.Question.Add("Acronym");
              fp = new FormPainter(new AlphabetAnswer("OOP"));
+             fp.AddComponent(new TimerPainter());
              questionCS4.CorrectAnswers.Add(fp);
              cs.addQuestion(questionCS4);
             AssociationQ<string, FormPainter> questionCS5 = new AssociationQ<string,FormPainter >();
@@ -202,6 +203,7 @@ namespace Trivia_master
 
             fp = new FormPainter(new AlphabetAnswer("Network")); 
             fp.AddComponent(new TimerPainter());
+           
             questionCS5.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS5);
 
