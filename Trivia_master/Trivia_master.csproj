@@ -136,6 +136,7 @@
       <DependentUpon>StartingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="State.cs" />
+    <Compile Include="TimerPainter.cs" />
     <Compile Include="TriviaButton.cs">
       <SubType>Component</SubType>
     </Compile>

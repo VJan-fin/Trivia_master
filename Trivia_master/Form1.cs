@@ -77,12 +77,12 @@ namespace Trivia_master
 
         public virtual void CorrectAnswer()
         {
-            DialogResult = DialogResult.OK;
+
         }
 
         public virtual void IncorrectAnswer()
         {
-            DialogResult = DialogResult.No;
+
         }
 
         public virtual void UpdateView()
@@ -103,7 +103,7 @@ namespace Trivia_master
 
         public virtual void TimeElapsed()
         {
-            DialogResult = DialogResult.No;
+
         }
 
         public virtual void Answered()
@@ -112,10 +112,20 @@ namespace Trivia_master
         }
 
 
-
         public void setCursor(Cursor crs)
         {
             this.Cursor = crs;
+        }
+
+
+        public void AnswerTrue()
+        {
+            DialogResult = DialogResult.OK;
+        }
+
+        public void AnswerFalse()
+        {
+            DialogResult = DialogResult.No;
         }
     }
 }

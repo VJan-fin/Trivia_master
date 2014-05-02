@@ -16,5 +16,7 @@ namespace Trivia_master
         void TimeElapsed();
         void Answered();
         void setCursor(Cursor crs);
+        void AnswerTrue();
+        void AnswerFalse();
     }
 }
