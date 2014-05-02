@@ -88,7 +88,7 @@ namespace Trivia_master
                 {
                     btn.Draw(g);
                 }
-                base.Draw(g);
+
                 if(Attempts <= AttemptsToClose)
                     g.DrawString(String.Format("Attempts: {0:00}", Attempts), Font, TimeToCloseBrush, AttemptsLocation);
                 else g.DrawString(String.Format("Attempts: {0:00}", Attempts), Font, DefaultBrush, AttemptsLocation);
@@ -133,15 +133,13 @@ namespace Trivia_master
             Form.UpdateView();
             if (count == answer.Length)
             {
-                Answered = 2;
-                Form.Answered();
+                Form.CorrectAnswer();
             }
             if (curr == 0)
                 Attempts--;
             if (Attempts == 0)
             {
-                Answered = 1;
-                Form.Answered();
+                Form.IncorrectAnswer();
             }
                 
         }
