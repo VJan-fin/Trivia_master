@@ -123,9 +123,9 @@ namespace Trivia_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Devil1 {
+        internal static System.Drawing.Bitmap Devil2 {
             get {
-                object obj = ResourceManager.GetObject("Devil1", resourceCulture);
+                object obj = ResourceManager.GetObject("Devil2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

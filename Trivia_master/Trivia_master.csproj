@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="oie_transparent.ico" />
+    <None Include="Resources\Devil2.png" />
     <None Include="Resources\Devil1.png" />
     <None Include="Resources\Devil.gif" />
     <None Include="Resources\Despicable Me.jpg" />

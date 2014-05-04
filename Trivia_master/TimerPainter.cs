@@ -44,6 +44,7 @@ namespace Trivia_master
 
         public override void Reset()
         {
+            base.Reset();
             FormSize = Form.getSize();
             if (FormSize.Width > FormSize.Height)
             {

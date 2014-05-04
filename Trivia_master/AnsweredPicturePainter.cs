@@ -25,7 +25,7 @@ namespace Trivia_master
             IncorrectIncoImage = Resources.Wrong_answer1;
             TimeElapsedImage = Resources.Timeout;
             Joker = Resources.Joker1;
-            Devil = Resources.Devil1;
+            Devil = Resources.Devil2;
         }
 
         public override void Reset()
