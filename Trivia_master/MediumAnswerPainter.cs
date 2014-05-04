@@ -9,73 +9,100 @@ namespace Trivia_master
 {
     public abstract class MediumAnswerPainter
     {
-        public Timer Timer { get; set; }
-        protected int TimeToClose { get; set; }
-        protected Size Size { get; set; }
-        public int Answered { get; set; }
-        public Font AlphaFont { get; set; }
-        protected Point Location { get; set; }
-        protected bool MouseClicked { get; set; }
-        protected Point PictureLocation { get; set; }
-        protected Size PictureSize { get; set; }
+        protected enum AnswerStates
+        {
+            NotAnswered,
+            Correct,
+            Incorrect,
+            TimeElapsed,
+            Joker,
+            Devil
+        };
+
+        protected AnswerStates AnswerState { get; set; }
+        protected Point FormLocation { get; set; }
+        protected Size FormSize { get; set; }
         protected Brush DefaultBrush { get; set; }
-        protected Brush AnsweredCorrect { get; set; }
-        protected Point AnsweredAnswerLocation { get; set; }
         protected Brush TimeToCloseBrush { get; set; }
-        public IUpdatableView Form { get; set; }
-        public Font Font { get; set; }
-        public int TimeToEnd { get; set; }
+        protected Brush AnsweredCorrectBrush { get; set; }
+        public Font SmallerFont { get; set; }
+        public Font LargerFont { get; set; }
+        public Form1 Form { get; set; }
+        protected bool MouseClicked { get; set; }
+
+        
+
+        protected Point AnsweredAnswerLocation { get; set; }
+
+        /// <summary>
+        /// Form Events
+        /// </summary>
+        /// <param name="e"></param>
         public virtual void KeyPress(KeyPressEventArgs e) { }
         public virtual void KeyDown(KeyEventArgs e) { }
         public virtual void KeyUp(KeyEventArgs e) { }
         public virtual void MouseUp(MouseEventArgs e) { }
         public virtual void MouseDown(MouseEventArgs e) { }
         public virtual void MouseMove(MouseEventArgs e) { }
-        public abstract void Draw(Graphics g);
 
-        public MediumAnswerPainter(int time = 3)
+        /// <summary>
+        /// Draws a component
+        /// </summary>
+        /// <param name="g"></param>
+        public abstract void Draw(Graphics g);
+        
+        /// <summary>
+        /// Changes AnswerType to Correct
+        /// needed to change behavior
+        /// </summary>
+        public virtual void CorrectAnswer() { AnswerState = AnswerStates.Correct; }
+
+        /// <summary>
+        /// Changes AnswerType to Incorrect
+        /// needed to change behavior
+        /// </summary>
+        public virtual void IncorrectAnswer() { AnswerState = AnswerStates.Incorrect; }
+
+        /// <summary>
+        /// Changes AnswerType to TimeElapsed
+        /// needed to change behavior
+        /// </summary>
+        public virtual void TimeElapsed() { AnswerState = AnswerStates.TimeElapsed; }
+
+
+        public MediumAnswerPainter()
         {
-            AlphaFont = new Font("Forte", 15);
-            Font = new Font("Forte", 24, FontStyle.Bold);
+            AnswerState = AnswerStates.NotAnswered;
+            SmallerFont = new Font("Forte", 15);
+            LargerFont = new Font("Forte", 24, FontStyle.Bold);
             DefaultBrush = new SolidBrush(Color.FromArgb(217, 0, 0));
             TimeToCloseBrush = new SolidBrush(Color.FromArgb(229, 192, 21));
-            Timer = new Timer();
-            Timer.Interval = 1000;
-            Timer.Tick += new System.EventHandler(this.Up);
-            AnsweredCorrect = new SolidBrush(Color.FromArgb(0, 146, 17));
-            PictureSize = new Size(263, 263);
+            AnsweredCorrectBrush = new SolidBrush(Color.FromArgb(0, 146, 17));
         }
 
-        public void Up(object sender, EventArgs e)
+        public virtual void DevilAnswer()
         {
-            if (TimeToEnd == 0)
-            {
-                Timer.Stop();
-                if (Answered == 1)
-                    Form.AnswerFalse();
-                if (Answered == 2)
-                    Form.AnswerTrue();
-                if (Answered == 3)
-                    Form.AnswerFalse();
-            }
-            else
-            {
-                TimeToEnd--;
-            }
+            AnswerState = AnswerStates.Devil;
         }
 
+        public virtual void JokerAnswer()
+        {
+            AnswerState = AnswerStates.Joker;
+        }
+
+        /// <summary>
+        /// Resets current state of object according to Form that represents it.
+        /// </summary>
         public virtual void Reset()
         {
+            AnswerState = AnswerStates.NotAnswered;
             MouseClicked = false;
-            Size = Form.getSize();
-            if (Size.Width > Size.Height)
+            FormSize = Form.getSize();
+            if (FormSize.Width > FormSize.Height)
             {
-                Location = new Point(Size.Width / 2 - Size.Height / 2, 0);
+                FormLocation = new Point(FormSize.Width / 2 - FormSize.Height / 2, 0);
             }
-            else Location = new Point(0, Size.Height / 2 - Size.Width / 2);
-            TimeToEnd = 3;
-            PictureLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 7 / 20), Location.Y + (Math.Min(Size.Width, Size.Height) * 4 / 15));
-            Answered = 0;
+            else FormLocation = new Point(0, FormSize.Height / 2 - FormSize.Width / 2);
         }
     }
 }

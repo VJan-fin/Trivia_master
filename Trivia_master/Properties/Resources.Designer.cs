@@ -113,9 +113,9 @@ namespace Trivia_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exitButton {
+        internal static System.Drawing.Bitmap Despicable_Me {
             get {
-                object obj = ResourceManager.GetObject("exitButton", resourceCulture);
+                object obj = ResourceManager.GetObject("Despicable_Me", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,19 @@ namespace Trivia_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Joker {
+        internal static System.Drawing.Bitmap Devil1 {
             get {
-                object obj = ResourceManager.GetObject("Joker", resourceCulture);
+                object obj = ResourceManager.GetObject("Devil1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exitButton {
+            get {
+                object obj = ResourceManager.GetObject("exitButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

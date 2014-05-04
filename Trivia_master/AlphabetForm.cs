@@ -13,7 +13,6 @@ namespace Trivia_master
     public partial class AlphabetForm : Form1
     {
         protected MediumQuestionPainter Question { get; set; }
-        protected MediumAnswerPainter Answer { get; set; }
         protected int Answere { get; set; }
         public AlphabetForm(Category<MediumQuestionPainter, MediumAnswerPainter> c, IQuestion<MediumQuestionPainter, MediumAnswerPainter> q, int TimeToClose = 3)
         {
@@ -26,8 +25,8 @@ namespace Trivia_master
             Question.Reset();
             Answer = q.getCorrectAnswer()[0];
             Answer.Form = this;
-            Answer.AlphaFont = lblKategorija.Font;
-            Answer.Font = lblOdgovor.Font;
+            Answer.SmallerFont = lblKategorija.Font;
+            Answer.LargerFont = lblOdgovor.Font;
             Answer.Reset();
             lblKategorija.Text = c.ToString();
             Invalidate(true);

@@ -10,8 +10,11 @@ namespace Trivia_master
 {
     public class AlphabetAnswer : MediumAnswerPainter
     {
-        protected String answer { get; set; }
-        protected String CorrectAnswer { get; set; }
+        protected Random Random { get; set; }
+        public int JokerChance { get; set; }
+        public int DevilChance { get; set; }
+        protected String Answer { get; set; }
+        protected String TheCorrectAnswer { get; set; }
         protected List<CostomAlphabetButton> Buttons { get; set; }
         protected Point AnswerLocation { get; set; }
         protected Brush AnswerBrush { get; set; }
@@ -20,53 +23,90 @@ namespace Trivia_master
         protected int Attempts { get; set; }
         protected int AttemptsToClose { get; set; }
         protected int DefaultAttempts { get; set; }
-        protected Point AttemptsLocation { get; set; }
-        protected StringBuilder sb;
-        protected int count;
-        protected int wrong;
-        public Point AttemptsRelativeLocation {get; set;}
+        protected Point AttemptsRelativeLocation { get; set; }
+        protected StringBuilder PresentedAnswer;
+        protected int CountLetters { get; set; }
+        protected int CountAttempts { get; set; }
+        public Point AttemtsLocation {get; set;}
+        public int NumOfLetters { get; set; }
+        public int TimeToEnd { get; set; }
+        public Timer Timer { get; set; }
+        protected bool IsChanged { get; set; }
 
-        public AlphabetAnswer(String a, int time = 20, int attepmts = 5) : base(time)
+        public AlphabetAnswer(String a , int attepmts = 5) : base()
         {
-            answer = a;
-            sb = new StringBuilder();
+            Random = new Random();
+            Answer = a;
+            PresentedAnswer = new StringBuilder();
             AnswerBrush = new SolidBrush(Color.White);
-            Answered = 0;
             StringBuilder pm = new StringBuilder();
-            for (int i = 0; i < answer.Length; i++)
+            NumOfLetters = 0;
+            for (int i = 0; i < Answer.Length; i++)
             {
-                pm.Append(Char.ToUpper(answer.ElementAt<Char>(i)));
+                if (!Answer.ElementAt<char>(i).Equals(' '))
+                    NumOfLetters++;
+                pm.Append(Char.ToUpper(Answer.ElementAt<Char>(i)));
                 pm.Append(" ");
             }
             DefaultAttempts = attepmts;
-            AttemptsRelativeLocation = new Point(63, 23);
+            AttemtsLocation = new Point(63, 23);
             Attempts = attepmts;
             AttemptsToClose = (int)Math.Round(Attempts * 20.0 / 100, 0);
-            CorrectAnswer = pm.ToString();
+            TheCorrectAnswer = pm.ToString();
+            JokerChance = 2;
+            DevilChance = 10;
+            Timer = new Timer();
+            Timer.Interval = 1000;
+            TimeToEnd = 3;
+            Timer.Tick += new System.EventHandler(this.TimerTick);
+        }
+
+        public void TimerTick(object sender, EventArgs e)
+        {
+            if (TimeToEnd == 0)
+            {
+                Timer.Stop();
+                if (AnswerState == AnswerStates.Incorrect || AnswerState == AnswerStates.TimeElapsed || AnswerState == AnswerStates.Devil)
+                    Form.AnswerFalse();
+                else
+                    Form.AnswerTrue();
+            }
+            else
+            {
+                TimeToEnd--;
+            }
         }
 
         public override void Reset()
         {
-            Answered = 0;
             base.Reset();
-            sb = new StringBuilder();
-            for (int i = 0; i < answer.Length; i++)
+
+            TimeToEnd = 3;
+            IsChanged = false;
+            PresentedAnswer = new StringBuilder();
+            
+            // Builds a hangman answer.
+            for (int i = 0; i < Answer.Length; i++)
             {
-                sb.Append("_ ");
+                if (Answer.ElementAt<char>(i).Equals(' '))
+                    PresentedAnswer.Append("  ");
+                else
+                    PresentedAnswer.Append("_ ");
             }
-            count = 0;
-            wrong = 0;
+
+            CountLetters = 0;
+            CountAttempts = 0;
             Set = new HashSet<char>();
             Attempts = DefaultAttempts;
-            AnswerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 4 / 19), Location.Y + (Math.Min(Size.Width, Size.Height) * 5 / 8));
-            AnsweredAnswerLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * 4 / 19), Location.Y + (Math.Min(Size.Width, Size.Height) * 31 / 40));
-            AttemptsLocation = new Point(Location.X + (Math.Min(Size.Width, Size.Height) * AttemptsRelativeLocation.X/100), Location.Y + (Math.Min(Size.Width, Size.Height) * AttemptsRelativeLocation.Y/100));
-            int pom = (int)Math.Round(Math.Min(Size.Width, Size.Height)/16.0, 0);
+            AnswerLocation = new Point(FormLocation.X + (Math.Min(FormSize.Width, FormSize.Height) * 4 / 19), FormLocation.Y + (Math.Min(FormSize.Width, FormSize.Height) * 64/100));
+            AnsweredAnswerLocation = new Point(FormLocation.X + (Math.Min(FormSize.Width, FormSize.Height) * 4 / 19), FormLocation.Y + (Math.Min(FormSize.Width, FormSize.Height) * 31 / 40));
+            AttemptsRelativeLocation = new Point(FormLocation.X + (Math.Min(FormSize.Width, FormSize.Height) * AttemtsLocation.X/100), FormLocation.Y + (Math.Min(FormSize.Width, FormSize.Height) * AttemtsLocation.Y/100));
+            int pom = (int)Math.Round(Math.Min(FormSize.Width, FormSize.Height)/16.0, 0);
             Size BtnSize = new Size(pom, pom);
             int XX = AnswerLocation.X;
             int X = XX;
-            int Y = Location.Y + (Math.Min(Size.Width, Size.Height) * 41 / 64);
-            int factor = (int)Math.Round(Math.Min(Size.Width, Size.Height) / 13.913, 0);
+            int Y = FormLocation.Y + (Math.Min(FormSize.Width, FormSize.Height) * 41 / 64);
+            int factor = (int)Math.Round(Math.Min(FormSize.Width, FormSize.Height) / 13.913, 0);
             Buttons = new List<CostomAlphabetButton>();
             for (int i = 0; i < 26; i++)
             {
@@ -75,66 +115,77 @@ namespace Trivia_master
                     X = XX;
                     Y += factor;
                 }
-                CostomAlphabetButton cb = new CostomAlphabetButton(AlphaFont, new Point(X, Y), BtnSize);
+                CostomAlphabetButton cb = new CostomAlphabetButton(SmallerFont, new Point(X, Y), BtnSize);
                 cb.Text = ((char)('A' + i)).ToString();
                 Buttons.Add(cb);
                 X += factor;
             }
+
+            
         }
 
         public override void Draw(System.Drawing.Graphics g)
         {
-            if (Answered == 0)
+            if (!IsChanged && JokerChance != 0 && Random.Next((int)(100 / JokerChance)) == 0)
+            {
+                IsChanged = true;
+                Form.JokerAnswer();
+                return;
+            }
+            IsChanged = true;
+            if (AnswerState == AnswerStates.NotAnswered)
             {
                 foreach (CostomAlphabetButton btn in Buttons)
-                {
                     btn.Draw(g);
-                }
 
                 if(Attempts <= AttemptsToClose)
-                    g.DrawString(String.Format("Attempts: {0:00}", Attempts), Font, TimeToCloseBrush, AttemptsLocation);
-                else g.DrawString(String.Format("Attempts: {0:00}", Attempts), Font, DefaultBrush, AttemptsLocation);
-                g.DrawString(sb.ToString(), Font, AnswerBrush, AnswerLocation);
+                    g.DrawString(String.Format("Attempts: {0:00}", Attempts), LargerFont, TimeToCloseBrush, AttemptsRelativeLocation);
+                else g.DrawString(String.Format("Attempts: {0:00}", Attempts), LargerFont, DefaultBrush, AttemptsRelativeLocation);
+                g.DrawString(PresentedAnswer.ToString(), LargerFont, AnswerBrush, AnswerLocation);
             }
-            else if (Answered == 1)
+            else if (AnswerState == AnswerStates.Incorrect)
             {
-                g.DrawImage(Resources.Wrong_answer1, new Rectangle(PictureLocation, PictureSize));
-                g.DrawString(CorrectAnswer, Font, DefaultBrush, AnsweredAnswerLocation);
+                g.DrawString(TheCorrectAnswer, LargerFont, DefaultBrush, AnsweredAnswerLocation);
             }
-            else if (Answered == 2)
+            else if (AnswerState == AnswerStates.Correct || AnswerState == AnswerStates.Devil)
             {
-                g.DrawImage(Resources.Correct2, new Rectangle(PictureLocation, PictureSize));
-                g.DrawString(CorrectAnswer, Font, AnsweredCorrect, AnsweredAnswerLocation);
+                g.DrawString(TheCorrectAnswer, LargerFont, AnsweredCorrectBrush, AnsweredAnswerLocation);
             }
-            else if (Answered == 3)
+            else if (AnswerState == AnswerStates.TimeElapsed)
             {
-                g.DrawImage(Resources.Timeout, new Rectangle(PictureLocation, PictureSize));
-                g.DrawString(CorrectAnswer, Font, DefaultBrush, AnsweredAnswerLocation);
+                g.DrawString(TheCorrectAnswer, LargerFont, DefaultBrush, AnsweredAnswerLocation);
             }
         }
 
         protected void AddChar(char c)
         {
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+                return;
             if (Set.Contains(c))
                 return;
             Set.Add(c);
             int curr = 0;
             int i = 0;
-            String str = sb.ToString();
-            foreach (char chr in answer)
+            String str = PresentedAnswer.ToString();
+            foreach (char chr in Answer)
             {
                 if (char.ToUpper(c).Equals(char.ToUpper(chr)) && str.ElementAt<Char>(2*i) == '_')
                 {
-                    sb.Insert(2 * i, c.ToString().ToUpper());
-                    sb.Remove(2 * i + 1, 1);
+                    PresentedAnswer.Insert(2 * i, c.ToString().ToUpper());
+                    PresentedAnswer.Remove(2 * i + 1, 1);
                     curr++;
                 }
                 i++;
             }
-            count += curr;
+            CountLetters += curr;
             Form.UpdateView();
-            if (count == answer.Length)
+            if (CountLetters == NumOfLetters)
             {
+                if (DevilChance != 0 && Random.Next((int)(100 / DevilChance)) == 0)
+                {
+                    Form.DevilAnswer();
+                    return;
+                }
                 Form.CorrectAnswer();
             }
             if (curr == 0)
@@ -153,43 +204,56 @@ namespace Trivia_master
 
         public override void KeyDown(System.Windows.Forms.KeyEventArgs e)
         {
+            bool changed = false;
             foreach (CostomAlphabetButton btn in Buttons)
             {
+                changed = true;
                 if (btn.Enabled && btn.Text.Equals(e.KeyData.ToString().ToUpper()))
                     btn.BackColor = Color.FromArgb(192, 192, 0);
             }
-            Form.UpdateView();
+            if(changed)
+                Form.UpdateView();
         }
 
         public override void KeyUp(System.Windows.Forms.KeyEventArgs e)
         {
+            bool changed = false;
             foreach (CostomAlphabetButton btn in Buttons)
             {
                 if (btn.Enabled && btn.Text.Equals(e.KeyData.ToString().ToUpper()))
                 {
+                    changed = true;
                     btn.Enabled = false;
                     btn.BackColor = Color.Transparent;
                     btn.ForeColor = SystemColors.InactiveCaptionText;
                 }
             }
-            Form.UpdateView();
+            if(changed)
+                Form.UpdateView();
         }
 
         public override void MouseMove(System.Windows.Forms.MouseEventArgs e)
         {
             if (MouseClicked)
                 return;
-            Form.setCursor(Cursors.Default);
+            bool changed = false;
             foreach (CostomAlphabetButton btn in Buttons)
             {
-                if (btn.Enabled && btn.IsIn(e.Location))
+                if (btn.Enabled && btn.IsIn(e.Location) && btn.BackColor != Color.FromArgb(229, 192, 21))
                 {
                     Form.setCursor(Cursors.Hand);
                     btn.BackColor = Color.FromArgb(229, 192, 21);
+                    changed = true;
                 }
-                else btn.BackColor = Color.Transparent;
+                else if (!btn.IsIn(e.Location) && btn.BackColor != Color.Transparent)
+                {
+                    btn.BackColor = Color.Transparent;
+                    Form.setCursor(Cursors.Default);
+                    changed = true;
+                }
             }
-            Form.UpdateView();
+            if(changed)
+                Form.UpdateView();
         }
 
         public override void MouseDown(System.Windows.Forms.MouseEventArgs e)
@@ -221,6 +285,36 @@ namespace Trivia_master
                 }
                 else btn.BackColor = Color.Transparent;
             }
+        }
+
+        public override void CorrectAnswer()
+        {
+            base.CorrectAnswer();
+            Timer.Start();
+        }
+
+        public override void IncorrectAnswer()
+        {
+            base.IncorrectAnswer();
+            Timer.Start();
+        }
+
+        public override void TimeElapsed()
+        {
+            base.TimeElapsed();
+            Timer.Start();
+        }
+
+        public override void DevilAnswer()
+        {
+            base.DevilAnswer();
+            Timer.Start();
+        }
+
+        public override void JokerAnswer()
+        {
+            base.JokerAnswer();
+            Timer.Start();
         }
     }
 }

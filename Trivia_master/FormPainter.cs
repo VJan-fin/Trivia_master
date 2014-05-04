@@ -5,131 +5,111 @@ using System.Text;
 
 namespace Trivia_master
 {
-   public class FormPainter : MediumAnswerPainter
+    /// <summary>
+    /// Document clas that servers other documents
+    /// All methods are just calls to other document's methods
+    /// </summary>
+    public class FormPainter : MediumAnswerPainter
     {
         List<MediumAnswerPainter> objectPaintList;
-        public int AnswerType { get; set; }
-        public AlphabetAnswer Answer { get; set; }
-        public bool Changed { get; set; }
-        //2- Correct, 1 - False, 3 - TimeElapsed
-        public FormPainter(AlphabetAnswer aa)
+
+        public FormPainter(MediumAnswerPainter Answer)
             : base()
         {
             objectPaintList = new List<MediumAnswerPainter>();
-            Answer = aa;
             objectPaintList.Add(Answer);
-            Changed = false;
-            AnswerType=-1;
 
         }
-        public void AddComponent(MediumAnswerPainter mp)
+        public void AddComponent(MediumAnswerPainter Component)
         {
 
-            objectPaintList.Add(mp);
+            objectPaintList.Add(Component);
         }
+
         public override void KeyDown(System.Windows.Forms.KeyEventArgs e)
-        {
-           
+        {  
             foreach(MediumAnswerPainter map in objectPaintList)
-            {
-
                 map.KeyDown(e);
-            }
         }
+
         public override void KeyPress(System.Windows.Forms.KeyPressEventArgs e)
         {
             foreach (MediumAnswerPainter map in objectPaintList)
-            {
                 map.KeyPress(e);
-            }
         }
+
         public override void KeyUp(System.Windows.Forms.KeyEventArgs e)
         {
             foreach (MediumAnswerPainter map in objectPaintList)
-            {
                 map.KeyUp(e);
-            }
         }
+
         public override void MouseDown(System.Windows.Forms.MouseEventArgs e)
         {
             foreach (MediumAnswerPainter map in objectPaintList)
-            {
                 map.MouseDown(e);
-            }
         }
+
         public override void MouseMove(System.Windows.Forms.MouseEventArgs e)
         {
             foreach (MediumAnswerPainter map in objectPaintList)
-            {
                 map.MouseMove(e);
-            }
         }
+
         public override void MouseUp(System.Windows.Forms.MouseEventArgs e)
         {
             foreach (MediumAnswerPainter map in objectPaintList)
-            {
                 map.MouseUp(e);
-            }
         }
+
         public override void Draw(System.Drawing.Graphics g)
         {
-            if (AnswerType == -1)
-            {
-                foreach (MediumAnswerPainter map in objectPaintList)
-                {
-                    map.Draw(g);
-                 
-                }
-              //  Answer.Draw(g);
-            }
-            else
-            {
-                Answer.Answered = AnswerType;
-                Answer.Draw(g);
-            }
+            foreach (MediumAnswerPainter map in objectPaintList)
+                map.Draw(g);
         }
+
         public override void Reset()
         {
-            AnswerType = -1;
-            Changed = false;
             foreach (MediumAnswerPainter map in objectPaintList)
             {
                 map.Form = Form;
                 map.Reset();
             }
         }
-        public void correctAnswer()
+
+        public override void CorrectAnswer()
         {
-            if (!Changed)
-            {
-                Changed = true;
-                AnswerType = 2;
-                Answer.Answered = 2;
-                Answer.Timer.Start();
-                Form.Answered();
-            }
+            foreach (MediumAnswerPainter map in objectPaintList)
+                map.CorrectAnswer();
+            Form.Answered();
         }
-        public void falseAnswer()
+
+        public override void IncorrectAnswer()
         {
-            if (!Changed)
-            {
-                Changed = true;
-                AnswerType = 1;
-                Answer.Answered = 1;
-                Answer.Timer.Start();
-                Form.Answered();
-            }
+            foreach (MediumAnswerPainter map in objectPaintList)
+                map.IncorrectAnswer();
+            Form.Answered();
         }
-        public void timeElapsed()
+
+        public override void TimeElapsed()
         {
-            if (!Changed)
-            {
-                Changed = true;
-                AnswerType = 3;
-                Answer.Answered = 3;
-                Answer.Timer.Start();
-                Form.Answered();
-            }
+            foreach (MediumAnswerPainter map in objectPaintList)
+                map.TimeElapsed();
+            Form.Answered();
         }
+
+        public override void DevilAnswer()
+        {
+            foreach (MediumAnswerPainter map in objectPaintList)
+                map.DevilAnswer();
+            Form.Answered();
+        }
+
+        public override void JokerAnswer()
+        {
+            foreach (MediumAnswerPainter map in objectPaintList)
+                map.JokerAnswer();
+            Form.Answered();
+        }    
     }
 }

@@ -21,8 +21,21 @@ namespace Trivia_master
             HangManQ<Image, FormPainter> q = new HangManQ<Image, FormPainter>();
             q.Question.Add(Resources.Napoleon);
             AlphabetAnswer aa = new AlphabetAnswer("NAPOLEON");
-            aa.AttemptsRelativeLocation = new Point(62, 59);
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
             FormPainter fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Despicable_Me);
+            aa = new AlphabetAnswer("DESPICABLE ME");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
             q.CorrectAnswers.Add(fp);
             main.addQuestion(q);
         }
@@ -104,43 +117,71 @@ namespace Trivia_master
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Medium obj = new Medium();
-            obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Computer Science" });
-            obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            AlphabetQuestion que = new AlphabetQuestion("First programming language?");
-            List<MediumQuestionPainter> list = new List<MediumQuestionPainter>();
-            list.Add(que);
-            obj.Categories[0].questions[0].setQuestion(list);
-            MediumAnswerPainter ans = new AlphabetAnswer("ADA");
-            List<MediumAnswerPainter> list1 = new List<MediumAnswerPainter>();
-            list1.Add(ans);
-            obj.Categories[0].questions[0].setCorrectAnswer(list1);
+            Medium medium = new Medium();
+
+            
+            medium.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Computer Science" });
+            medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            AlphabetQuestion question = new AlphabetQuestion("First programming language?");
+            List<MediumQuestionPainter> listQuestions = new List<MediumQuestionPainter>();
+            listQuestions.Add(question);
+            medium.Categories[0].questions[0].setQuestion(listQuestions);
+            AlphabetAnswer alphabetAnswer = new AlphabetAnswer("ADA");
+            alphabetAnswer.DevilChance = 5;
+            alphabetAnswer.JokerChance = 5;
+            FormPainter answer = new FormPainter(alphabetAnswer);
+            answer.AddComponent(new TimerPainter());
+            answer.AddComponent(new AnsweredPicturePainter());
+            List<MediumAnswerPainter> listAnswers = new List<MediumAnswerPainter>();
+            listAnswers.Add(answer);
+            medium.Categories[0].questions[0].setCorrectAnswer(listAnswers);
 
             //obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Finki" });
-            obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            que = new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?");
-            list = new List<MediumQuestionPainter>();
-            list.Add(que);
-            obj.Categories[0].questions[1].setQuestion(list);
-            ans = new AlphabetAnswer("HEURISTIC");
-            list1 = new List<MediumAnswerPainter>();
-            list1.Add(ans);
-            obj.Categories[0].questions[1].setCorrectAnswer(list1);
+            medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            question = new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?");
+            listQuestions = new List<MediumQuestionPainter>();
+            listQuestions.Add(question);
+            medium.Categories[0].questions[1].setQuestion(listQuestions);
+            alphabetAnswer = new AlphabetAnswer("HEURISTIC");
+            alphabetAnswer.DevilChance = 5;
+            alphabetAnswer.JokerChance = 5;
+            answer = new FormPainter(alphabetAnswer);
+            answer.AddComponent(new TimerPainter());
+            answer.AddComponent(new AnsweredPicturePainter());
+            listAnswers = new List<MediumAnswerPainter>();
+            listAnswers.Add(answer);
+            medium.Categories[0].questions[1].setCorrectAnswer(listAnswers);
 
-            obj.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            que = new AlphabetQuestion("Home");
-            list = new List<MediumQuestionPainter>();
-            list.Add(que);
-            obj.Categories[0].questions[2].setQuestion(list);
-            ans = new AlphabetJoker();
-            list1 = new List<MediumAnswerPainter>();
-            list1.Add(ans);
-            obj.Categories[0].questions[2].setCorrectAnswer(list1);
-            obj.Categories[0].Shuffle();
+            /*medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            question = new AlphabetQuestion("Home");
+            listQuestions = new List<MediumQuestionPainter>();
+            listQuestions.Add(question);
+            medium.Categories[0].questions[2].setQuestion(listQuestions);
+            answer = new FormPainter(new AlphabetJoker());
+            listAnswers = new List<MediumAnswerPainter>();
+            listAnswers.Add(answer);
+            medium.Categories[0].questions[2].setCorrectAnswer(listAnswers);*/
+            //medium.Categories[0].Shuffle();
 
-            obj.MainCategory = main;
+            medium.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "History" });
+            medium.Categories[1].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
+            question = new AlphabetQuestion("Son of Philip 2 Macedonian was called?");
+            listQuestions = new List<MediumQuestionPainter>();
+            listQuestions.Add(question);
+            medium.Categories[1].questions[0].setQuestion(listQuestions);
+            alphabetAnswer = new AlphabetAnswer("THE GREAT");
+            alphabetAnswer.DevilChance = 5;
+            alphabetAnswer.JokerChance = 5;
+            answer = new FormPainter(alphabetAnswer);
+            answer.AddComponent(new TimerPainter());
+            answer.AddComponent(new AnsweredPicturePainter());
+            listAnswers = new List<MediumAnswerPainter>();
+            listAnswers.Add(answer);
+            medium.Categories[1].questions[0].setCorrectAnswer(listAnswers);
 
-            obj.createState();
+            medium.MainCategory = main;
+
+            medium.createState();
         }
         public override void CloseForm()
         {
@@ -163,6 +204,7 @@ namespace Trivia_master
             question.Question.Add("Has a lot of dialects");
             fp = new FormPainter(new AlphabetAnswer("LISP"));
             fp.AddComponent(new TimerPainter());
+            fp.AddComponent(new AnsweredPicturePainter()); 
             question.CorrectAnswers.Add(fp);
             cs.addQuestion(question);
            
@@ -174,6 +216,7 @@ namespace Trivia_master
             questionCS2.Question.Add("Tree traversal");
             fp = new FormPainter(new AlphabetAnswer("Minimax"));
             fp.AddComponent(new TimerPainter());
+            fp.AddComponent(new AnsweredPicturePainter()); 
             questionCS2.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS2);
             
@@ -184,6 +227,7 @@ namespace Trivia_master
              questionCS3.Question.Add("E-mail");
              fp = new FormPainter(new AlphabetAnswer("ILOVEYOU"));
              fp.AddComponent(new TimerPainter());
+             fp.AddComponent(new AnsweredPicturePainter()); 
              questionCS3.CorrectAnswers.Add(fp);
              cs.addQuestion(questionCS3);
              AssociationQ<string, FormPainter> questionCS4 = new AssociationQ<string, FormPainter>();
@@ -193,6 +237,7 @@ namespace Trivia_master
              questionCS4.Question.Add("Acronym");
              fp = new FormPainter(new AlphabetAnswer("OOP"));
              fp.AddComponent(new TimerPainter());
+             fp.AddComponent(new AnsweredPicturePainter()); 
              questionCS4.CorrectAnswers.Add(fp);
              cs.addQuestion(questionCS4);
             AssociationQ<string, FormPainter> questionCS5 = new AssociationQ<string,FormPainter >();
@@ -203,7 +248,7 @@ namespace Trivia_master
 
             fp = new FormPainter(new AlphabetAnswer("Network")); 
             fp.AddComponent(new TimerPainter());
-           
+            fp.AddComponent(new AnsweredPicturePainter()); 
             questionCS5.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS5);
 
