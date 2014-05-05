@@ -35,7 +35,8 @@ namespace Trivia_master
         }
         public virtual void CloseForm()
         {
-            Close();
+            DialogResult = DialogResult.No;
+            //Close();
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
@@ -94,7 +95,7 @@ namespace Trivia_master
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         public virtual Size getSize()

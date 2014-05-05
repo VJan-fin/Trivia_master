@@ -82,13 +82,24 @@ namespace Trivia_master
         private void alphabetButton1_Click(object sender, EventArgs e)
         {
             int ind = 0;
+            this.Focus();
             foreach (var item in this.Boxes)
             {
                 if (item.Text == (sender as QuestionBox).Text)
                     break;
                 ind++;
             }
-            (sender as QuestionBox).Visible = !state.ShowQ(state.Category[ind]);
+            if (state.ShowQ(state.Category[ind]) == true)
+            {
+                (sender as QuestionBox).Visible = false;
+                this.Focus();
+            }
+            else
+            {
+                (sender as QuestionBox).Visible = false;
+                this.Focus();
+                (sender as QuestionBox).Visible = true;
+            }
         }
 
         private void Draw(Graphics g)
