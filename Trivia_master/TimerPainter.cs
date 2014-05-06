@@ -17,7 +17,7 @@ namespace Trivia_master
         protected Point TimerLocation { get; set; }
         public Point Location { get; set; }
 
-        public TimerPainter(int time = 20) : base()
+        public TimerPainter(int time = 60) : base()
         {
             this.Time = time;
             Location = new Point(80, 28);
