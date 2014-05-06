@@ -18,9 +18,11 @@ namespace Trivia_master
         List<CostomAlphabetButton> lista;
         Font font;
         Point Pstring;
+        int curr = 0;
         public CloseForm()
         {
             InitializeComponent();
+            timer1.Start();
             lista = new List<CostomAlphabetButton>();
 
             font = new Font("Forte", 15);
@@ -124,6 +126,14 @@ namespace Trivia_master
         private void CloseForm_Paint(object sender, PaintEventArgs e)
         {
             draw(e.Graphics);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Opacity += 0.1;
+            curr++;
+            if (curr == 10)
+                timer1.Stop();
         }
 
     }

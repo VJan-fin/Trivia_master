@@ -42,7 +42,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Trivia_master.Properties.Resources.Logo;
             this.pictureBox2.Location = new System.Drawing.Point(165, 160);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(440, 258);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,8 +128,9 @@
             this.Controls.Add(this.QBox1);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StartingForm";
+            this.Opacity = 0D;
             this.Text = "Trivia Master";
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.QBox1, 0);

@@ -96,6 +96,7 @@ namespace Trivia_master
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlphabetForm";
+            this.Opacity = 0D;
             this.Text = "butt";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.AlphabetForm_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AlphabetForm_KeyDown);

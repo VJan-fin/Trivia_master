@@ -696,6 +696,7 @@
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
+            this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);

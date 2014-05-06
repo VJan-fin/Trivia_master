@@ -16,11 +16,13 @@ namespace Trivia_master
         Boolean IsClicked = false;
         Point mousePoint;
         Point currPoint;
+        int curr;
 
         public Form1()
         {
             InitializeComponent();
-      
+            curr = 0;
+            timer1.Start();
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -140,5 +142,14 @@ namespace Trivia_master
         {
             DialogResult = DialogResult.No;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Opacity += 0.1;
+            curr++;
+            if (curr == 10)
+                timer1.Stop();
+        }
+
     }
 }
