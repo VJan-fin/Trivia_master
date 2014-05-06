@@ -145,7 +145,7 @@ namespace Trivia_master
             }
             else if (AnswerState == AnswerStates.Incorrect)
             {
-                g.DrawString(TheCorrectAnswer, LargerFont, DefaultBrush, AnsweredAnswerLocation);
+                g.DrawString(PresentedAnswer.ToString(), LargerFont, DefaultBrush, AnsweredAnswerLocation);
             }
             else if (AnswerState == AnswerStates.Correct || AnswerState == AnswerStates.Devil)
             {
@@ -153,13 +153,13 @@ namespace Trivia_master
             }
             else if (AnswerState == AnswerStates.TimeElapsed)
             {
-                g.DrawString(TheCorrectAnswer, LargerFont, DefaultBrush, AnsweredAnswerLocation);
+                g.DrawString(PresentedAnswer.ToString(), LargerFont, DefaultBrush, AnsweredAnswerLocation);
             }
         }
 
         protected void AddChar(char c)
         {
-            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) || AnswerState != AnswerStates.NotAnswered)
                 return;
             if (Set.Contains(c))
                 return;

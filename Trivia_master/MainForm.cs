@@ -129,7 +129,7 @@ namespace Trivia_master
 
         public override void UpdateView()
         {
-            Invalidate(true);
+            Invalidate();
         }
 
         private void AlphabetForm_MouseDown(object sender, MouseEventArgs e)
