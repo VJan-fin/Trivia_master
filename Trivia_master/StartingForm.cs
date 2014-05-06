@@ -253,7 +253,7 @@ namespace Trivia_master
             cs.addQuestion(questionCS5);
 
             hard.Categories.Add(cs);
-        /*    Category<string, FormPainter> geography = new Category<string, FormPainter>();
+            Category<string, FormPainter> geography = new Category<string, FormPainter>();
             geography.CategoryName = "Geography";
             AssociationQ<string, FormPainter> questionG1 = new AssociationQ<string, FormPainter>();
             questionG1.Question.Add("One of the biggest cities in the world");
@@ -261,29 +261,103 @@ namespace Trivia_master
             questionG1.Question.Add("Turkey");
             questionG1.Question.Add("Transcontinental city");
             fp = new FormPainter(new AlphabetAnswer("Istanbul"));
+            fp.AddComponent(new AnsweredPicturePainter()); 
             fp.AddComponent(new TimerPainter());
-            questionG1.CorrectAnswers.Add(new AlphabetAnswer("Istanbul");
+            questionG1.CorrectAnswers.Add(fp);
             geography.addQuestion(questionG1);
             AssociationQ<string, FormPainter> questionG2 = new AssociationQ<string, FormPainter>();
             questionG2.Question.Add("Planet");
             questionG2.Question.Add("Closest to the sun");
             questionG2.Question.Add("Named after one of the Roman gods");
             questionG2.Question.Add("Smaller than Earth");
-            questionG2.CorrectAnswers.Add(new FormPainter("Mercury"));
+            fp = new FormPainter(new AlphabetAnswer("Mercury"));
+            fp.AddComponent(new AnsweredPicturePainter()); 
+            fp.AddComponent(new TimerPainter());
+            questionG2.CorrectAnswers.Add(fp);
             geography.addQuestion(questionG2);
             AssociationQ<string, FormPainter> questionG3 = new AssociationQ<string, FormPainter>();
             questionG3.Question.Add("River");
             questionG3.Question.Add("Africa");
             questionG3.Question.Add("Floods every year");
             questionG3.Question.Add("flows through 10 distinct countries");
-            questionG3.CorrectAnswers.Add(new AlphabetAnswer("NILE"));
+            fp = new FormPainter(new AlphabetAnswer("NILE"));
+            fp.AddComponent(new AnsweredPicturePainter()); 
+            fp.AddComponent(new TimerPainter());
+            questionG3.CorrectAnswers.Add(fp);
             geography.addQuestion(questionG3);
+            AssociationQ<string, FormPainter> questionG4 = new AssociationQ<string, FormPainter>();
+            questionG4.Question.Add("Country");
+            questionG4.Question.Add("Population of 32 000");
+            questionG4.Question.Add("Casinos");
+            questionG4.Question.Add("Has no airports");
+             fp = new FormPainter(new AlphabetAnswer("MONACO"));
+            fp.AddComponent(new AnsweredPicturePainter()); 
+            fp.AddComponent(new TimerPainter());
+            questionG4.CorrectAnswers.Add(fp);
+            geography.addQuestion(questionG4);
             hard.Categories.Add(geography);
-          
-          */
 
+            Category<string, FormPainter> movies = new Category<string, FormPainter>();
+            movies.CategoryName = "Movies";
+            AssociationQ<string, FormPainter> questionM1 = new AssociationQ<string, FormPainter>();
+            questionM1.Question.Add("Gondor");
+            questionM1.Question.Add("Battle of the Pelennor fields");
+            questionM1.Question.Add("City of the kings");
+            questionM1.Question.Add("Aragorn");
+            fp = new FormPainter(new AlphabetAnswer("Minas Tirith"));
+            fp.AddComponent(new AnsweredPicturePainter());
+            fp.AddComponent(new TimerPainter());
+            questionM1.CorrectAnswers.Add(fp);
+            movies.addQuestion(questionM1);
+
+            AssociationQ<string, FormPainter> questionM2 = new AssociationQ<string, FormPainter>();
+            questionM2.Question.Add("Unforgivable Curse");
+            questionM2.Question.Add("Harry Potter");
+            questionM2.Question.Add("Cedric Diggory");
+            questionM2.Question.Add("A flash of green light");
+            fp = new FormPainter(new AlphabetAnswer("Avada Kedavra"));
+            fp.AddComponent(new AnsweredPicturePainter());
+            fp.AddComponent(new TimerPainter());
+            questionM2.CorrectAnswers.Add(fp);
+            movies.addQuestion(questionM2);
+
+            AssociationQ<string, FormPainter> questionM3 = new AssociationQ<string, FormPainter>();
+            questionM3.Question.Add("007");
+            questionM3.Question.Add("Daniel Craig");
+            questionM3.Question.Add("2012");
+            questionM3.Question.Add("ADELE");
+            fp = new FormPainter(new AlphabetAnswer("Skyfall"));
+            fp.AddComponent(new AnsweredPicturePainter());
+            fp.AddComponent(new TimerPainter());
+            questionM3.CorrectAnswers.Add(fp);
+            movies.addQuestion(questionM3);
+
+            AssociationQ<string, FormPainter> questionM4 = new AssociationQ<string, FormPainter>();
+            questionM4.Question.Add("Clark Kent");
+            questionM4.Question.Add("Krypton");
+            questionM4.Question.Add("Lois Lane");
+            questionM4.Question.Add("Lex Luthor");
+            fp = new FormPainter(new AlphabetAnswer("Superman"));
+            fp.AddComponent(new AnsweredPicturePainter());
+            fp.AddComponent(new TimerPainter());
+            questionM4.CorrectAnswers.Add(fp);
+            movies.addQuestion(questionM4);
+
+
+            AssociationQ<string, FormPainter> questionM5 = new AssociationQ<string, FormPainter>();
+            questionM5.Question.Add("Magicians");
+            questionM5.Question.Add("\"Man's reach exceeds his imagination\"");
+            questionM5.Question.Add("Nikola Tesla");
+            questionM5.Question.Add("Christian Bale");
+            fp = new FormPainter(new AlphabetAnswer("The prestige"));
+            fp.AddComponent(new AnsweredPicturePainter());
+            fp.AddComponent(new TimerPainter());
+            questionM5.CorrectAnswers.Add(fp);
+            movies.addQuestion(questionM5);
             
+            hard.Categories.Add(movies);
             hard.MainCategory = main;
+
 
             hard.createState();
             
