@@ -54,6 +54,8 @@
             this.Text = "Form3";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.CloseForm_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CloseForm_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CloseForm_KeyUp);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CloseForm_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CloseForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CloseForm_MouseMove);

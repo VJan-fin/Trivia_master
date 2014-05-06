@@ -46,7 +46,6 @@ namespace Trivia_master
             lista.Add(cb);
             lista.Add(cb1);
             Invalidate();
-           
         }
         private void draw(Graphics e)
         {
@@ -136,5 +135,28 @@ namespace Trivia_master
                 timer1.Stop();
         }
 
+        private void CloseForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Close();
+            if (e.KeyCode == Keys.Enter)
+                DialogResult = DialogResult.Yes;
+        }
+
+        private void CloseForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                lista[1].BackColor = Color.FromArgb(229, 192, 21);
+                Invalidate();
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                lista[0].BackColor = Color.FromArgb(229, 192, 21);
+                Invalidate();
+            }
+        }
+
+        
     }
 }

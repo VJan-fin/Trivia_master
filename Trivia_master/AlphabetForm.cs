@@ -81,6 +81,8 @@ namespace Trivia_master
 
         private void AlphabetForm_MouseMove(object sender, MouseEventArgs e)
         {
+            if (Opacity < 0.9)
+                return;
             Question.MouseMove(e);
             Answer.MouseMove(e);
         }
