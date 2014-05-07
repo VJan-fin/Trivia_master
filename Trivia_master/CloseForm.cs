@@ -80,8 +80,7 @@ namespace Trivia_master
             {
                 if (c.IsIn(e.Location) && c.Text == "Yes")
                 {
-                    DialogResult = DialogResult.Yes;
-                    Close();
+                    Application.Exit();
 
                 }
                 if (c.IsIn(e.Location) && c.Text == "No")
@@ -137,20 +136,20 @@ namespace Trivia_master
 
         private void CloseForm_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.N)
                 Close();
-            if (e.KeyCode == Keys.Enter)
-                DialogResult = DialogResult.Yes;
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Y)
+                Application.Exit();
         }
 
         private void CloseForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.N)
             {
                 lista[1].BackColor = Color.FromArgb(229, 192, 21);
                 Invalidate();
             }
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Y)
             {
                 lista[0].BackColor = Color.FromArgb(229, 192, 21);
                 Invalidate();

@@ -151,5 +151,11 @@ namespace Trivia_master
                 timer1.Stop();
         }
 
+        protected virtual void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+                Close();
+        }
+
     }
 }

@@ -7,6 +7,7 @@ namespace Trivia_master
 {
     static class Program
     {
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,7 +16,9 @@ namespace Trivia_master
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartingForm());
+            LoadingForm fm = new LoadingForm();
+            fm.Show();
+            Application.Run();
         }
     }
 }

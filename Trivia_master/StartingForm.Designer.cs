@@ -132,6 +132,7 @@
             this.Name = "StartingForm";
             this.Opacity = 0D;
             this.Text = "Trivia Master";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.StartingForm_KeyUp);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.QBox1, 0);
             this.Controls.SetChildIndex(this.questionBox1, 0);

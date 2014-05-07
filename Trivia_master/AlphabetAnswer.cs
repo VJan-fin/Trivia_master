@@ -126,7 +126,7 @@ namespace Trivia_master
 
         public override void Draw(System.Drawing.Graphics g)
         {
-            if (!IsChanged && JokerChance != 0 && Random.Next((int)(100 / JokerChance)) == 0)
+            if (!IsChanged && JokerChance != 0 && Random.Next(100) < JokerChance)
             {
                 IsChanged = true;
                 Form.JokerAnswer();
@@ -181,7 +181,7 @@ namespace Trivia_master
             Form.UpdateView();
             if (CountLetters == NumOfLetters)
             {
-                if (DevilChance != 0 && Random.Next((int)(100 / DevilChance)) == 0)
+                if (DevilChance != 0 && Random.Next(100) < DevilChance)
                 {
                     Form.DevilAnswer();
                     return;

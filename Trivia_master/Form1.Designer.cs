@@ -64,6 +64,7 @@ namespace Trivia_master
             this.KeyPreview = true;
             this.Name = "Form1";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
