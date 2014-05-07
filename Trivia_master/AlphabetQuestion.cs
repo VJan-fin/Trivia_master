@@ -10,6 +10,7 @@ namespace Trivia_master
     {
         private String question;
         private StringBuilder sb;
+
         public AlphabetQuestion()
         {
             StringBuilder sb = new StringBuilder();

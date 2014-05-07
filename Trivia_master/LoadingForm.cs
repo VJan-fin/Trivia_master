@@ -12,16 +12,7 @@ namespace Trivia_master
 {
     public partial class LoadingForm : Form
     {
-        Image img0;
-        Image img1;
-        Image img2;
-        Image img3;
-        Image img4;
-        Image img5;
-        Image img6;
-        Image img7;
-        Image img8;
-        Size size { get; set; }
+        List<PuzzlePainter> Puzzle;
 
         Category<Image, FormPainter> main { get; set; }
         Easy easyObj;
@@ -36,34 +27,52 @@ namespace Trivia_master
             timer3.Stop();
             cap = 0;
             curr = 0;
-            img0 = Resources._0;
-            img1 = Resources._1;
-            img2 = Resources._2;
-            img3 = Resources._3;
-            img4 = Resources._4;
-            img5 = Resources._5;
-            img6 = Resources._6;
-            img7 = Resources._7;
-            img8 = Resources._8;
-            size = new Size(200, 200);
+            label1.Visible = false;
+
+            this.Puzzle = new List<PuzzlePainter>();
+            PuzzlePainter.Size = new Size(200, 200);
+
+            this.Puzzle.Add(new PuzzlePainter(Resources._0, this.genPoint(), new Point(50, 201)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._1, this.genPoint(), new Point(141, 174)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._2, this.genPoint(), new Point(255, 201)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._3, this.genPoint(), new Point(371, 203)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._4, this.genPoint(), new Point(450, 222)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._5, this.genPoint(), new Point(455, 109)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._6, this.genPoint(), new Point(362, 110)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._7, this.genPoint(), new Point(266, 107)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._8, this.genPoint(), new Point(150, 286)));
+
+            timer4.Start();
             DoubleBuffered = true;
             timer2.Stop();
             timer3.Stop();
             timer1.Start();
         }
 
+        private Point genPoint()
+        {
+            Random r = new Random();
+            int x = r.Next(this.Width - 200);
+            int y = r.Next(this.Height - 200);
+            Point tmp = new Point(x, y);
+            return tmp;
+        }
+
         private void LoadingForm_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = e.Graphics;
-            g.DrawImage(img0, new Rectangle(new Point(50, 201), size));
-            g.DrawImage(img1, new Rectangle(new Point(141, 174), size));
-            g.DrawImage(img2, new Rectangle(new Point(255, 201), size));
-            g.DrawImage(img3, new Rectangle(new Point(371, 203), size));
-            g.DrawImage(img4, new Rectangle(new Point(450, 222), size));
-            g.DrawImage(img5, new Rectangle(new Point(455, 109), size));          
-            g.DrawImage(img6, new Rectangle(new Point(362, 110), size));
-            g.DrawImage(img7, new Rectangle(new Point(266, 107), size));
-            g.DrawImage(img8, new Rectangle(new Point(150, 286), size));
+            foreach (var item in this.Puzzle)
+            {
+                item.draw(e.Graphics);
+            }
+        }
+
+        private void timer4_Tick_1(object sender, EventArgs e)
+        {
+            foreach (var item in this.Puzzle)
+            {
+                item.move();
+            }
+            Invalidate(true);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -83,6 +92,31 @@ namespace Trivia_master
                
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            curr++;
+            if (curr == 5)
+                label1.Visible = true;
+            if (curr == 7)
+            {
+                timer2.Stop();
+                timer3.Start();
+            }
+            Invalidate(true);
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            Opacity -= 0.1;
+            if (Opacity == 0)
+            {
+                timer3.Stop();
+                StartingForm st = new StartingForm(easyObj, medium, hard);
+                st.Show();
+                Close();
+            }
+        }
+
         private void CreateMain()
         {
             main = new Category<Image, FormPainter>();
@@ -97,7 +131,6 @@ namespace Trivia_master
             q.CorrectAnswers.Add(fp);
             main.addQuestion(q);
 
-
             q = new HangManQ<Image, FormPainter>();
             q.Question.Add(Resources.Despicable_Me);
             aa = new AlphabetAnswer("DESPICABLE ME");
@@ -107,6 +140,88 @@ namespace Trivia_master
             fp = new FormPainter(aa);
             q.CorrectAnswers.Add(fp);
             main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Elizabeth_Taylor);
+            aa = new AlphabetAnswer("Elizabeth Taylor");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.The_Godfather);
+            aa = new AlphabetAnswer("The Godfather");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Starry_Night);
+            aa = new AlphabetAnswer("Starry Night");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Sting);
+            aa = new AlphabetAnswer("Sting");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Maserati);
+            aa = new AlphabetAnswer("Maserati");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Georgia);
+            aa = new AlphabetAnswer("Georgia");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.France);
+            aa = new AlphabetAnswer("France");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            q = new HangManQ<Image, FormPainter>();
+            q.Question.Add(Resources.Jessica_Alba);
+            aa = new AlphabetAnswer("Jessica Alba");
+            aa.JokerChance = 0;
+            aa.DevilChance = 0;
+            aa.AttemtsLocation = new Point(62, 59);
+            fp = new FormPainter(aa);
+            q.CorrectAnswers.Add(fp);
+            main.addQuestion(q);
+
+            main.Shuffle();
         }
 
         private void CreateEasy()
@@ -185,12 +300,12 @@ namespace Trivia_master
         private void CreateMedium()
         {
             medium = new Medium();
-
+            
             medium.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Computer Science" });
             medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            AlphabetQuestion question = new AlphabetQuestion("First programming language?");
+            AlphabetQuestion q = new AlphabetQuestion("First programming language?");
             List<MediumQuestionPainter> listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(question);
+            listQuestions.Add(q);
             medium.Categories[0].questions[0].setQuestion(listQuestions);
             AlphabetAnswer alphabetAnswer = new AlphabetAnswer("ADA");
             alphabetAnswer.DevilChance = 5;
@@ -204,9 +319,9 @@ namespace Trivia_master
 
             //obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Finki" });
             medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            question = new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?");
+            q = new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?");
             listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(question);
+            listQuestions.Add(q);
             medium.Categories[0].questions[1].setQuestion(listQuestions);
             alphabetAnswer = new AlphabetAnswer("HEURISTIC");
             alphabetAnswer.DevilChance = 5;
@@ -231,9 +346,9 @@ namespace Trivia_master
 
             medium.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "History" });
             medium.Categories[1].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            question = new AlphabetQuestion("Son of Philip 2 Macedonian was called?");
+            q = new AlphabetQuestion("Son of Philip 2 Macedonian was called?");
             listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(question);
+            listQuestions.Add(q);
             medium.Categories[1].questions[0].setQuestion(listQuestions);
             alphabetAnswer = new AlphabetAnswer("THE GREAT");
             alphabetAnswer.DevilChance = 5;
@@ -244,6 +359,7 @@ namespace Trivia_master
             listAnswers = new List<MediumAnswerPainter>();
             listAnswers.Add(answer);
             medium.Categories[1].questions[0].setCorrectAnswer(listAnswers);
+            
 
             medium.MainCategory = main;
         }
@@ -252,8 +368,10 @@ namespace Trivia_master
         {
             hard = new Hard();
             FormPainter fp;
+            
             Category<string, FormPainter> cs = new Category<string, FormPainter>();
             cs.CategoryName = "Computer Science";
+            
             AssociationQ<string, FormPainter> question = new AssociationQ<string, FormPainter>();
             question.Question.Add("A programming language");
             question.Question.Add("John McCarthy");
@@ -264,7 +382,6 @@ namespace Trivia_master
             fp.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(fp);
             cs.addQuestion(question);
-
 
             AssociationQ<string, FormPainter> questionCS2 = new AssociationQ<string, FormPainter>();
             questionCS2.Question.Add("Algorithm");
@@ -287,6 +404,7 @@ namespace Trivia_master
             fp.AddComponent(new AnsweredPicturePainter());
             questionCS3.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS3);
+            
             AssociationQ<string, FormPainter> questionCS4 = new AssociationQ<string, FormPainter>();
             questionCS4.Question.Add("A programming paradigm");
             questionCS4.Question.Add("Java");
@@ -297,21 +415,22 @@ namespace Trivia_master
             fp.AddComponent(new AnsweredPicturePainter());
             questionCS4.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS4);
+            
             AssociationQ<string, FormPainter> questionCS5 = new AssociationQ<string, FormPainter>();
             questionCS5.Question.Add("Router");
             questionCS5.Question.Add("Switch");
             questionCS5.Question.Add("Hub");
             questionCS5.Question.Add("Ethernet");
-
             fp = new FormPainter(new AlphabetAnswer("Network"));
             fp.AddComponent(new TimerPainter());
             fp.AddComponent(new AnsweredPicturePainter());
             questionCS5.CorrectAnswers.Add(fp);
             cs.addQuestion(questionCS5);
-
             hard.Categories.Add(cs);
+            
             Category<string, FormPainter> geography = new Category<string, FormPainter>();
             geography.CategoryName = "Geography";
+            
             AssociationQ<string, FormPainter> questionG1 = new AssociationQ<string, FormPainter>();
             questionG1.Question.Add("One of the biggest cities in the world");
             questionG1.Question.Add("Has a population of 14 milion");
@@ -322,6 +441,7 @@ namespace Trivia_master
             fp.AddComponent(new TimerPainter());
             questionG1.CorrectAnswers.Add(fp);
             geography.addQuestion(questionG1);
+            
             AssociationQ<string, FormPainter> questionG2 = new AssociationQ<string, FormPainter>();
             questionG2.Question.Add("Planet");
             questionG2.Question.Add("Closest to the sun");
@@ -332,6 +452,7 @@ namespace Trivia_master
             fp.AddComponent(new TimerPainter());
             questionG2.CorrectAnswers.Add(fp);
             geography.addQuestion(questionG2);
+            
             AssociationQ<string, FormPainter> questionG3 = new AssociationQ<string, FormPainter>();
             questionG3.Question.Add("River");
             questionG3.Question.Add("Africa");
@@ -342,6 +463,7 @@ namespace Trivia_master
             fp.AddComponent(new TimerPainter());
             questionG3.CorrectAnswers.Add(fp);
             geography.addQuestion(questionG3);
+            
             AssociationQ<string, FormPainter> questionG4 = new AssociationQ<string, FormPainter>();
             questionG4.Question.Add("Country");
             questionG4.Question.Add("Population of 32 000");
@@ -400,7 +522,6 @@ namespace Trivia_master
             questionM4.CorrectAnswers.Add(fp);
             movies.addQuestion(questionM4);
 
-
             AssociationQ<string, FormPainter> questionM5 = new AssociationQ<string, FormPainter>();
             questionM5.Question.Add("Magicians");
             questionM5.Question.Add("\"Man's reach exceeds his imagination\"");
@@ -416,35 +537,6 @@ namespace Trivia_master
 
 
             hard.MainCategory = main;
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            curr++;
-            if (curr == 5)
-            {
-                timer2.Stop();
-                timer3.Start();
-            }
-            Invalidate(true);
-        }
-
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-            Opacity -= 0.1;
-            if (Opacity == 0)
-            {
-                timer3.Stop();
-                StartingForm st = new StartingForm(easyObj, medium, hard);
-                st.Show();
-                Close();
-                
-            }
-        }
-
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            Opacity = 1;
         }
     }
 }

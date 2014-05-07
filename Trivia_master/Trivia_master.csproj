@@ -129,6 +129,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="PuzzlePainter.cs" />
     <Compile Include="QuestionBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -192,59 +193,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exitButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Timeout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Wrong answer1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Correct2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rsz_1rsz_1rsz_1aaaaq.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TRU BRICK 2 DARK BLUE.jpg" />
-    <None Include="Resources\Joker.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Joker1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="oie_transparent.ico" />
-    <None Include="Resources\8.png" />
-    <None Include="Resources\7.png" />
-    <None Include="Resources\6.png" />
-    <None Include="Resources\5.png" />
-    <None Include="Resources\4.png" />
-    <None Include="Resources\3.png" />
-    <None Include="Resources\2.png" />
-    <None Include="Resources\1.png" />
-    <None Include="Resources\0.png" />
-    <None Include="Resources\Devil2.png" />
-    <None Include="Resources\Devil1.png" />
-    <None Include="Resources\Devil.gif" />
-    <None Include="Resources\Despicable Me.jpg" />
-    <None Include="Resources\Napoleon.jpg" />
-    <None Include="Resources\Blue_Frame11.png" />
-    <None Include="Resources\Blue_Frame1.png" />
-    <None Include="Resources\pozadina.png" />
-    <None Include="Resources\oie_transparent.ico" />
+    <None Include="Resources\The Godfather.jpg" />
+    <None Include="Resources\Sting.jpg" />
+    <None Include="Resources\Starry Night.jpg" />
+    <None Include="Resources\Maserati.jpg" />
+    <None Include="Resources\Jessica Alba.jpg" />
+    <None Include="Resources\Georgia.png" />
+    <None Include="Resources\France.png" />
+    <None Include="Resources\Elizabeth Taylor.jpg" />
+    <None Include="Resources\Agatha Christie.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

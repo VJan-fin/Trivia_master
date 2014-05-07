@@ -6,8 +6,8 @@ using System.Text;
 namespace Trivia_master
 {
     /// <summary>
-    /// Document clas that servers other documents
-    /// All methods are just calls to other document's methods
+    /// Document class that serves other documents
+    /// All methods are just calls to other documents' methods
     /// </summary>
     public class FormPainter : MediumAnswerPainter
     {

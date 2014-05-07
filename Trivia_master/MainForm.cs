@@ -19,9 +19,6 @@ namespace Trivia_master
         public MainForm(Category<T, U> c, IQuestion<Image, FormPainter> q)
         {
             InitializeComponent();
-            //timer1.Start();
-           
-            
             question = q;
             Question = q.getQuestion()[0];
             this.category = c;
@@ -59,7 +56,6 @@ namespace Trivia_master
             this.Boxes.Add(this.QBox9);
             question = state.Question;
             Question = question.getQuestion()[0];
-            //this.category = c;
             Answere = 0;
             DoubleBuffered = true;
             Answer = question.getCorrectAnswer()[0];
