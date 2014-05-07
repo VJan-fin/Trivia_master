@@ -18,42 +18,54 @@ namespace Trivia_master
         Easy easyObj;
         Medium medium;
         Hard hard;
+        Point FormLocation;
+        Random r;
+        int min;
+        int PuzzleSize;
 
         int cap;
         int curr;
         public LoadingForm()
         {
             InitializeComponent();
-            timer3.Stop();
+            r = new Random();
+            if (Width > Height)
+            {
+                FormLocation = new Point(Width / 2 - Height / 2, 0);
+            }
+            else FormLocation = new Point(0, Height / 2 - Width / 2);
             cap = 0;
             curr = 0;
             label1.Visible = false;
-
+            min = Math.Min(Width, Height);
+            PuzzleSize = (int)(min * 0.3125);
             this.Puzzle = new List<PuzzlePainter>();
-            PuzzlePainter.Size = new Size(200, 200);
+            PuzzlePainter.Size = new Size(PuzzleSize, PuzzleSize);
+            label1.Font = new Font("Microsoft Sans Serif", min*(float)(10.0 / 640));
+            label1.Location = new Point(FormLocation.X + (int)(min * (170.0 / 640)), FormLocation.Y + (int)(min * (440.0 / 640)));
+            this.Puzzle.Add(new PuzzlePainter(Resources._0, this.genPoint(), new Point(FormLocation.X + (int)(min * (23.0 / 640)), FormLocation.Y + (int)(min * (201.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._1, this.genPoint(), new Point(FormLocation.X + (int)(min * (114.0 / 640)), FormLocation.Y + (int)(min * (174.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._2, this.genPoint(), new Point(FormLocation.X + (int)(min * (228.0 / 640)), FormLocation.Y + (int)(min * (201.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._3, this.genPoint(), new Point(FormLocation.X + (int)(min * (344.0 /640)), FormLocation.Y + (int)(min * (203.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._4, this.genPoint(), new Point(FormLocation.X + (int)(min * (423.0 / 640)), FormLocation.Y + (int)(min * (222.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._5, this.genPoint(), new Point(FormLocation.X + (int)(min * (428.0 / 640)), FormLocation.Y + (int)(min * (109.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._6, this.genPoint(), new Point(FormLocation.X + (int)(min * (335.0 / 640)), FormLocation.Y + (int)(min * (110.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._7, this.genPoint(), new Point(FormLocation.X + (int)(min * (239.0 / 640)), FormLocation.Y + (int)(min * (107.0 / 640)))));
+            this.Puzzle.Add(new PuzzlePainter(Resources._8, this.genPoint(), new Point(FormLocation.X + (int)(min * (123.0 / 640)), FormLocation.Y + (int)(min * (286.0 / 640)))));
 
-            this.Puzzle.Add(new PuzzlePainter(Resources._0, this.genPoint(), new Point(50, 201)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._1, this.genPoint(), new Point(141, 174)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._2, this.genPoint(), new Point(255, 201)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._3, this.genPoint(), new Point(371, 203)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._4, this.genPoint(), new Point(450, 222)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._5, this.genPoint(), new Point(455, 109)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._6, this.genPoint(), new Point(362, 110)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._7, this.genPoint(), new Point(266, 107)));
-            this.Puzzle.Add(new PuzzlePainter(Resources._8, this.genPoint(), new Point(150, 286)));
-
-            timer4.Start();
             DoubleBuffered = true;
-            timer2.Stop();
-            timer3.Stop();
             timer1.Start();
+            timer4.Start();
         }
 
+        /// <summary>
+        /// Generates random starting point for puzzle parts
+        /// </summary>
+        /// <returns></returns>
         private Point genPoint()
         {
-            Random r = new Random();
-            int x = r.Next(this.Width - 200);
-            int y = r.Next(this.Height - 200);
+            int x = r.Next(this.Width - PuzzleSize);
+            int y = r.Next(this.Height - PuzzleSize);
             Point tmp = new Point(x, y);
             return tmp;
         }
@@ -66,45 +78,74 @@ namespace Trivia_master
             }
         }
 
+        /// <summary>
+        /// Control the move of Puzzle
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer4_Tick_1(object sender, EventArgs e)
         {
             foreach (var item in this.Puzzle)
             {
                 item.move();
             }
+            if (Puzzle[0].Step == 0)
+            {
+                timer4.Stop();
+                Invalidate();
+                timer2.Start();
+            }
             Invalidate(true);
         }
 
+        /// <summary>
+        /// Control the transparent appear
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             Opacity += 0.1;
             cap++;
-            if (cap == 9)
+            if (cap == 10)
             {
                 timer1.Stop();
-                CreateMain();
-                CreateEasy();
-                CreateMedium();
-                CreateHard();
-                timer3.Stop();
-                timer2.Start();
             }
                
         }
 
+        /// <summary>
+        /// Creates main objects, and defines the time of loading window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer2_Tick(object sender, EventArgs e)
         {
+            if (curr == 0)
+            {
+                timer2.Stop();
+                CreateMain();
+                CreateEasy();
+                CreateMedium();
+                CreateHard();
+                label1.Visible = true;
+            }
             curr++;
             if (curr == 5)
-                label1.Visible = true;
-            if (curr == 7)
             {
                 timer2.Stop();
                 timer3.Start();
             }
             Invalidate(true);
+            if (curr == 1)
+                timer2.Start();
         }
 
+        /// <summary>
+        /// Transparent disappearing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer3_Tick(object sender, EventArgs e)
         {
             Opacity -= 0.1;
@@ -117,6 +158,9 @@ namespace Trivia_master
             }
         }
 
+        /// <summary>
+        /// Creates questions for main form
+        /// </summary>
         private void CreateMain()
         {
             main = new Category<Image, FormPainter>();
@@ -224,6 +268,9 @@ namespace Trivia_master
             main.Shuffle();
         }
 
+        /// <summary>
+        /// Creates questions for easy form
+        /// </summary>
         private void CreateEasy()
         {
             easyObj = new Easy();
@@ -297,73 +344,168 @@ namespace Trivia_master
             easyObj.MainCategory = main;
         }
 
+        /// <summary>
+        /// Creates questions for medium form
+        /// </summary>
         private void CreateMedium()
         {
             medium = new Medium();
+
+            //COMPUTER SCIENCE
+            FormPainter formpainter;
+            Category<MediumQuestionPainter, MediumAnswerPainter> category = new Category<MediumQuestionPainter, MediumAnswerPainter>();
+            category.CategoryName = "Computer Science";
+            HangManQ<MediumQuestionPainter, MediumAnswerPainter> question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("First programming language?"));
+            formpainter = new FormPainter(new AlphabetAnswer("ADA"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?"));
+            formpainter = new FormPainter(new AlphabetAnswer("HEURISTIC"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("If you need to sort a very large list of integers (billions), what efficient sorting algorithm would be your best bet?"));
+            formpainter = new FormPainter(new AlphabetAnswer("QUICKSORT"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Name the famous computer scientist who worked to break Nazi codes at Bletchley Park during WWII."));
+            formpainter = new FormPainter(new AlphabetAnswer("ALLAN TURING"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Which company is the largest manufacturer of network equipment?"));
+            formpainter = new FormPainter(new AlphabetAnswer("CISCO"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("What does the computer acronym PnP stand for?"));
+            formpainter = new FormPainter(new AlphabetAnswer("PLUG AND PLAY"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("What does the “W” stand for on a WAP phone?"));
+            formpainter = new FormPainter(new AlphabetAnswer("WIRELESS"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("What chess-playing computer developed by IBM that defeated world champion Garry Kasparov in 1997?"));
+            formpainter = new FormPainter(new AlphabetAnswer("DEEP BLUE"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("What chess-playing computer developed by IBM that defeated world champion Garry Kasparov in 1997?"));
+            formpainter = new FormPainter(new AlphabetAnswer("DEEP BLUE"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Nibble is?"));
+            formpainter = new FormPainter(new AlphabetAnswer("HALF BYTE"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("In terms of computing, what does CPU stand for?"));
+            formpainter = new FormPainter(new AlphabetAnswer("CENTRAL PROCESSING UNIT"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("What does the abbreviation WWW stand for?"));
+            formpainter = new FormPainter(new AlphabetAnswer("WORLD WIDE WEB"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            category.Shuffle();
+            medium.Categories.Add(category);
+
+            //HISTORY
+            category = new Category<MediumQuestionPainter, MediumAnswerPainter>();
+            category.CategoryName = "History";
             
-            medium.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Computer Science" });
-            medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            AlphabetQuestion q = new AlphabetQuestion("First programming language?");
-            List<MediumQuestionPainter> listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(q);
-            medium.Categories[0].questions[0].setQuestion(listQuestions);
-            AlphabetAnswer alphabetAnswer = new AlphabetAnswer("ADA");
-            alphabetAnswer.DevilChance = 5;
-            alphabetAnswer.JokerChance = 5;
-            FormPainter answer = new FormPainter(alphabetAnswer);
-            answer.AddComponent(new TimerPainter());
-            answer.AddComponent(new AnsweredPicturePainter());
-            List<MediumAnswerPainter> listAnswers = new List<MediumAnswerPainter>();
-            listAnswers.Add(answer);
-            medium.Categories[0].questions[0].setCorrectAnswer(listAnswers);
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Son of Philip 2 Macedonian was called?"));
+            formpainter = new FormPainter(new AlphabetAnswer("THE GREAT"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
 
-            //obj.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "Finki" });
-            medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            q = new AlphabetQuestion("What is the term used for describing the judgmental or commonsense part of problem solving?");
-            listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(q);
-            medium.Categories[0].questions[1].setQuestion(listQuestions);
-            alphabetAnswer = new AlphabetAnswer("HEURISTIC");
-            alphabetAnswer.DevilChance = 5;
-            alphabetAnswer.JokerChance = 5;
-            answer = new FormPainter(alphabetAnswer);
-            answer.AddComponent(new TimerPainter());
-            answer.AddComponent(new AnsweredPicturePainter());
-            listAnswers = new List<MediumAnswerPainter>();
-            listAnswers.Add(answer);
-            medium.Categories[0].questions[1].setCorrectAnswer(listAnswers);
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Which of these countries represented the easternmost extent of the Greek empire of Alexander the Great and his forces conquered land eastward from Greece to what country? Was it Persia, India, or China?"));
+            formpainter = new FormPainter(new AlphabetAnswer("INDIA"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
 
-            /*medium.Categories[0].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            question = new AlphabetQuestion("Home");
-            listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(question);
-            medium.Categories[0].questions[2].setQuestion(listQuestions);
-            answer = new FormPainter(new AlphabetJoker());
-            listAnswers = new List<MediumAnswerPainter>();
-            listAnswers.Add(answer);
-            medium.Categories[0].questions[2].setCorrectAnswer(listAnswers);*/
-            //medium.Categories[0].Shuffle();
+            category.Shuffle();
+            medium.Categories.Add(category);
 
-            medium.Categories.Add(new Category<MediumQuestionPainter, MediumAnswerPainter>() { CategoryName = "History" });
-            medium.Categories[1].addQuestion(new HangManQ<MediumQuestionPainter, MediumAnswerPainter>());
-            q = new AlphabetQuestion("Son of Philip 2 Macedonian was called?");
-            listQuestions = new List<MediumQuestionPainter>();
-            listQuestions.Add(q);
-            medium.Categories[1].questions[0].setQuestion(listQuestions);
-            alphabetAnswer = new AlphabetAnswer("THE GREAT");
-            alphabetAnswer.DevilChance = 5;
-            alphabetAnswer.JokerChance = 5;
-            answer = new FormPainter(alphabetAnswer);
-            answer.AddComponent(new TimerPainter());
-            answer.AddComponent(new AnsweredPicturePainter());
-            listAnswers = new List<MediumAnswerPainter>();
-            listAnswers.Add(answer);
-            medium.Categories[1].questions[0].setCorrectAnswer(listAnswers);
-            
+            //HISTORY
+            category = new Category<MediumQuestionPainter, MediumAnswerPainter>();
+            category.CategoryName = "Geography";
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Which is the capital of Kenya?"));
+            formpainter = new FormPainter(new AlphabetAnswer("NAIROBY"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
+            question.Question.Add(new AlphabetQuestion("Which is the third most populated country in the world?"));
+            formpainter = new FormPainter(new AlphabetAnswer("AMERICA"));
+            formpainter.AddComponent(new TimerPainter());
+            formpainter.AddComponent(new AnsweredPicturePainter());
+            question.CorrectAnswers.Add(formpainter);
+            category.addQuestion(question);
+
+            category.Shuffle();
+            medium.Categories.Add(category);
 
             medium.MainCategory = main;
         }
 
+        /// <summary>
+        /// Creates questions for hard form
+        /// </summary>
         private void CreateHard()
         {
             hard = new Hard();
