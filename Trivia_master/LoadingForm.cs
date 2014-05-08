@@ -52,7 +52,7 @@ namespace Trivia_master
             this.Puzzle.Add(new PuzzlePainter(Resources._6, this.genPoint(), new Point(FormLocation.X + (int)(min * (335.0 / 640)), FormLocation.Y + (int)(min * (110.0 / 640)))));
             this.Puzzle.Add(new PuzzlePainter(Resources._7, this.genPoint(), new Point(FormLocation.X + (int)(min * (239.0 / 640)), FormLocation.Y + (int)(min * (107.0 / 640)))));
             this.Puzzle.Add(new PuzzlePainter(Resources._8, this.genPoint(), new Point(FormLocation.X + (int)(min * (123.0 / 640)), FormLocation.Y + (int)(min * (286.0 / 640)))));
-
+            
             DoubleBuffered = true;
             timer1.Start();
             timer4.Start();
