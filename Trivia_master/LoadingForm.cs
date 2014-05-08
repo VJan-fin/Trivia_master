@@ -418,15 +418,7 @@ namespace Trivia_master
             formpainter.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(formpainter);
             category.addQuestion(question);
-            /*
-            question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
-            question.Question.Add(new AlphabetQuestion("What chess-playing computer developed by IBM that defeated world champion Garry Kasparov in 1997?"));
-            formpainter = new FormPainter(new AlphabetAnswer("DEEP BLUE"));
-            formpainter.AddComponent(new TimerPainter());
-            formpainter.AddComponent(new AnsweredPicturePainter());
-            question.CorrectAnswers.Add(formpainter);
-            category.addQuestion(question);
-            */
+
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
             question.Question.Add(new AlphabetQuestion("Nibble is?"));
             formpainter = new FormPainter(new AlphabetAnswer("HALF BYTE"));
@@ -436,8 +428,8 @@ namespace Trivia_master
             category.addQuestion(question);
 
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
-            question.Question.Add(new AlphabetQuestion("In terms of computing, what does CPU stand for?"));
-            formpainter = new FormPainter(new AlphabetAnswer("CENTRAL PROCESSING UNIT"));
+            question.Question.Add(new AlphabetQuestion("Where is the main arithmetical-logical unit located?"));
+            formpainter = new FormPainter(new AlphabetAnswer("PROCESSING UNIT"));
             formpainter.AddComponent(new TimerPainter());
             formpainter.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(formpainter);

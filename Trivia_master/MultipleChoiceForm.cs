@@ -27,7 +27,6 @@ namespace Trivia_master
 
         public MultipleChoiceForm(Category<string, string> cat, IQuestion<string, string> question)
         {
-            // TODO: Complete member initialization
             InitializeComponent();
             DoubleBuffered = true;
             labelTimer.Text = String.Format("{0,2:D2}:{1,2:D2}", remainingTime / 60, remainingTime % 60);
@@ -52,7 +51,7 @@ namespace Trivia_master
             if (!this.isAnswered)
             {
                 this.Cursor = Cursors.Hand;
-                //(sender as Label).BackColor = Color.FromArgb(32, 73, 128) - light blue
+                //(32, 73, 128) - light blue
                 (sender as Label).BackColor = Color.FromArgb(229, 192, 21);
             }
         }

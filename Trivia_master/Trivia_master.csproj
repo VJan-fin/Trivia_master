@@ -87,7 +87,6 @@
       <DependentUpon>CloseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPainter.cs" />
-    <Compile Include="Grpahics.cs" />
     <Compile Include="HangManQ.cs" />
     <Compile Include="Hard.cs" />
     <Compile Include="IQuestion.cs" />
@@ -196,7 +195,6 @@
     <None Include="Resources\Georgia.png" />
     <None Include="Resources\France.png" />
     <None Include="Resources\Elizabeth Taylor.jpg" />
-    <None Include="Resources\Agatha Christie.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

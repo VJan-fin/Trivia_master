@@ -62,11 +62,6 @@ namespace Trivia_master
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-          /*  CloseForm cs = new CloseForm();
-            if (cs.ShowDialog() == DialogResult.Yes)
-            {
-                Close();
-            }*/
             CloseForm();
         }
 
@@ -157,8 +152,5 @@ namespace Trivia_master
             if(e.KeyCode == Keys.Escape)
                 Close();
         }
-
-
-
     }
 }

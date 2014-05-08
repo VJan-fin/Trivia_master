@@ -26,7 +26,7 @@ namespace Trivia_master
             this.CurrPosX = start.X;
             this.CurrPosY = start.Y;
             this.FinalPos = new Point(end.X, end.Y);
-            this.Step = 180;
+            this.Step = 100;
             this.deltaX = (float)(this.FinalPos.X - this.StartPos.X) / this.Step;
             this.deltaY = (float)(this.FinalPos.Y - this.StartPos.Y) / this.Step;
         }

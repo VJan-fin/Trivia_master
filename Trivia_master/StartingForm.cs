@@ -85,9 +85,10 @@ namespace Trivia_master
                 CloseForm();
         }
 
+        // Don't remove
         protected override void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            //Ne go brisi metodov pazen neka bide bez nego nema da raboti dobro..
+            
         }
     }
 }

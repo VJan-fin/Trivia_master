@@ -17,7 +17,6 @@ namespace Trivia_master
         protected String Question { get; set; }
         protected int Answere { get; set; }
         List<Rectangle> Areas;
-        //public int TimeLeft = 21;
         public int heightStart;
         public int increment;
         public int widthStart;
@@ -30,6 +29,7 @@ namespace Trivia_master
         Point Location;
         public int AssNumber { get; set; }
         public int secondsCounter { get; set; }
+
         public AssociationForm()
         {
             InitializeComponent();
@@ -41,7 +41,6 @@ namespace Trivia_master
             AssNumber = 4;
             secondsCounter = 0;
             Areas = new List<Rectangle>();
-            //timer1.Start();
             sb = new SolidBrush(Color.Red);
             font = new Font("Forte", 15);
             timerFont = new Font("Forte", 22);
@@ -137,25 +136,6 @@ namespace Trivia_master
                 gp.DrawString((i + 1).ToString() + ". " + question.getQuestion()[i], font, sb, rec1);
                 heightStart += increment;
             }
-
-
-            /*private void timer1_Tick(object sender, EventArgs e)
-            {
-                TimeLeft--;
-                if (TimeLeft == 0)
-                    timer1.Stop();
-                else
-                {
-             
-                    Rectangle rec2 = new Rectangle(500, 300, 40, 40);
-                    Bitmap back = new Bitmap(OldPicture);
-                   Graphics gp = Graphics.FromImage(back);
-                   gp.FillRectangle(new SolidBrush(Color.Transparent), rec2);
-                    gp.DrawString(TimeLeft.ToString(), timerFont, sb, rec2);
-        
-                    BackgroundImage = back;
-                }
-            }*/
         }
 
         private void AssociationForm_Load(object sender, EventArgs e)
