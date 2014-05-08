@@ -28,7 +28,8 @@ namespace Trivia_master
         Font font;
         Font timerFont;
         Point Location;
-        
+        public int AssNumber { get; set; }
+        public int secondsCounter { get; set; }
         public AssociationForm()
         {
             InitializeComponent();
@@ -37,6 +38,8 @@ namespace Trivia_master
         public AssociationForm(Category<String, FormPainter> c, IQuestion<String, FormPainter> q)
         {
             InitializeComponent();
+            AssNumber = 4;
+            secondsCounter = 0;
             Areas = new List<Rectangle>();
             //timer1.Start();
             sb = new SolidBrush(Color.Red);
@@ -57,6 +60,8 @@ namespace Trivia_master
             Answer.Form = this; 
             Answer.Reset();
             UpdateView();
+            timer2.Interval = 1000;
+            timer2.Start();
         }
 
 
@@ -124,7 +129,7 @@ namespace Trivia_master
         {
             heightStart = defaultHeightStart;
             gp.DrawString("Category : " + category.CategoryName, font, sb, new Rectangle(widthStart, 190, widthSize, heightSize));
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < AssNumber; i++)
             {
 
                 Rectangle rec1 = new Rectangle(widthStart, heightStart, widthSize, heightSize);
@@ -156,6 +161,17 @@ namespace Trivia_master
         private void AssociationForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            secondsCounter++;
+            if (secondsCounter == 60)
+                timer2.Stop();
+            else if (secondsCounter % 15 == 0)
+            {
+                AssNumber--;
+            }
         }
     }
 }

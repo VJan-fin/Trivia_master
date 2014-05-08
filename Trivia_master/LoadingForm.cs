@@ -41,8 +41,8 @@ namespace Trivia_master
             PuzzleSize = (int)(min * 0.3125);
             this.Puzzle = new List<PuzzlePainter>();
             PuzzlePainter.Size = new Size(PuzzleSize, PuzzleSize);
-            label1.Font = new Font("Microsoft Sans Serif", min*(float)(10.0 / 640));
-            label1.Location = new Point(FormLocation.X + (int)(min * (170.0 / 640)), FormLocation.Y + (int)(min * (440.0 / 640)));
+            label1.Font = new Font("Microsoft Sans Serif", min*(float)(8.0 / 640));
+            label1.Location = new Point(FormLocation.X + (int)(min * (210.0 / 640)), FormLocation.Y + (int)(min * (470.0 / 640)));
             this.Puzzle.Add(new PuzzlePainter(Resources._0, this.genPoint(), new Point(FormLocation.X + (int)(min * (23.0 / 640)), FormLocation.Y + (int)(min * (201.0 / 640)))));
             this.Puzzle.Add(new PuzzlePainter(Resources._1, this.genPoint(), new Point(FormLocation.X + (int)(min * (114.0 / 640)), FormLocation.Y + (int)(min * (174.0 / 640)))));
             this.Puzzle.Add(new PuzzlePainter(Resources._2, this.genPoint(), new Point(FormLocation.X + (int)(min * (228.0 / 640)), FormLocation.Y + (int)(min * (201.0 / 640)))));
@@ -59,7 +59,7 @@ namespace Trivia_master
         }
 
         /// <summary>
-        /// Generates random starting point for puzzle parts
+        /// Generates a random starting point for puzzle parts
         /// </summary>
         /// <returns></returns>
         private Point genPoint()
@@ -79,7 +79,7 @@ namespace Trivia_master
         }
 
         /// <summary>
-        /// Control the move of Puzzle
+        /// Controls the movement of the Puzzle pieces
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -99,7 +99,7 @@ namespace Trivia_master
         }
 
         /// <summary>
-        /// Control the transparent appear
+        /// Controls the appearance effect of the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -381,7 +381,7 @@ namespace Trivia_master
 
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
             question.Question.Add(new AlphabetQuestion("Name the famous computer scientist who worked to break Nazi codes at Bletchley Park during WWII."));
-            formpainter = new FormPainter(new AlphabetAnswer("ALLAN TURING"));
+            formpainter = new FormPainter(new AlphabetAnswer("ALAN TURING"));
             formpainter.AddComponent(new TimerPainter());
             formpainter.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(formpainter);
@@ -412,13 +412,13 @@ namespace Trivia_master
             category.addQuestion(question);
 
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
-            question.Question.Add(new AlphabetQuestion("What chess-playing computer developed by IBM that defeated world champion Garry Kasparov in 1997?"));
+            question.Question.Add(new AlphabetQuestion("Which chess-playing computer developed by IBM defeated the world champion Garry Kasparov in 1997?"));
             formpainter = new FormPainter(new AlphabetAnswer("DEEP BLUE"));
             formpainter.AddComponent(new TimerPainter());
             formpainter.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(formpainter);
             category.addQuestion(question);
-
+            /*
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
             question.Question.Add(new AlphabetQuestion("What chess-playing computer developed by IBM that defeated world champion Garry Kasparov in 1997?"));
             formpainter = new FormPainter(new AlphabetAnswer("DEEP BLUE"));
@@ -426,7 +426,7 @@ namespace Trivia_master
             formpainter.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(formpainter);
             category.addQuestion(question);
-
+            */
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
             question.Question.Add(new AlphabetQuestion("Nibble is?"));
             formpainter = new FormPainter(new AlphabetAnswer("HALF BYTE"));
@@ -467,7 +467,7 @@ namespace Trivia_master
             category.addQuestion(question);
 
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
-            question.Question.Add(new AlphabetQuestion("Which of these countries represented the easternmost extent of the Greek empire of Alexander the Great and his forces conquered land eastward from Greece to what country? Was it Persia, India, or China?"));
+            question.Question.Add(new AlphabetQuestion("Which of these countries represented the easternmost extent of the Macedonian empire of Alexander the Great? Was it Persia, India, or China?"));
             formpainter = new FormPainter(new AlphabetAnswer("INDIA"));
             formpainter.AddComponent(new TimerPainter());
             formpainter.AddComponent(new AnsweredPicturePainter());
@@ -491,7 +491,7 @@ namespace Trivia_master
 
             question = new HangManQ<MediumQuestionPainter, MediumAnswerPainter>();
             question.Question.Add(new AlphabetQuestion("Which is the third most populated country in the world?"));
-            formpainter = new FormPainter(new AlphabetAnswer("AMERICA"));
+            formpainter = new FormPainter(new AlphabetAnswer("USA"));
             formpainter.AddComponent(new TimerPainter());
             formpainter.AddComponent(new AnsweredPicturePainter());
             question.CorrectAnswers.Add(formpainter);

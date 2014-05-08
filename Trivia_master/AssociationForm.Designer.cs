@@ -58,6 +58,7 @@
             this.triviaLabel2 = new Trivia_master.TriviaLabel();
             this.alphabetButton22 = new Trivia_master.AlphabetButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // triviaButton3
@@ -492,6 +493,10 @@
             // 
             this.timer1.Interval = 1000;
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // AssociationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,6 +605,7 @@
         private TriviaLabel triviaLabel2;
         private AlphabetButton alphabetButton22;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
 
     }
 }
