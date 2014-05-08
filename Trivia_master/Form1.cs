@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Trivia_master.Properties;
+using System.Drawing.Drawing2D;
 
 namespace Trivia_master
 {
@@ -156,6 +157,8 @@ namespace Trivia_master
             if(e.KeyCode == Keys.Escape)
                 Close();
         }
+
+
 
     }
 }
