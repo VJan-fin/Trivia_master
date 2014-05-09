@@ -41,6 +41,7 @@ namespace Trivia_master
             PuzzleSize = (int)(min * 0.3125);
             this.Puzzle = new List<PuzzlePainter>();
             PuzzlePainter.Size = new Size(PuzzleSize, PuzzleSize);
+            label1.BackColor = Color.FromArgb(4, 26, 65);
             label1.Font = new Font("Microsoft Sans Serif", min*(float)(8.0 / 640));
             label1.Location = new Point(FormLocation.X + (int)(min * (210.0 / 640)), FormLocation.Y + (int)(min * (470.0 / 640)));
             this.Puzzle.Add(new PuzzlePainter(Resources._0, this.genPoint(), new Point(FormLocation.X + (int)(min * (23.0 / 640)), FormLocation.Y + (int)(min * (201.0 / 640)))));
@@ -333,12 +334,158 @@ namespace Trivia_master
             easyObj.Categories.Add(cat3);
             //creating a new question
             MultipleChoiceQ<string, string> mc6 = new MultipleChoiceQ<string, string>();
-            mc6.Question.Add("Which of the followong authors does not belong to the Romantic period?");
+            mc6.Question.Add("Which of the following authors does not belong to the Romantic period?");
             mc6.CorrectAnswers.Add("Leo Tolstoy");
             mc6.Answers.Add("Lord Byron");
             mc6.Answers.Add("Victor Hugo");
             mc6.Answers.Add("Leo Tolstoy");
             mc6.Answers.Add("Alexander Pushkin");
+            cat3.questions.Add(mc6);
+
+            //creating a new category
+            cat3 = new Category<string, string>() { CategoryName = "Movies" };
+            //creating a new question
+            mc5 = new MultipleChoiceQ<string, string>();
+            mc5.Question.Add("Who won the Oscar for Best Actress on the 86th Academy Award ceremony in 2014?");
+            mc5.CorrectAnswers.Add("Cate Blanchett");
+            mc5.Answers.Add("Sandra Bullock");
+            mc5.Answers.Add("Judi Dench");
+            mc5.Answers.Add("Meryl Streep");
+            mc5.Answers.Add("Cate Blanchett");
+            cat3.questions.Add(mc5);
+            easyObj.Categories.Add(cat3);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("In the film \"Golden Eye\", James Bond was portrayed by:");
+            mc6.CorrectAnswers.Add("Pierce Brosnan");
+            mc6.Answers.Add("Pierce Brosnan");
+            mc6.Answers.Add("Timothy Dalton");
+            mc6.Answers.Add("Sean Connery");
+            mc6.Answers.Add("Roger Moore");
+            cat3.questions.Add(mc6);
+
+            //creating a new category
+            cat3 = new Category<string, string>() { CategoryName = "Biology" };
+            //creating a new question
+            mc5 = new MultipleChoiceQ<string, string>();
+            mc5.Question.Add("Which is considered to be the oldest bipedal human ancestor?");
+            mc5.CorrectAnswers.Add("Australopithecus");
+            mc5.Answers.Add("Homo Habilis");
+            mc5.Answers.Add("Australopithecus");
+            mc5.Answers.Add("Homo Erectus");
+            mc5.Answers.Add("Neanderthal");
+            cat3.questions.Add(mc5);
+            easyObj.Categories.Add(cat3);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("Which is the major energy-producing structure of an animal cell?");
+            mc6.CorrectAnswers.Add("Mitochondrion");
+            mc6.Answers.Add("Mitochondrion");
+            mc6.Answers.Add("Nucleus");
+            mc6.Answers.Add("Golgi apparatus");
+            mc6.Answers.Add("Ribosome");
+            cat3.questions.Add(mc6);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("The sleep stage during which dreams occur is referred to as");
+            mc6.CorrectAnswers.Add("REM");
+            mc6.Answers.Add("EEG");
+            mc6.Answers.Add("NREM");
+            mc6.Answers.Add("PGO");
+            mc6.Answers.Add("REM");
+            cat3.questions.Add(mc6);
+
+            //creating a new category
+            cat3 = new Category<string, string>() { CategoryName = "Art" };
+            //creating a new question
+            mc5 = new MultipleChoiceQ<string, string>();
+            mc5.Question.Add("Which art movement claimed to be anti-art?");
+            mc5.CorrectAnswers.Add("Dada");
+            mc5.Answers.Add("Dada");
+            mc5.Answers.Add("Cubism");
+            mc5.Answers.Add("Art Nouveau");
+            mc5.Answers.Add("Fauvism");
+            cat3.questions.Add(mc5);
+            easyObj.Categories.Add(cat3);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("Whose art style became known as Surrealism?");
+            mc6.CorrectAnswers.Add("Salvador Dali");
+            mc6.Answers.Add("Francisco de Goya");
+            mc6.Answers.Add("Edgar Degas");
+            mc6.Answers.Add("Peter Paul Rubens");
+            mc6.Answers.Add("Salvador Dali");
+            cat3.questions.Add(mc6);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("Who once declared \"Art is anything you can get away with\"?");
+            mc6.CorrectAnswers.Add("Andy Warhol");
+            mc6.Answers.Add("Tracy Enim");
+            mc6.Answers.Add("Andy Warhol");
+            mc6.Answers.Add("Cornelia Parker");
+            mc6.Answers.Add("Claude Monet");
+            cat3.questions.Add(mc6);
+
+            //creating a new category
+            cat3 = new Category<string, string>() { CategoryName = "Music" };
+            //creating a new question
+            mc5 = new MultipleChoiceQ<string, string>();
+            mc5.Question.Add("Who sang the title track of the late 80s James Bond film Licence to Kill?");
+            mc5.CorrectAnswers.Add("Gladys Knight");
+            mc5.Answers.Add("Tina Turner");
+            mc5.Answers.Add("Madonna");
+            mc5.Answers.Add("Gladys Knight");
+            mc5.Answers.Add("Patti LaBelle");
+            cat3.questions.Add(mc5);
+            easyObj.Categories.Add(cat3);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("Which one of the following has Kylie Minogue not done a duet with?");
+            mc6.CorrectAnswers.Add("Shakira");
+            mc6.Answers.Add("Jimmy Plant");
+            mc6.Answers.Add("Nick Cave");
+            mc6.Answers.Add("Coldplay");
+            mc6.Answers.Add("Shakira");
+            cat3.questions.Add(mc6);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("How many Grammy awards has Adele won so far?");
+            mc6.CorrectAnswers.Add("10");
+            mc6.Answers.Add("13");
+            mc6.Answers.Add("7");
+            mc6.Answers.Add("10");
+            mc6.Answers.Add("8");
+            cat3.questions.Add(mc6);
+
+            //creating a new category
+            cat3 = new Category<string, string>() { CategoryName = "Fashion" };
+            //creating a new question
+            mc5 = new MultipleChoiceQ<string, string>();
+            mc5.Question.Add("What was Coco Chanel's real name?");
+            mc5.CorrectAnswers.Add("Gabrielle Bonheur Chanel");
+            mc5.Answers.Add("Marie-Eve Chanel");
+            mc5.Answers.Add("Genevieve Chanel");
+            mc5.Answers.Add("Gabrielle Bonheur Chanel");
+            mc5.Answers.Add("Marguerite Chevalier Chanel");
+            cat3.questions.Add(mc5);
+            easyObj.Categories.Add(cat3);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("Which designer was once described as \"the supreme master of minimalism\"?");
+            mc6.CorrectAnswers.Add("Calvin Klein");
+            mc6.Answers.Add("Ralph Lauren");
+            mc6.Answers.Add("Calvin Klein");
+            mc6.Answers.Add("Roberto Cavalli");
+            mc6.Answers.Add("Versace");
+            cat3.questions.Add(mc6);
+            //creating a new question
+            mc6 = new MultipleChoiceQ<string, string>();
+            mc6.Question.Add("Tom Ford is most notably recognized for his work as the head of which fashion house?");
+            mc6.CorrectAnswers.Add("Gucci");
+            mc6.Answers.Add("Chanel");
+            mc6.Answers.Add("Chloe");
+            mc6.Answers.Add("Gucci");
+            mc6.Answers.Add("Prada");
             cat3.questions.Add(mc6);
 
             easyObj.MainCategory = main;

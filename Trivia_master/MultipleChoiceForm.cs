@@ -37,10 +37,23 @@ namespace Trivia_master
             this.question = question;
             this.labelCategory.Text = this.cat.CategoryName;
             this.labelQ.Text = question.getQuestion()[0];
-            this.labelA1.Text = question.getAnswers()[0];
-            this.labelA2.Text = this.question.getAnswers()[1];
-            this.labelA3.Text = this.question.getAnswers()[2];
-            this.labelA4.Text = this.question.getAnswers()[3];
+            // Shuffling the possible answers
+            Random rand = new Random();
+            List<string> tmp = question.getAnswers();
+            int n = tmp.Count;
+            int ind = rand.Next(n--);
+            this.labelA1.Text = tmp[ind];
+            tmp.RemoveAt(ind);
+            ind = rand.Next(n--);
+            this.labelA2.Text = tmp[ind];
+            tmp.RemoveAt(ind);
+            ind = rand.Next(n--);
+            this.labelA3.Text = tmp[ind];
+            tmp.RemoveAt(ind);
+            ind = rand.Next(n--);
+            this.labelA4.Text = tmp[ind];
+            tmp.RemoveAt(ind);
+
             this.correctAnswer = this.question.getCorrectAnswer()[0];
             timer1.Interval = 1000;
             timer1.Start();

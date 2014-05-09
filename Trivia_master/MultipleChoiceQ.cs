@@ -38,7 +38,12 @@ namespace Trivia_master
 
         public List<U> getAnswers()
         {
-            return this.Answers;
+            List<U> a = new List<U>();
+            foreach (var item in this.Answers)
+            {
+                a.Add(item);
+            }
+            return a;
         }
 
         public void setQuestion(List<T> q)
